@@ -10,20 +10,18 @@ namespace Content.Shared.Weapons.Ranged.Components;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState, AutoGenerateComponentPause]
 public sealed partial class RechargeBasicEntityAmmoComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("rechargeCooldown")]
+    [DataField]
     [AutoNetworkedField]
     public float RechargeCooldown = 1.5f;
 
-    [DataField("rechargeSound")]
+    [DataField]
     [AutoNetworkedField]
     public SoundSpecifier RechargeSound = new SoundPathSpecifier("/Audio/Magic/forcewall.ogg")
     {
         Params = AudioParams.Default.WithVolume(-5f)
     };
 
-    [ViewVariables(VVAccess.ReadWrite),
-     DataField("nextCharge", customTypeSerializer:typeof(TimeOffsetSerializer)),
+    [DataField("nextCharge", customTypeSerializer:typeof(TimeOffsetSerializer)),
     AutoNetworkedField]
     [AutoPausedField]
     public TimeSpan? NextCharge;

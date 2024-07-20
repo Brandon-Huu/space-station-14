@@ -18,7 +18,7 @@ public sealed partial class GasArtifactComponent : Component
     /// <summary>
     ///     List of possible activation gases to pick on startup.
     /// </summary>
-    [DataField]
+    [DataField("possibleGas")]
     public List<Gas> PossibleGases = new()
     {
         Gas.Oxygen,

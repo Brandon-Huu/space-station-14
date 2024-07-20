@@ -11,7 +11,6 @@ public sealed partial class KitchenSpikeComponent : Component
     [DataField("delay")]
     public float SpikeDelay = 7.0f;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("sound")]
     public SoundSpecifier SpikeSound = new SoundPathSpecifier("/Audio/Effects/Fluids/splat.ogg");
 

@@ -15,7 +15,7 @@ namespace Content.Shared.Clothing.Components;
 [Access(typeof(ClothingSystem), typeof(InventorySystem))]
 public sealed partial class ClothingComponent : Component
 {
-    [DataField("clothingVisuals")]
+    [DataField]
     public Dictionary<string, List<PrototypeLayerData>> ClothingVisuals = new();
 
     /// <summary>
@@ -24,26 +24,21 @@ public sealed partial class ClothingComponent : Component
     [DataField]
     public string? MappedLayer;
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("quickEquip")]
+    [DataField]
     public bool QuickEquip = true;
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("slots", required: true)]
+    [DataField(required: true)]
     [Access(typeof(ClothingSystem), typeof(InventorySystem), Other = AccessPermissions.ReadExecute)]
     public SlotFlags Slots = SlotFlags.NONE;
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("equipSound")]
+    [DataField]
     public SoundSpecifier? EquipSound;
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("unequipSound")]
+    [DataField]
     public SoundSpecifier? UnequipSound;
 
     [Access(typeof(ClothingSystem))]
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("equippedPrefix")]
+    [DataField]
     public string? EquippedPrefix;
 
     /// <summary>
@@ -51,24 +46,19 @@ public sealed partial class ClothingComponent : Component
     /// useful when prototyping INNERCLOTHING items into OUTERCLOTHING items without duplicating/modifying RSIs etc.
     /// </summary>
     [Access(typeof(ClothingSystem))]
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("equippedState")]
+    [DataField]
     public string? EquippedState;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("sprite")]
     public string? RsiPath;
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("maleMask")]
+    [DataField]
     public ClothingMask MaleMask = ClothingMask.UniformFull;
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("femaleMask")]
+    [DataField]
     public ClothingMask FemaleMask = ClothingMask.UniformFull;
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("unisexMask")]
+    [DataField]
     public ClothingMask UnisexMask = ClothingMask.UniformFull;
 
     /// <summary>
@@ -76,10 +66,10 @@ public sealed partial class ClothingComponent : Component
     /// </summary>
     public string? InSlot;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan EquipDelay = TimeSpan.Zero;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan UnequipDelay = TimeSpan.Zero;
 }
 

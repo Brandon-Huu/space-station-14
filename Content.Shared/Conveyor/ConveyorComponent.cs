@@ -11,14 +11,12 @@ public sealed partial class ConveyorComponent : Component
     /// <summary>
     ///     The angle to move entities by in relation to the owner's rotation.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public Angle Angle = Angle.Zero;
 
     /// <summary>
     ///     The amount of units to move the entity by per second.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public float Speed = 2f;
 

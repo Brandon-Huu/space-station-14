@@ -21,7 +21,6 @@ public sealed partial class DoorComponent : Component
     /// <remarks>
     /// This should never be set directly, use <see cref="SharedDoorSystem.SetState(EntityUid, DoorState, DoorComponent?)"/> instead.
     /// </remarks>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     [Access(typeof(SharedDoorSystem))]
     public DoorState State = DoorState.Closed;

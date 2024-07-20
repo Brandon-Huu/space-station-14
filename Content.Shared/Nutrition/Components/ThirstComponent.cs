@@ -11,8 +11,7 @@ namespace Content.Shared.Nutrition.Components;
 public sealed partial class ThirstComponent : Component
 {
     // Base stuff
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("baseDecayRate")]
+    [DataField]
     [AutoNetworkedField]
     public float BaseDecayRate = 0.1f;
 
@@ -26,7 +25,6 @@ public sealed partial class ThirstComponent : Component
     [DataField, AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
     public ThirstThreshold LastThirstThreshold;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("startingThirst")]
     [AutoNetworkedField]
     public float CurrentThirst = -1f;
@@ -34,7 +32,7 @@ public sealed partial class ThirstComponent : Component
     /// <summary>
     /// The time when the hunger will update next.
     /// </summary>
-    [DataField("nextUpdateTime", customTypeSerializer: typeof(TimeOffsetSerializer)), ViewVariables(VVAccess.ReadWrite)]
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
     [AutoPausedField]
     public TimeSpan NextUpdateTime;
@@ -42,7 +40,6 @@ public sealed partial class ThirstComponent : Component
     /// <summary>
     /// The time between each update.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public TimeSpan UpdateRate = TimeSpan.FromSeconds(1);
 

@@ -25,47 +25,43 @@ public sealed partial class ContainmentFieldGeneratorComponent : Component
     /// <summary>
     /// The minimum the field generator needs to start generating a connection
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("powerMinimum")]
+    [DataField]
     public int PowerMinimum = 6;
 
     /// <summary>
     /// How much power should this field generator receive from a collision
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("power")]
     public int PowerReceived = 3;
 
     /// <summary>
     /// How much power should this field generator lose if not powered?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("powerLoss")]
+    [DataField]
     public int PowerLoss = 2;
 
     /// <summary>
     /// Used to check if it's received power recently.
     /// </summary>
-    [DataField("accumulator")]
+    [DataField]
     public float Accumulator;
 
     /// <summary>
     /// How many seconds should the generators wait before losing power?
     /// </summary>
-    [DataField("threshold")]
+    [DataField]
     public float Threshold = 20f;
 
     /// <summary>
     /// How many tiles should this field check before giving up?
     /// </summary>
-    [DataField("maxLength")]
+    [DataField]
     public float MaxLength = 8F;
 
     /// <summary>
     /// What collision should power this generator?
     /// It really shouldn't be anything but an emitter bolt but it's here for fun.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("idTag", customTypeSerializer: typeof(PrototypeIdSerializer<TagPrototype>))]
     public string IDTag = "EmitterBolt";
 
@@ -91,7 +87,7 @@ public sealed partial class ContainmentFieldGeneratorComponent : Component
     /// <summary>
     /// The masks the raycast should not go through
     /// </summary>
-    [DataField("collisionMask")]
+    [DataField]
     public int CollisionMask = (int) (CollisionGroup.MobMask | CollisionGroup.Impassable | CollisionGroup.MachineMask | CollisionGroup.Opaque);
 
     /// <summary>
@@ -104,8 +100,7 @@ public sealed partial class ContainmentFieldGeneratorComponent : Component
     /// <summary>
     /// What fields should this spawn?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("createdField", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string CreatedField = "ContainmentField";
 }
 
