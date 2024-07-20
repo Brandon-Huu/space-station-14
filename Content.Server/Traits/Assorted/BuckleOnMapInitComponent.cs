@@ -8,7 +8,6 @@ namespace Content.Server.Traits.Assorted;
 [RegisterComponent, Access(typeof(BuckleOnMapInitSystem))]
 public sealed partial class BuckleOnMapInitComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField(required: true)]
     public EntProtoId Prototype;
 }

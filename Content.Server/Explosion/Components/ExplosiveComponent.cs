@@ -20,23 +20,20 @@ public sealed partial class ExplosiveComponent : Component
     ///     The explosion prototype. This determines the damage types, the tile-break chance, and some visual
     ///     information (e.g., the light that the explosion gives off).
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("explosionType", required: true, customTypeSerializer: typeof(PrototypeIdSerializer<ExplosionPrototype>))]
+    [DataField(required: true, customTypeSerializer: typeof(PrototypeIdSerializer<ExplosionPrototype>))]
     public string ExplosionType = default!;
 
     /// <summary>
     ///     The maximum intensity the explosion can have on a single tile. This limits the maximum damage and tile
     ///     break chance the explosion can achieve at any given location.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("maxIntensity")]
+    [DataField]
     public float MaxIntensity = 4;
 
     /// <summary>
     ///     How quickly the intensity drops off as you move away from the epicenter.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("intensitySlope")]
+    [DataField]
     public float IntensitySlope = 1;
 
     /// <summary>
@@ -47,38 +44,34 @@ public sealed partial class ExplosiveComponent : Component
     ///     This number can be overridden by passing optional argument to <see
     ///     cref="ExplosionSystem.TriggerExplosive"/>.
     /// </remarks>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("totalIntensity")]
+    [DataField]
     public float TotalIntensity = 10;
 
     /// <summary>
     ///     Factor used to scale the explosion intensity when calculating tile break chances. Allows for stronger
     ///     explosives that don't space tiles, without having to create a new explosion-type prototype.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("tileBreakScale")]
+    [DataField]
     public float TileBreakScale = 1f;
 
     /// <summary>
     ///     Maximum number of times that an explosive can break a tile. Currently, for normal space stations breaking a
     ///     tile twice will generally result in a vacuum.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("maxTileBreak")]
+    [DataField]
     public int MaxTileBreak = int.MaxValue;
 
     /// <summary>
     ///     Whether this explosive should be able to create a vacuum by breaking tiles.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("canCreateVacuum")]
+    [DataField]
     public bool CanCreateVacuum = true;
 
     /// <summary>
     /// An override for whether or not the entity should be deleted after it explodes.
     /// If null, the system calling the explode method handles it.
     /// </summary>
-    [DataField("deleteAfterExplosion")]
+    [DataField]
     public bool? DeleteAfterExplosion;
 
     /// <summary>

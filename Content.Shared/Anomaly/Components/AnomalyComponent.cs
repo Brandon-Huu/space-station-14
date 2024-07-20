@@ -64,7 +64,7 @@ public sealed partial class AnomalyComponent : Component
     /// <summary>
     /// The amount of health lost when the stability is below the <see cref="DecayThreshold"/>
     /// </summary>
-    [DataField("healthChangePerSecond"), ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float HealthChangePerSecond = -0.01f;
     #endregion
 
@@ -73,13 +73,13 @@ public sealed partial class AnomalyComponent : Component
     /// If the <see cref="Stability"/> of the anomaly exceeds this value, it
     /// becomes unstable and starts increasing in <see cref="Severity"/>.
     /// </summary>
-    [DataField("growthThreshold"), ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float GrowthThreshold = 0.5f;
 
     /// <summary>
     /// A coefficient used for calculating the increase in severity when above the GrowthThreshold
     /// </summary>
-    [DataField("severityGrowthCoefficient"), ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float SeverityGrowthCoefficient = 0.07f;
     #endregion
 
@@ -183,21 +183,21 @@ public sealed partial class AnomalyComponent : Component
     /// <summary>
     /// The minimum amount of research points generated per second
     /// </summary>
-    [DataField("minPointsPerSecond")]
+    [DataField]
     public int MinPointsPerSecond = 10;
 
     /// <summary>
     /// The maximum amount of research points generated per second
     /// This doesn't include the point bonus for being unstable.
     /// </summary>
-    [DataField("maxPointsPerSecond")]
+    [DataField]
     public int MaxPointsPerSecond = 70;
 
     /// <summary>
     /// The multiplier applied to the point value for the
     /// anomaly being above the <see cref="GrowthThreshold"/>
     /// </summary>
-    [DataField("growingPointMultiplier")]
+    [DataField]
     public float GrowingPointMultiplier = 1.5f;
     #endregion
 
@@ -218,13 +218,13 @@ public sealed partial class AnomalyComponent : Component
     /// <summary>
     /// A prototype entity that appears when an anomaly supercrit collapse.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntProtoId? CorePrototype;
 
     /// <summary>
     /// A prototype entity that appears when an anomaly decays.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntProtoId? CoreInertPrototype;
 
     #region Behavior Deviations
@@ -256,14 +256,12 @@ public sealed partial class AnomalyComponent : Component
     /// <summary>
     /// How long it takes to go from the bottom of the animation to the top.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("animationTime")]
+    [DataField]
     public float AnimationTime = 2f;
 
     /// <summary>
     /// How far it goes in any direction.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("offset")]
     public Vector2 FloatingOffset = new(0, 0.15f);
 

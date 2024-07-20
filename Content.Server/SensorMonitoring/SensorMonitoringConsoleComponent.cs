@@ -16,14 +16,13 @@ public sealed partial class SensorMonitoringConsoleComponent : Component
     /// <summary>
     /// If enabled, additional data streams are shown intended to only be visible for debugging.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("debugStreams")]
+    [DataField]
     public bool DebugStreams = false;
 
     [ViewVariables(VVAccess.ReadWrite)]
     public Dictionary<EntityUid, SensorData> Sensors = new();
 
-    [DataField("retentionTime")]
+    [DataField]
     public TimeSpan RetentionTime = TimeSpan.FromMinutes(1);
 
     // UI update tracking stuff.

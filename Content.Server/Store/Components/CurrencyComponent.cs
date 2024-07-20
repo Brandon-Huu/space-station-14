@@ -16,7 +16,6 @@ public sealed partial class CurrencyComponent : Component
     /// The string is the currency type that will be added.
     /// The FixedPoint2 is the value of each individual currency entity.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("price", customTypeSerializer: typeof(PrototypeIdDictionarySerializer<FixedPoint2, CurrencyPrototype>))]
+    [DataField(customTypeSerializer: typeof(PrototypeIdDictionarySerializer<FixedPoint2, CurrencyPrototype>))]
     public Dictionary<string, FixedPoint2> Price = new();
 }

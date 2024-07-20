@@ -18,7 +18,7 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// Does this entity do a disarm on alt attack.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public bool AltDisarm = true;
 
     /// <summary>
@@ -37,7 +37,7 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// Starts attack cooldown when equipped if true.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public bool ResetOnHandSelected = true;
 
     /*
@@ -49,7 +49,7 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// How many times we can attack per second.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public float AttackRate = 1f;
 
     /// <summary>
@@ -62,14 +62,14 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// If true, attacks will be repeated automatically without requiring the mouse button to be lifted.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public bool AutoAttack;
 
     /// <summary>
     /// Base damage for this weapon. Can be modified via heavy damage or other means.
     /// </summary>
     [DataField(required: true)]
-    [ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [AutoNetworkedField]
     public DamageSpecifier Damage = default!;
 
     [DataField]
@@ -78,36 +78,36 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// Multiplies damage by this amount for single-target attacks.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public FixedPoint2 ClickDamageModifier = FixedPoint2.New(1);
 
     // TODO: Temporarily 1.5 until interactionoutline is adjusted to use melee, then probably drop to 1.2
     /// <summary>
     /// Nearest edge range to hit an entity.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public float Range = 1.5f;
 
     /// <summary>
     /// Total width of the angle for wide attacks.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [ DataField]
     public Angle Angle = Angle.FromDegrees(60);
 
-    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public EntProtoId Animation = "WeaponArcPunch";
 
-    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public EntProtoId WideAnimation = "WeaponArcSlash";
 
     /// <summary>
     /// Rotation of the animation.
     /// 0 degrees means the top faces the attacker.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public Angle WideAnimationRotation = Angle.Zero;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public bool SwingLeft;
 
 
@@ -116,7 +116,6 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// This gets played whenever a melee attack is done. This is predicted by the client.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("soundSwing"), AutoNetworkedField]
     public SoundSpecifier SwingSound { get; set; } = new SoundPathSpecifier("/Audio/Weapons/punchmiss.ogg")
     {
@@ -127,14 +126,12 @@ public sealed partial class MeleeWeaponComponent : Component
     // then a player may doubt if the target actually took damage or not.
     // If overwatch and apex do this then we probably should too.
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("soundHit"), AutoNetworkedField]
     public SoundSpecifier? HitSound;
 
     /// <summary>
     /// Plays if no damage is done to the target entity.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("soundNoDamage"), AutoNetworkedField]
     public SoundSpecifier NoDamageSound { get; set; } = new SoundCollectionSpecifier("WeakHit");
 

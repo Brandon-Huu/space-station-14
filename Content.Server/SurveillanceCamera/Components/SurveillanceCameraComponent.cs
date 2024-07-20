@@ -30,16 +30,13 @@ public sealed partial class SurveillanceCameraComponent : Component
     // This one isn't easy to deal with. Will require a UI
     // to change/set this so mapping these in isn't
     // the most terrible thing possible.
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("id")]
     public string CameraId { get; set;  } = "camera";
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("nameSet")]
+    [DataField]
     public bool NameSet { get; set; }
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("networkSet")]
+    [DataField]
     public bool NetworkSet { get; set; }
 
     // This has to be device network frequency prototypes.
