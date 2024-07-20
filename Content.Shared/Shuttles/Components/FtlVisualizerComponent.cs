@@ -9,7 +9,6 @@ public sealed partial class FtlVisualizerComponent : Component
     /// <summary>
     /// Clientside time tracker for the animation.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float Elapsed;
 
     [DataField(required: true)]

@@ -12,7 +12,6 @@ public sealed partial class GasArtifactComponent : Component
     ///     Gas that will be spawned when artifact activated.
     ///     If null it will be picked on startup from <see cref="PossibleGases"/>.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("spawnGas")]
     public Gas? SpawnGas;
 
@@ -36,7 +35,6 @@ public sealed partial class GasArtifactComponent : Component
     ///     Temperature of spawned gas. If null it will be picked on startup from range from
     ///     <see cref="MinRandomTemperature"/> to <see cref="MaxRandomTemperature"/>.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("spawnTemperature")]
     public float? SpawnTemperature;
 
@@ -50,14 +48,12 @@ public sealed partial class GasArtifactComponent : Component
     ///     Max allowed external atmospheric pressure.
     ///     Artifact will stop spawn gas.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("maxExternalPressure")]
     public float MaxExternalPressure = Atmospherics.GasMinerDefaultMaxExternalPressure;
 
     /// <summary>
     ///     Moles of gas to spawn each time when artifact activated.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("spawnAmount")]
     public float SpawnAmount = Atmospherics.MolesCellStandard * 3;
 }

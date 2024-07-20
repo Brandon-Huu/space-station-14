@@ -41,8 +41,7 @@ namespace Content.Server.Body.Components
         /// <remarks>
         ///     This generally corresponds to an amount of damage and can't go above 100.
         /// </remarks>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float BleedAmount;
+            public float BleedAmount;
 
         /// <summary>
         ///     How much should bleeding be reduced every update interval?
@@ -170,8 +169,7 @@ namespace Content.Server.Body.Components
         /// <summary>
         /// Variable that stores the amount of status time added by having a low blood level.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public TimeSpan StatusTime;
+            public TimeSpan StatusTime;
 
         [DataField]
         public ProtoId<AlertPrototype> BleedingAlert = "Bleed";

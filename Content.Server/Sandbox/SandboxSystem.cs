@@ -32,8 +32,7 @@ namespace Content.Server.Sandbox
 
         private bool _isSandboxEnabled;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool IsSandboxEnabled
+            public bool IsSandboxEnabled
         {
             get => _isSandboxEnabled;
             set

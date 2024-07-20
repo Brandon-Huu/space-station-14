@@ -29,7 +29,6 @@ public sealed partial class SingularityComponent : Component
     /// </summary>
     [Access(friends: typeof(SharedSingularitySystem), Other = AccessPermissions.Read, Self = AccessPermissions.Read)]
     [DataField("radsPerLevel")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float RadsPerLevel = 2f;
 
     /// <summary>
@@ -42,7 +41,6 @@ public sealed partial class SingularityComponent : Component
     /// The rate at which this singularity loses energy over time.
     /// </summary>
     [DataField("energyLoss")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float EnergyDrain;
 
     #region Audio
@@ -60,7 +58,6 @@ public sealed partial class SingularityComponent : Component
     /// <summary>
     /// The audio stream that plays the sound specified by <see cref="AmbientSound"/> on loop.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public EntityUid? AmbientSoundStream = null;
 
     /// <summary>
@@ -74,7 +71,6 @@ public sealed partial class SingularityComponent : Component
     ///     The sound that the singularity produces when it dissipates.
     /// </summary>
     [DataField("dissipationSound")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier? DissipationSound = new SoundPathSpecifier(
         "/Audio/Effects/singularity_collapse.ogg",
         AudioParams.Default

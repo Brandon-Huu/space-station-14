@@ -35,7 +35,6 @@ public sealed class TipsSystem : EntitySystem
     private string _tipsDataset = "";
     private float _tipTippyChance;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     private TimeSpan _nextTipTime = TimeSpan.Zero;
 
     public override void Initialize()

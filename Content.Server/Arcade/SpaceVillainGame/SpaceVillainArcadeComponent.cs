@@ -60,7 +60,6 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     /// <summary>
     /// The prefixes that can be used to create the game name.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("possibleFightVerbs")]
     public List<string> PossibleFightVerbs = new()
         {"Defeat", "Annihilate", "Save", "Strike", "Stop", "Destroy", "Robust", "Romance", "Pwn", "Own"};
@@ -68,7 +67,6 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     /// <summary>
     /// The first names/titles that can be used to construct the name of the villain.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("possibleFirstEnemyNames")]
     public List<string> PossibleFirstEnemyNames = new(){
         "the Automatic", "Farmer", "Lord", "Professor", "the Cuban", "the Evil", "the Dread King",
@@ -78,7 +76,6 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     /// <summary>
     /// The last names that can be used to construct the name of the villain.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("possibleLastEnemyNames")]
     public List<string> PossibleLastEnemyNames = new()
     {
@@ -89,7 +86,6 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     /// <summary>
     /// The prototypes that can be dispensed as a reward for winning the game.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("possibleRewards", customTypeSerializer: typeof(PrototypeIdListSerializer<EntityPrototype>))]
     public List<string> PossibleRewards = new();
 
@@ -108,6 +104,5 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     /// <summary>
     /// The remaining number of prizes the arcade machine can dispense.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public int RewardAmount = 0;
 }

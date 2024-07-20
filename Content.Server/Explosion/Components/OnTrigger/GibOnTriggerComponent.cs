@@ -10,7 +10,6 @@ public sealed partial class GibOnTriggerComponent : Component
     /// <summary>
     /// Should gibbing also delete the owners items?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("deleteItems")]
     public bool DeleteItems = false;
 }

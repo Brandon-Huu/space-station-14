@@ -16,7 +16,6 @@ internal sealed partial class WeaponRandomComponent : Component
     /// <summary>
     /// Chance for the damage bonus to occur (1 = 100%).
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float RandomDamageChance = 0.00001f;
 
     /// <summary>

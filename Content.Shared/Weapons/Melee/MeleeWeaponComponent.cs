@@ -24,7 +24,6 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// Should the melee weapon's damage stats be examinable.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool Hidden;
 
@@ -32,7 +31,6 @@ public sealed partial class MeleeWeaponComponent : Component
     /// Next time this component is allowed to light attack. Heavy attacks are wound up and never have a cooldown.
     /// </summary>
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField]
-    [ViewVariables(VVAccess.ReadWrite)]
     [AutoPausedField]
     public TimeSpan NextAttack;
 
@@ -75,7 +73,6 @@ public sealed partial class MeleeWeaponComponent : Component
     public DamageSpecifier Damage = default!;
 
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public FixedPoint2 BluntStaminaDamageFactor = FixedPoint2.New(0.5f);
 
     /// <summary>
@@ -119,7 +116,6 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// This gets played whenever a melee attack is done. This is predicted by the client.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("soundSwing"), AutoNetworkedField]
     public SoundSpecifier SwingSound { get; set; } = new SoundPathSpecifier("/Audio/Weapons/punchmiss.ogg")
     {
@@ -130,14 +126,12 @@ public sealed partial class MeleeWeaponComponent : Component
     // then a player may doubt if the target actually took damage or not.
     // If overwatch and apex do this then we probably should too.
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("soundHit"), AutoNetworkedField]
     public SoundSpecifier? HitSound;
 
     /// <summary>
     /// Plays if no damage is done to the target entity.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("soundNoDamage"), AutoNetworkedField]
     public SoundSpecifier NoDamageSound { get; set; } = new SoundCollectionSpecifier("WeakHit");
 

@@ -34,8 +34,7 @@ namespace Content.Shared.Damage
         ///     Main DamageSpecifier dictionary. Most DamageSpecifier functions exist to somehow modifying this.
         /// </summary>
         [JsonIgnore]
-        [ViewVariables(VVAccess.ReadWrite)]
-        [IncludeDataField(customTypeSerializer: typeof(DamageSpecifierDictionarySerializer), readOnly: true)]
+            [IncludeDataField(customTypeSerializer: typeof(DamageSpecifierDictionarySerializer), readOnly: true)]
         public Dictionary<string, FixedPoint2> DamageDict { get; set; } = new();
 
         /// <summary>

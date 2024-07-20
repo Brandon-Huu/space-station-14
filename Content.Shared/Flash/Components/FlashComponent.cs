@@ -9,8 +9,7 @@ namespace Content.Shared.Flash.Components
     {
 
         [DataField("duration")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int FlashDuration { get; set; } = 5000;
+            public int FlashDuration { get; set; } = 5000;
 
         /// <summary>
         /// How long a target is stunned when a melee flash is used.
@@ -20,19 +19,15 @@ namespace Content.Shared.Flash.Components
         public TimeSpan? MeleeStunDuration = TimeSpan.FromSeconds(1.5);
 
         [DataField("range")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float Range { get; set; } = 7f;
+            public float Range { get; set; } = 7f;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("aoeFlashDuration")]
+            [DataField("aoeFlashDuration")]
         public int AoeFlashDuration { get; set; } = 2000;
 
         [DataField("slowTo")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float SlowTo { get; set; } = 0.5f;
+            public float SlowTo { get; set; } = 0.5f;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("sound")]
+            [DataField("sound")]
         public SoundSpecifier Sound { get; set; } = new SoundPathSpecifier("/Audio/Weapons/flash.ogg")
         {
             Params = AudioParams.Default.WithVolume(1f).WithMaxDistance(3f)

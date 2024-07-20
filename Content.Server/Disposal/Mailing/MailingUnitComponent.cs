@@ -22,7 +22,6 @@ public sealed partial class MailingUnitComponent : Component
     /// <summary>
     /// The tag for this mailing unit
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("tag")]
     public string? Tag;
 

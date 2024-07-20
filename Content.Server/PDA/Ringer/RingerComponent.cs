@@ -20,12 +20,10 @@ namespace Content.Server.PDA.Ringer
         /// <summary>
         /// How far the sound projects in metres.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("range")]
+            [DataField("range")]
         public float Range = 3f;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("volume")]
+            [DataField("volume")]
         public float Volume = -4f;
     }
 

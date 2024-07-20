@@ -12,8 +12,7 @@ namespace Content.Server.Atmos.Components
      Access(typeof(AtmosphereSystem), typeof(GasTileOverlaySystem), typeof(AtmosDebugOverlaySystem))]
     public sealed partial class GridAtmosphereComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool Simulated { get; set; } = true;
+            public bool Simulated { get; set; } = true;
 
         [ViewVariables]
         public bool ProcessingPaused { get; set; } = false;

@@ -9,11 +9,9 @@ namespace Content.Shared.Spider;
 [Access(typeof(SharedSpiderSystem))]
 public sealed partial class SpiderComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("webPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string WebPrototype = "SpiderWeb";
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("webAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string WebAction = "ActionSpiderWeb";
 

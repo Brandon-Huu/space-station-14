@@ -31,8 +31,7 @@ namespace Content.Shared.Movement.Components
         [AutoNetworkedField, ViewVariables]
         public float SprintSpeedModifier = 1.0f;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        private float _baseWalkSpeedVV
+            private float _baseWalkSpeedVV
         {
             get => BaseWalkSpeed;
             set
@@ -42,8 +41,7 @@ namespace Content.Shared.Movement.Components
             }
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        private float _baseSprintSpeedVV
+            private float _baseSprintSpeedVV
         {
             get => BaseSprintSpeed;
             set

@@ -18,15 +18,12 @@ public sealed partial class EmergencyLightComponent : SharedEmergencyLightCompon
     /// </summary>
     public bool ForciblyEnabled = false;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("wattage")]
     public float Wattage = 5;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("chargingWattage")]
     public float ChargingWattage = 60;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("chargingEfficiency")]
     public float ChargingEfficiency = 0.85f;
 

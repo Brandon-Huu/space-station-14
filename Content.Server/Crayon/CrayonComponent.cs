@@ -10,19 +10,15 @@ namespace Content.Server.Crayon
     {
         [DataField("useSound")] public SoundSpecifier? UseSound;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("selectableColor")]
+            [DataField("selectableColor")]
         public bool SelectableColor { get; set; }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int Charges { get; set; }
+            public int Charges { get; set; }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("capacity")]
+            [DataField("capacity")]
         public int Capacity { get; set; } = 30;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("deleteEmpty")]
+            [DataField("deleteEmpty")]
         public bool DeleteEmpty = true;
     }
 }

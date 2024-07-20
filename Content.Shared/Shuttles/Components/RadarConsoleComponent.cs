@@ -7,7 +7,6 @@ namespace Content.Shared.Shuttles.Components;
 [Access(typeof(SharedRadarConsoleSystem))]
 public sealed partial class RadarConsoleComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite)]
     public float RangeVV
     {
         get => MaxRange;

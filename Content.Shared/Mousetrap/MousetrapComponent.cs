@@ -15,7 +15,6 @@ public sealed partial class MousetrapComponent : Component
     ///     equation will occur.
     ///     The default is 10.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("massBalance")]
     public int MassBalance = 10;
 }

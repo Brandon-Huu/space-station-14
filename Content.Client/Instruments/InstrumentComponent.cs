@@ -33,7 +33,6 @@ public sealed partial class InstrumentComponent : SharedInstrumentComponent
     /// <summary>
     ///     Whether a midi song will loop or not.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool LoopMidi { get; set; } = false;
 
     /// <summary>

@@ -16,11 +16,9 @@ public sealed partial class AirlockComponent : Component
     public bool Powered;
 
     // Need to network airlock safety state to avoid mis-predicts when a door auto-closes as the client walks through the door.
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public bool Safety = true;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public bool EmergencyAccess = false;
 
@@ -48,7 +46,6 @@ public sealed partial class AirlockComponent : Component
     /// <summary>
     /// Whether the airlock should auto close. This value is reset every time the airlock closes.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool AutoClose = true;
 
     /// <summary>
@@ -61,7 +58,6 @@ public sealed partial class AirlockComponent : Component
     /// Multiplicative modifier for the auto-close delay. Can be modified by hacking the airlock wires. Setting to
     /// zero will disable auto-closing.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float AutoCloseDelayModifier = 1.0f;
 
     /// <summary>

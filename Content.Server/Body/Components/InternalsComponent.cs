@@ -18,8 +18,7 @@ namespace Content.Server.Body.Components
         /// <summary>
         /// Toggle Internals delay when the target is not you.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public TimeSpan Delay = TimeSpan.FromSeconds(3);
 
         [DataField]

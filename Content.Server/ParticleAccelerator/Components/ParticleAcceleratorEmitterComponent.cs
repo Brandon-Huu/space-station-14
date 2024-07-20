@@ -6,11 +6,9 @@ namespace Content.Server.ParticleAccelerator.Components;
 public sealed partial class ParticleAcceleratorEmitterComponent : Component
 {
     [DataField("emittedPrototype")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string EmittedPrototype = "ParticlesProjectile";
 
     [DataField("emitterType")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public ParticleAcceleratorEmitterType Type = ParticleAcceleratorEmitterType.Fore;
 
     public override string ToString()

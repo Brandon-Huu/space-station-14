@@ -10,9 +10,7 @@ public abstract partial class BatteryAmmoProviderComponent : AmmoProviderCompone
 
     // Batteries aren't predicted which means we need to track the battery and manually count it ourselves woo!
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public int Shots;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public int Capacity;
 }

@@ -24,6 +24,5 @@ public sealed partial class ArtifactDamageTriggerComponent : Component
     /// <summary>
     /// How much damage has been accumulated on the artifact so far
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float AccumulatedDamage = 0;
 }

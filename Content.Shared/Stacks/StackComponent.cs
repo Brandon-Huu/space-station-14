@@ -7,8 +7,7 @@ namespace Content.Shared.Stacks
     [RegisterComponent, NetworkedComponent]
     public sealed partial class StackComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("stackType", required: true, customTypeSerializer: typeof(PrototypeIdSerializer<StackPrototype>))]
+            [DataField("stackType", required: true, customTypeSerializer: typeof(PrototypeIdSerializer<StackPrototype>))]
         public string StackTypeId { get; private set; } = default!;
 
         /// <summary>
@@ -51,8 +50,7 @@ namespace Content.Shared.Stacks
         /// Default IconLayer stack.
         /// </summary>
         [DataField("baseLayer")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public string BaseLayer = "";
+            public string BaseLayer = "";
 
         /// <summary>
         /// Determines if the visualizer uses composite or non-composite layers for icons. Defaults to false.
@@ -68,16 +66,14 @@ namespace Content.Shared.Stacks
         ///
         /// </summary>
         [DataField("composite")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool IsComposite;
+            public bool IsComposite;
 
         /// <summary>
         /// Sprite layers used in stack visualizer. Sprites first in layer correspond to lower stack states
         /// e.g. <code>_spriteLayers[0]</code> is lower stack level than <code>_spriteLayers[1]</code>.
         /// </summary>
         [DataField("layerStates")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public List<string> LayerStates = new();
+            public List<string> LayerStates = new();
     }
 
     [Serializable, NetSerializable]

@@ -21,7 +21,6 @@ public sealed partial class DoorComponent : Component
     /// <remarks>
     /// This should never be set directly, use <see cref="SharedDoorSystem.SetState(EntityUid, DoorState, DoorComponent?)"/> instead.
     /// </remarks>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     [Access(typeof(SharedDoorSystem))]
     public DoorState State = DoorState.Closed;
@@ -146,7 +145,6 @@ public sealed partial class DoorComponent : Component
     /// The sprite state used for the door when it's open.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string OpenSpriteState = "open";
 
     /// <summary>
@@ -159,7 +157,6 @@ public sealed partial class DoorComponent : Component
     /// The sprite state used for the door when it's closed.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string ClosedSpriteState = "closed";
 
     /// <summary>
@@ -273,21 +270,18 @@ public sealed partial class DoorComponent : Component
     /// <summary>
     /// Whether the door blocks light.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool Occludes = true;
 
     /// <summary>
     /// Whether the door will open when it is bumped into.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool BumpOpen = true;
 
     /// <summary>
     /// Whether the door will open when it is activated or clicked.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool ClickOpen = true;
 

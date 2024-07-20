@@ -9,27 +9,23 @@ namespace Content.Server.Atmos.Piping.Unary.Components
     [Access(typeof(GasVentScrubberSystem))]
     public sealed partial class GasVentScrubberComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool Enabled { get; set; } = false;
+            public bool Enabled { get; set; } = false;
 
         [ViewVariables]
         public bool IsDirty { get; set; } = false;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("outlet")]
+            [DataField("outlet")]
         public string OutletName { get; set; } = "pipe";
 
         [ViewVariables]
         public readonly HashSet<Gas> FilterGases = new(GasVentScrubberData.DefaultFilterGases);
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public ScrubberPumpDirection PumpDirection { get; set; } = ScrubberPumpDirection.Scrubbing;
+            public ScrubberPumpDirection PumpDirection { get; set; } = ScrubberPumpDirection.Scrubbing;
 
         /// <summary>
         ///     Target volume to transfer. If <see cref="WideNet"/> is enabled, actual transfer rate will be much higher.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float TransferRate
+            public float TransferRate
         {
             get => _transferRate;
             set => _transferRate = Math.Clamp(value, 0f, MaxTransferRate);
@@ -37,8 +33,7 @@ namespace Content.Server.Atmos.Piping.Unary.Components
 
         private float _transferRate = Atmospherics.MaxTransferRate;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("maxTransferRate")]
+            [DataField("maxTransferRate")]
         public float MaxTransferRate = Atmospherics.MaxTransferRate;
 
         /// <summary>
@@ -48,8 +43,7 @@ namespace Content.Server.Atmos.Piping.Unary.Components
         [DataField("maxPressure")]
         public float MaxPressure = Atmospherics.MaxOutputPressure;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool WideNet { get; set; } = false;
+            public bool WideNet { get; set; } = false;
 
         public GasVentScrubberData ToAirAlarmData()
         {

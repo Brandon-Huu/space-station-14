@@ -9,7 +9,6 @@ public sealed partial class NPCMeleeCombatComponent : Component
     /// <summary>
     /// If the target is moving what is the chance for this NPC to miss.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float MissChance;
 
     [ViewVariables]

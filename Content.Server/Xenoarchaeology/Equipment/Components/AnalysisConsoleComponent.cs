@@ -15,7 +15,6 @@ public sealed partial class AnalysisConsoleComponent : Component
     /// The analyzer entity the console is linked.
     /// Can be null if not linked.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public EntityUid? AnalyzerEntity;
 
     /// <summary>

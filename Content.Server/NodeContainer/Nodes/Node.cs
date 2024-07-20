@@ -47,8 +47,7 @@ namespace Content.Server.NodeContainer.Nodes
             return xform.Anchored;
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("needAnchored")]
+            [DataField("needAnchored")]
         public bool NeedAnchored { get; private set; } = true;
 
         public virtual void OnAnchorStateChanged(IEntityManager entityManager, bool anchored) { }

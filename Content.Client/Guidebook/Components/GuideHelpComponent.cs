@@ -21,7 +21,6 @@ public sealed partial class GuideHelpComponent : Component
     /// Whether or not to automatically include the children of the given guides.
     /// </summary>
     [DataField("includeChildren")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool IncludeChildren = true;
 
     /// <summary>
@@ -29,6 +28,5 @@ public sealed partial class GuideHelpComponent : Component
     /// Mostly intended for books
     /// </summary>
     [DataField("openOnActivation")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool OpenOnActivation;
 }

@@ -46,7 +46,6 @@ public sealed partial class MechGrabberComponent : Component
 
     public EntityUid? AudioStream;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public Container ItemContainer = default!;
 
     [DataField, ViewVariables(VVAccess.ReadOnly)]

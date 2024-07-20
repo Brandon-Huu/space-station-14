@@ -7,8 +7,7 @@ namespace Content.Shared.Standing
     [Access(typeof(StandingStateSystem))]
     public sealed partial class StandingStateComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public SoundSpecifier? DownSound { get; private set; } = new SoundCollectionSpecifier("BodyFall");
 
         [DataField, AutoNetworkedField]

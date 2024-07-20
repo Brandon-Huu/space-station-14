@@ -3,8 +3,7 @@
     [RegisterComponent]
     public sealed partial class CableVisComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("node", required:true)]
+            [DataField("node", required:true)]
         public string Node;
     }
 }

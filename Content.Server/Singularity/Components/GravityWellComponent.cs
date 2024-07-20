@@ -14,7 +14,6 @@ public sealed partial class GravityWellComponent : Component
     /// The maximum range at which the gravity well can push/pull entities.
     /// </summary>
     [DataField("maxRange")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float MaxRange;
 
     /// <summary>
@@ -22,7 +21,6 @@ public sealed partial class GravityWellComponent : Component
     /// This is effectively hardfloored at <see cref="GravityWellSystem.MinGravPulseRange"/>.
     /// </summary>
     [DataField("minRange")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float MinRange = 0f;
 
     /// <summary>
@@ -31,7 +29,6 @@ public sealed partial class GravityWellComponent : Component
     /// Actual acceleration scales with the inverse of the distance to the singularity.
     /// </summary>
     [DataField("baseRadialAcceleration")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float BaseRadialAcceleration = 0.0f;
 
     /// <summary>
@@ -40,7 +37,6 @@ public sealed partial class GravityWellComponent : Component
     /// Actual acceleration scales with the inverse of the distance to the singularity.
     /// </summary>
     [DataField("baseTangentialAcceleration")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float BaseTangentialAcceleration = 0.0f;
 
     #region Update Timing

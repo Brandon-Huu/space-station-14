@@ -34,7 +34,6 @@ public sealed partial class HTNComponent : NPCComponent
     /// <summary>
     /// How much longer until we can try re-planning. This will happen even during update in case something changed.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float PlanAccumulator = 0f;
 
     [ViewVariables]

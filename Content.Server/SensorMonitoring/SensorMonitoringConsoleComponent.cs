@@ -16,11 +16,9 @@ public sealed partial class SensorMonitoringConsoleComponent : Component
     /// <summary>
     /// If enabled, additional data streams are shown intended to only be visible for debugging.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("debugStreams")]
     public bool DebugStreams = false;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public Dictionary<EntityUid, SensorData> Sensors = new();
 
     [DataField("retentionTime")]
@@ -33,23 +31,18 @@ public sealed partial class SensorMonitoringConsoleComponent : Component
 
     public sealed class SensorData
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int NetId;
+            public int NetId;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public SensorDeviceType DeviceType;
+            public SensorDeviceType DeviceType;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public Dictionary<string, SensorStream> Streams = new();
+            public Dictionary<string, SensorStream> Streams = new();
     }
 
     public sealed class SensorStream
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int NetId;
+            public int NetId;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public SensorUnit Unit;
+            public SensorUnit Unit;
 
         // Queue<T> is a ring buffer internally, and we can still iterate over it.
         // I don't wanna write a ring buffer myself, so this is pretty convenient!

@@ -12,8 +12,7 @@ namespace Content.Server.Disposal.Tube.Components
     [RegisterComponent]
     public sealed partial class DisposalTaggerComponent : DisposalTransitComponent
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("tag")]
+            [DataField("tag")]
         public string Tag = "";
 
         [DataField("clickSound")]

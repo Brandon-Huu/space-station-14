@@ -6,7 +6,6 @@
 [RegisterComponent]
 public sealed partial class TriggerOnTimedCollideComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("threshold")]
     public float Threshold;
 

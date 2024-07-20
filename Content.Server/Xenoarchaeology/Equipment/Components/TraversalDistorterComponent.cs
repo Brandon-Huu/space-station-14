@@ -7,7 +7,6 @@
 [RegisterComponent]
 public sealed partial class TraversalDistorterComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite)]
     public BiasDirection BiasDirection = BiasDirection.Up;
 
     public TimeSpan NextActivation = default!;

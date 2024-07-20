@@ -9,12 +9,10 @@ namespace Content.Server.Atmos.Piping.Binary.Components
         [DataField("reacting")]
         public Boolean Reacting { get; set; } = false;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("inlet")]
+            [DataField("inlet")]
         public string InletName { get; set; } = "inlet";
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("outlet")]
+            [DataField("outlet")]
         public string OutletName { get; set; } = "outlet";
 
         [DataField, ViewVariables(VVAccess.ReadWrite)]

@@ -14,6 +14,5 @@ public sealed partial class BecomesStationComponent : Component
     ///     scenarios.
     /// </summary>
     [DataField("id", required: true)]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string Id = default!;
 }

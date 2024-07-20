@@ -10,7 +10,6 @@ public sealed class SubFloorHideSystem : SharedSubFloorHideSystem
 
     private bool _showAll;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool ShowAll
     {
         get => _showAll;

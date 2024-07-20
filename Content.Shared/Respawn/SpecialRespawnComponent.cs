@@ -18,7 +18,6 @@ public sealed partial class SpecialRespawnComponent: Component
     /// <summary>
     /// Checks if the entityentity should respawn on the station grid
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("respawn")]
     public bool Respawn = true;
 

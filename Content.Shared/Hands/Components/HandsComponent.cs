@@ -41,14 +41,12 @@ public sealed partial class HandsComponent : Component
     ///     Modifies the speed at which items are thrown.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float BaseThrowspeed { get; set; } = 11f;
 
     /// <summary>
     ///     Distance after which longer throw targets stop increasing throw impulse.
     /// </summary>
     [DataField("throwRange")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float ThrowRange { get; set; } = 8f;
 
     /// <summary>

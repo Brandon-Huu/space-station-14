@@ -10,7 +10,6 @@ public sealed partial class InteractionPopupComponent : Component
     /// Time delay between interactions to avoid spam.
     /// </summary>
     [DataField("interactDelay")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan InteractDelay = TimeSpan.FromSeconds(1.0);
 
     /// <summary>
@@ -74,7 +73,6 @@ public sealed partial class InteractionPopupComponent : Component
     [DataField("soundPerceivedByOthers")]
     public bool SoundPerceivedByOthers = true;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan LastInteractTime;
 
     /// <summary>

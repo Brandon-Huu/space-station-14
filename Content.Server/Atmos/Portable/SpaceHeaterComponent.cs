@@ -36,18 +36,15 @@ public sealed partial class SpaceHeaterComponent : Component
     ///     Positive for heaters, negative for freezers.
     /// </summary>
     [DataField("heatingCoefficientOfPerformance")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float HeatingCp = 1f;
 
     [DataField("coolingCoefficientOfPerformance")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float CoolingCp = -0.9f;
 
     /// <summary>
     ///     The delta from the target temperature after which the space heater switch mode while in Auto. Value should account for the thermomachine temperature tolerance.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float AutoModeSwitchThreshold = 0.8f;
 
     /// <summary>

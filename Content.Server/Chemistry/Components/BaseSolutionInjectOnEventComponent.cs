@@ -18,7 +18,6 @@ public abstract partial class BaseSolutionInjectOnEventComponent : Component
     [DataField]
     public FixedPoint2 TransferAmount = FixedPoint2.New(1);
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public float TransferEfficiency { get => _transferEfficiency; set => _transferEfficiency = Math.Clamp(value, 0, 1); }
 
     /// <summary>

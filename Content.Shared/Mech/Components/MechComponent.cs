@@ -64,7 +64,6 @@ public sealed partial class MechComponent : Component
     /// <summary>
     /// The slot the pilot is stored in.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public ContainerSlot PilotSlot = default!;
 
     [ViewVariables]
@@ -95,7 +94,6 @@ public sealed partial class MechComponent : Component
     /// <summary>
     /// A container for storing the equipment entities.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public Container EquipmentContainer = default!;
 
     [ViewVariables]

@@ -15,7 +15,6 @@ public sealed partial class IngestionBlockerComponent : Component
     /// <summary>
     ///     Is this component currently blocking consumption.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("enabled")]
     public bool Enabled { get; set; } = true;
 }

@@ -28,6 +28,5 @@ public sealed partial class SingularityGeneratorComponent : Component
     ///     The prototype ID used to spawn a singularity.
     /// </summary>
     [DataField("spawnId", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? SpawnPrototype = "Singularity";
 }

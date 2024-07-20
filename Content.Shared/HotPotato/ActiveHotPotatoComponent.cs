@@ -18,6 +18,5 @@ public sealed partial class ActiveHotPotatoComponent : Component
     /// <summary>
     /// Moment in time next effect will be spawned
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan TargetTime = TimeSpan.Zero;
 }

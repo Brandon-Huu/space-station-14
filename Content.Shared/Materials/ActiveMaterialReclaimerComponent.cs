@@ -14,7 +14,6 @@ public sealed partial class ActiveMaterialReclaimerComponent : Component
     /// <summary>
     /// Container used to store the item currently being reclaimed
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public Container ReclaimingContainer = default!;
 
     /// <summary>

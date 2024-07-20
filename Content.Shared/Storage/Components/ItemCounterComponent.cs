@@ -29,8 +29,7 @@ namespace Content.Shared.Storage.Components
         /// Default IconLayer stack.
         /// </summary>
         [DataField("baseLayer")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public string BaseLayer = "";
+            public string BaseLayer = "";
 
         /// <summary>
         /// Determines if the visualizer uses composite or non-composite layers for icons. Defaults to false.
@@ -46,15 +45,13 @@ namespace Content.Shared.Storage.Components
         ///
         /// </summary>
         [DataField("composite")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool IsComposite;
+            public bool IsComposite;
 
         /// <summary>
         /// Sprite layers used in counter visualizer. Sprites first in layer correspond to lower stack states
         /// e.g. <code>_spriteLayers[0]</code> is lower stack level than <code>_spriteLayers[1]</code>.
         /// </summary>
         [DataField("layerStates")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public List<string> LayerStates = new();
+            public List<string> LayerStates = new();
     }
 }

@@ -34,8 +34,7 @@ namespace Content.Shared.Examine
         ///     The title of the Examine Group. Localized string that gets added to the examine tooltip.
         /// </summary>
         [DataField]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public string? Title;
+            public string? Title;
 
         /// <summary>
         ///     A list of ExamineEntries, containing which component it belongs to, which priority it has, and what FormattedMessage it holds.

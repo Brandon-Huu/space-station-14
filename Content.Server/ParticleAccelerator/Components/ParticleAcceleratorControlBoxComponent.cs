@@ -43,7 +43,6 @@ public sealed partial class ParticleAcceleratorControlBoxComponent : Component
     /// <summary>
     /// Block re-entrant rescanning.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool CurrentlyRescanning = false;
 
     /// <summary>
@@ -51,7 +50,6 @@ public sealed partial class ParticleAcceleratorControlBoxComponent : Component
     /// Bounded by <see cref="ParticleAcceleratorPowerState.Standby"/> and <see cref="MaxStrength"/>.
     /// Modified by <see cref="ParticleAcceleratorStrengthWireAction"/>.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public ParticleAcceleratorPowerState SelectedStrength = ParticleAcceleratorPowerState.Standby;
 
     /// <summary>
@@ -113,28 +111,24 @@ public sealed partial class ParticleAcceleratorControlBoxComponent : Component
     /// The amount of power (in watts) the PA draws just by existing as a functional machine.
     /// </summary>
     [DataField("powerDrawBase")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public int BasePowerDraw = 500;
 
     /// <summary>
     /// The amount of power (in watts) the PA draws per level when turned on.
     /// </summary>
     [DataField("powerDrawMult")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public int LevelPowerDraw = 1500;
 
     /// <summary>
     /// The time at which the PA last fired a wave of particles.
     /// </summary>
     [DataField("lastFire")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan LastFire;
 
     /// <summary>
     /// The time at which the PA will next fire a wave of particles.
     /// </summary>
     [DataField("nextFire")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan NextFire;
 
     /// <summary>
@@ -151,7 +145,6 @@ public sealed partial class ParticleAcceleratorControlBoxComponent : Component
     // So...
     // I have reflected that here to be authentic.
     [DataField("chargeTime")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan ChargeTime = TimeSpan.FromSeconds(6.0);
 
     /// <summary>

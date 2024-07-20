@@ -12,12 +12,10 @@ namespace Content.Server.Atmos.Components
     public sealed partial class BarotraumaComponent : Component
     {
         [DataField("damage", required: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public DamageSpecifier Damage = default!;
+            public DamageSpecifier Damage = default!;
 
         [DataField("maxDamage")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public FixedPoint2 MaxDamage = 200;
+            public FixedPoint2 MaxDamage = 200;
 
         /// <summary>
         ///     Used to keep track of when damage starts/stops. Useful for logs.
@@ -45,8 +43,7 @@ namespace Content.Server.Atmos.Components
         /// <summary>
         /// Whether the entity is immuned to pressure (i.e possess the PressureImmunity component)
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool HasImmunity = false;
+            public bool HasImmunity = false;
 
         [DataField]
         public ProtoId<AlertPrototype> HighPressureAlert = "HighPressure";

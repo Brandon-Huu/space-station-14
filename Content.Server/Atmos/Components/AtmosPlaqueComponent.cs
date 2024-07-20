@@ -7,8 +7,7 @@ namespace Content.Server.Atmos.Components
     {
         [DataField("plaqueType")] public PlaqueType Type = PlaqueType.Unset;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public PlaqueType TypeVV
+            public PlaqueType TypeVV
         {
             get => Type;
             set

@@ -14,7 +14,6 @@ public sealed partial class RadiationCollectorComponent : Component
     ///     Power output (in Watts) per unit of radiation collected.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float ChargeModifier = 30000f;
 
     /// <summary>
@@ -24,7 +23,6 @@ public sealed partial class RadiationCollectorComponent : Component
     ///     to model the radiation source going away.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public int PowerTicksLeft = 0;
 
     /// <summary>
@@ -38,7 +36,6 @@ public sealed partial class RadiationCollectorComponent : Component
     ///     List of gases that will react to the radiation passing through the collector
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public List<RadiationReactiveGas>? RadiationReactiveGases;
 }
 

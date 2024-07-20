@@ -11,56 +11,48 @@ public sealed partial class EnsnaringComponent : Component
     /// <summary>
     /// How long it should take to free someone else.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("freeTime")]
     public float FreeTime = 3.5f;
 
     /// <summary>
     /// How long it should take for an entity to free themselves.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("breakoutTime")]
     public float BreakoutTime = 30.0f;
 
     /// <summary>
     /// How much should this slow down the entities walk?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("walkSpeed")]
     public float WalkSpeed = 0.9f;
 
     /// <summary>
     /// How much should this slow down the entities sprint?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("sprintSpeed")]
     public float SprintSpeed = 0.9f;
 
     /// <summary>
     /// How much stamina does the ensnare sap
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("staminaDamage")]
     public float StaminaDamage = 55f;
 
     /// <summary>
     /// Should this ensnare someone when thrown?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("canThrowTrigger")]
     public bool CanThrowTrigger;
 
     /// <summary>
     /// What is ensnared?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("ensnared")]
     public EntityUid? Ensnared;
 
     /// <summary>
     /// Should breaking out be possible when moving?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("canMoveBreakout")]
     public bool CanMoveBreakout;
 

@@ -23,7 +23,6 @@ public sealed partial class SolidFuelGeneratorAdapterComponent : Component
     /// The material to accept as fuel.
     /// </summary>
     [DataField("fuelMaterial", customTypeSerializer: typeof(PrototypeIdSerializer<MaterialPrototype>))]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string FuelMaterial = "Plasma";
 
     /// <summary>

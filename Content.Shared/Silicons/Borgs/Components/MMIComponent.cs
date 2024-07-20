@@ -21,7 +21,6 @@ public sealed partial class MMIComponent : Component
     /// <summary>
     /// The <see cref="ItemSlot"/> for this implanter
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public ItemSlot BrainSlot = default!;
 
     /// <summary>

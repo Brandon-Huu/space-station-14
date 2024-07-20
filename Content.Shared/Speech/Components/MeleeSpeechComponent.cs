@@ -14,7 +14,6 @@ public sealed partial class MeleeSpeechComponent : Component
     /// <summary>
     /// The battlecry to be said when an entity attacks with this component
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("Battlecry")]
     [AutoNetworkedField]
     public string? Battlecry;
@@ -22,7 +21,6 @@ public sealed partial class MeleeSpeechComponent : Component
     /// <summary>
     /// The maximum amount of characters allowed in a battlecry
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("MaxBattlecryLength")]
     [AutoNetworkedField]
     public int MaxBattlecryLength = 12;

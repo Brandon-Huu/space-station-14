@@ -7,7 +7,6 @@ public sealed partial class SmesComponent : Component
     /// The prefix used for the RSI states of the sprite layers indicating the charge level of the SMES.
     /// </summary>
     [DataField("chargeOverlayPrefix")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string ChargeOverlayPrefix = "smes-og";
 
     /// <summary>
@@ -15,7 +14,6 @@ public sealed partial class SmesComponent : Component
     /// Actually bundled together with the output indicator light.
     /// </summary>
     [DataField("inputOverlayPrefix")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string InputOverlayPrefix = "smes-oc";
 
     /// <summary>
@@ -23,6 +21,5 @@ public sealed partial class SmesComponent : Component
     /// Actually bundled together with the input indicator light.
     /// </summary>
     [DataField("outputOverlayPrefix")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string OutputOverlayPrefix = "smes-op";
 }

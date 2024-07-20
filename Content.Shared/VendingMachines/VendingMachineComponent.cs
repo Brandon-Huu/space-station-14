@@ -192,12 +192,9 @@ namespace Content.Shared.VendingMachines
     [Serializable, NetSerializable]
     public sealed class VendingMachineInventoryEntry
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        public InventoryType Type;
-        [ViewVariables(VVAccess.ReadWrite)]
-        public string ID;
-        [ViewVariables(VVAccess.ReadWrite)]
-        public uint Amount;
+            public InventoryType Type;
+            public string ID;
+            public uint Amount;
         public VendingMachineInventoryEntry(InventoryType type, string id, uint amount)
         {
             Type = type;

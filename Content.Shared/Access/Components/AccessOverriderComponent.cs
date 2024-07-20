@@ -16,7 +16,6 @@ public sealed partial class AccessOverriderComponent : Component
     [DataField]
     public ItemSlot PrivilegedIdSlot = new();
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public SoundSpecifier? DenialSound;
 
@@ -36,7 +35,6 @@ public sealed partial class AccessOverriderComponent : Component
     [DataField, AutoNetworkedField]
     public List<ProtoId<AccessLevelPrototype>> AccessLevels = new();
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public float DoAfter;
 

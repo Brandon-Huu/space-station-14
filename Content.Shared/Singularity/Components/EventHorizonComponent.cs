@@ -38,7 +38,6 @@ public sealed partial class EventHorizonComponent : Component
     /// If you want to set this go through <see cref="SharedEventHorizonSystem.SetCanBreachContainment"/>.
     /// </summary>
     [DataField("canBreachContainment")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool CanBreachContainment = false;
 
     /// <summary>
@@ -47,7 +46,6 @@ public sealed partial class EventHorizonComponent : Component
     /// If you want to set this go through <see cref="SharedEventHorizonSystem.SetHorizonFixtureId"/>.
     /// </summary>
     [DataField("consumerFixtureId")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? ConsumerFixtureId = "EventHorizonConsumer";
 
     /// <summary>
@@ -56,7 +54,6 @@ public sealed partial class EventHorizonComponent : Component
     /// If you want to set this go through <see cref="SharedEventHorizonSystem.SetHorizonFixtureId"/>.
     /// </summary>
     [DataField("colliderFixtureId")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? ColliderFixtureId = "EventHorizonCollider";
 
     /// <summary>
@@ -71,7 +68,6 @@ public sealed partial class EventHorizonComponent : Component
     /// The amount of time that should elapse between this event horizon consuming everything it overlaps with.
     /// </summary>
     [DataField("consumePeriod")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan TargetConsumePeriod = TimeSpan.FromSeconds(0.5);
 
     /// <summary>

@@ -65,15 +65,13 @@ namespace Content.Shared.Movement.Components
         /// If we traverse on / off a grid then set a timer to update our relative inputs.
         /// </summary>
         [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public TimeSpan LerpTarget;
+            public TimeSpan LerpTarget;
 
         public const float LerpTime = 1.0f;
 
         public bool Sprinting => (HeldMoveButtons & MoveButtons.Walk) == 0x0;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool CanMove = true;
+            public bool CanMove = true;
     }
 
     [Serializable, NetSerializable]

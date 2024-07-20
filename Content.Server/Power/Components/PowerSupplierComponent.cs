@@ -6,36 +6,31 @@ namespace Content.Server.Power.Components
     [RegisterComponent]
     public sealed partial class PowerSupplierComponent : BaseNetConnectorComponent<IBasePowerNet>
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("supplyRate")]
+            [DataField("supplyRate")]
         public float MaxSupply { get => NetworkSupply.MaxSupply; set => NetworkSupply.MaxSupply = value; }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("supplyRampTolerance")]
+            [DataField("supplyRampTolerance")]
         public float SupplyRampTolerance
         {
             get => NetworkSupply.SupplyRampTolerance;
             set => NetworkSupply.SupplyRampTolerance = value;
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("supplyRampRate")]
+            [DataField("supplyRampRate")]
         public float SupplyRampRate
         {
             get => NetworkSupply.SupplyRampRate;
             set => NetworkSupply.SupplyRampRate = value;
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("supplyRampPosition")]
+            [DataField("supplyRampPosition")]
         public float SupplyRampPosition
         {
             get => NetworkSupply.SupplyRampPosition;
             set => NetworkSupply.SupplyRampPosition = value;
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("enabled")]
+            [DataField("enabled")]
         public bool Enabled
         {
             get => NetworkSupply.Enabled;

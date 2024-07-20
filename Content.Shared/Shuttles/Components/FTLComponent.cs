@@ -19,14 +19,11 @@ public sealed partial class FTLComponent : Component
     [ViewVariables]
     public FTLState State = FTLState.Available;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public StartEndTime StateTime;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public float StartupTime = 0f;
 
     // Because of sphagetti, actual travel time is Math.Max(TravelTime, DefaultArrivalTime)
-    [ViewVariables(VVAccess.ReadWrite)]
     public float TravelTime = 0f;
 
     [DataField]

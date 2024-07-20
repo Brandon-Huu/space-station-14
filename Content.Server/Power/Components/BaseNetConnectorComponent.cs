@@ -20,8 +20,7 @@ namespace Content.Server.Power.Components
     {
         [Dependency] private readonly IEntityManager _entMan = default!;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public Voltage Voltage { get => _voltage; set => SetVoltage(value); }
+            public Voltage Voltage { get => _voltage; set => SetVoltage(value); }
         [DataField("voltage")]
         private Voltage _voltage = Voltage.High;
 

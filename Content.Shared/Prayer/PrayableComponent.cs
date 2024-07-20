@@ -13,21 +13,18 @@ public sealed partial class PrayableComponent : Component
     /// If bible users are only allowed to use this prayable entity
     /// </summary>
     [DataField("bibleUserOnly")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool BibleUserOnly;
 
     /// <summary>
     /// Message given to user to notify them a message was sent
     /// </summary>
     [DataField("sentMessage")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string SentMessage = "prayer-popup-notify-pray-sent";
 
     /// <summary>
     /// Prefix used in the notification to admins
     /// </summary>
     [DataField("notificationPrefix")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string NotificationPrefix = "prayer-chat-notify-pray";
 
     /// <summary>

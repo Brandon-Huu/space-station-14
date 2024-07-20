@@ -28,7 +28,6 @@ public sealed partial class BorgChassisComponent : Component
     [DataField("brainContainerId")]
     public string BrainContainerId = "borg_brain";
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public ContainerSlot BrainContainer = default!;
 
     public EntityUid? BrainEntity => BrainContainer.ContainedEntity;
@@ -53,7 +52,6 @@ public sealed partial class BorgChassisComponent : Component
     [DataField("moduleContainerId")]
     public string ModuleContainerId = "borg_module";
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public Container ModuleContainer = default!;
 
     public int ModuleCount => ModuleContainer.ContainedEntities.Count;

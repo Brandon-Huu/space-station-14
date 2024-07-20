@@ -113,7 +113,6 @@ public sealed partial record PolymorphConfiguration
     /// can occur.
     /// </summary>
     [DataField(serverOnly: true)]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan Cooldown = TimeSpan.Zero;
 }
 

@@ -12,7 +12,6 @@ public sealed partial class HandheldLightComponent : Component
     public byte? Level;
     public bool Activated;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("wattage")]
     public float Wattage { get; set; } = .8f;
 

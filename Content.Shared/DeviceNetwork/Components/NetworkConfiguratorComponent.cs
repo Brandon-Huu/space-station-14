@@ -15,7 +15,6 @@ public sealed partial class NetworkConfiguratorComponent : Component
     /// Determines whether the configurator is in linking mode or list mode
     /// </summary>
     [DataField, AutoNetworkedField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool LinkModeActive = true;
 
     /// <summary>
@@ -44,11 +43,9 @@ public sealed partial class NetworkConfiguratorComponent : Component
     public Dictionary<string, EntityUid> Devices = new();
 
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan UseDelay = TimeSpan.FromSeconds(0.5);
 
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan LastUseAttempt;
 
     [DataField]

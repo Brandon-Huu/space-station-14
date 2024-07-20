@@ -33,7 +33,6 @@ public sealed partial class MultipleToolComponent : Component
     [ViewVariables]
     public string CurrentQualityName = string.Empty;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool UiUpdateNeeded;
 
     [DataField]

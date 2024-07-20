@@ -6,16 +6,13 @@ namespace Content.Server.Spawners.Components
     [Virtual]
     public partial class ConditionalSpawnerComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public List<EntProtoId> Prototypes { get; set; } = new();
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public List<EntProtoId> GameRules = new();
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public float Chance { get; set; } = 1.0f;
     }
 }

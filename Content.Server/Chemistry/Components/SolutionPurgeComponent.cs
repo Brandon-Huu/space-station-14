@@ -23,7 +23,6 @@ public sealed partial class SolutionPurgeComponent : Component
     /// The reagent(s) to be ignored when purging the solution
     /// </summary>
     [DataField("preserve", customTypeSerializer: typeof(PrototypeIdListSerializer<ReagentPrototype>))]
-    [ViewVariables(VVAccess.ReadWrite)]
     public List<string> Preserve = new();
 
     /// <summary>

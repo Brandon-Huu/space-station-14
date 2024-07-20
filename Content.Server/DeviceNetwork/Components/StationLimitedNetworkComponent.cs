@@ -9,14 +9,12 @@ namespace Content.Server.DeviceNetwork.Components
         /// <summary>
         /// The station id the device is limited to.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public EntityUid? StationId;
+            public EntityUid? StationId;
 
         /// <summary>
         /// Whether the entity is allowed to receive packets from entities that are not tied to any station
         /// </summary>
         [DataField("allowNonStationPackets")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool AllowNonStationPackets = false;
+            public bool AllowNonStationPackets = false;
     }
 }

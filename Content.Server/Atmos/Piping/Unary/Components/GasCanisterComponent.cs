@@ -7,23 +7,19 @@ namespace Content.Server.Atmos.Piping.Unary.Components
     [RegisterComponent]
     public sealed partial class GasCanisterComponent : Component, IGasMixtureHolder
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("port")]
+            [DataField("port")]
         public string PortName { get; set; } = "port";
 
         /// <summary>
         ///     Container name for the gas tank holder.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("container")]
+            [DataField("container")]
         public string ContainerName { get; set; } = "tank_slot";
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public ItemSlot GasTankSlot = new();
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("gasMixture")]
+            [DataField("gasMixture")]
         public GasMixture Air { get; set; } = new();
 
         /// <summary>
@@ -34,29 +30,25 @@ namespace Content.Server.Atmos.Piping.Unary.Components
         /// <summary>
         ///     Minimum release pressure possible for the release valve.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("minReleasePressure")]
+            [DataField("minReleasePressure")]
         public float MinReleasePressure { get; set; } = Atmospherics.OneAtmosphere / 10;
 
         /// <summary>
         ///     Maximum release pressure possible for the release valve.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("maxReleasePressure")]
+            [DataField("maxReleasePressure")]
         public float MaxReleasePressure { get; set; } = Atmospherics.OneAtmosphere * 10;
 
         /// <summary>
         ///     Valve release pressure.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("releasePressure")]
+            [DataField("releasePressure")]
         public float ReleasePressure { get; set; } = Atmospherics.OneAtmosphere;
 
         /// <summary>
         ///     Whether the release valve is open on the canister.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("releaseValve")]
+            [DataField("releaseValve")]
         public bool ReleaseValve { get; set; } = false;
 
         [DataField("accessDeniedSound")]

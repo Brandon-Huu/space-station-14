@@ -38,7 +38,6 @@ public sealed partial class ImplanterComponent : Component
     /// <summary>
     /// The time it takes to implant someone else
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public float ImplantTime = 5f;
 
@@ -47,7 +46,6 @@ public sealed partial class ImplanterComponent : Component
     /// The time it takes to extract an implant from someone
     /// It's excessively long to deter from implant checking any antag
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public float DrawTime = 60f;
 

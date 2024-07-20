@@ -41,7 +41,6 @@ public abstract partial class SharedBeamComponent : Component
     /// <summary>
     /// Sound played upon creation
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("sound")]
     public SoundSpecifier? Sound;
 }

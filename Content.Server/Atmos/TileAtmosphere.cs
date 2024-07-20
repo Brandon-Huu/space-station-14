@@ -34,8 +34,7 @@ namespace Content.Server.Atmos
         [ViewVariables]
         public float PressureDifference { get; set; }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float HeatCapacity { get; set; } = Atmospherics.MinimumHeatCapacity;
+            public float HeatCapacity { get; set; } = Atmospherics.MinimumHeatCapacity;
 
         [ViewVariables]
         public float ThermalConductivity { get; set; } = 0.05f;

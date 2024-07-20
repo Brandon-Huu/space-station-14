@@ -31,8 +31,7 @@ namespace Content.Server.Atmos.Portable
             Gas.Frezon
         };
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool Enabled = true;
+            public bool Enabled = true;
 
         /// <summary>
         /// Maximum internal pressure before it refuses to take more.

@@ -29,14 +29,12 @@ public sealed partial class GeigerComponent : Component
     /// <summary>
     ///     Should it shows examine message with current radiation level?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool ShowExamine;
 
     /// <summary>
     ///     Should it shows item control when equipped by player?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool ShowControl;
 

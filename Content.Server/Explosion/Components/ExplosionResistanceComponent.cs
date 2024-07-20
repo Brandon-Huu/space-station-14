@@ -40,7 +40,6 @@ public sealed partial class ExplosionResistanceComponent : Component
     /// <summary>
     ///     Modifiers specific to each explosion type for more customizability.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("modifiers", customTypeSerializer: typeof(PrototypeIdDictionarySerializer<float, ExplosionPrototype>))]
     public Dictionary<string, float> Modifiers = new();
 }

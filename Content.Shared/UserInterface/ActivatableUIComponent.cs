@@ -14,15 +14,13 @@ namespace Content.Shared.UserInterface
         /// Whether the item must be held in one of the user's hands to work.
         /// This is ignored unless <see cref="RequireHands"/> is true.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public bool InHandsOnly;
 
         [DataField]
         public bool SingleUser;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public bool AdminOnly;
 
         [DataField]
@@ -35,8 +33,7 @@ namespace Content.Shared.UserInterface
         ///     This should probably be true for most machines & computers, but there will still be UIs that represent a
         ///     more generic interaction / configuration that might not require hands.
         /// </remarks>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public bool RequireHands = true;
 
         /// <summary>
@@ -55,16 +52,14 @@ namespace Content.Shared.UserInterface
         /// <summary>
         ///     Whether spectators (non-admin ghosts) should be allowed to view this UI.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public bool BlockSpectators;
 
         /// <summary>
         ///     Whether the item must be in the user's currently selected/active hand.
         ///     This is ignored unless <see cref="InHandsOnly"/> is true.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public bool RequireActiveHand = true;
 
         /// <summary>

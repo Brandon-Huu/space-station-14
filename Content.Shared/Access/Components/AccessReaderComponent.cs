@@ -23,7 +23,6 @@ public sealed partial class AccessReaderComponent : Component
     /// <summary>
     /// The set of tags that will automatically deny an allowed check, if any of them are present.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public HashSet<ProtoId<AccessLevelPrototype>> DenyTags = new();
 

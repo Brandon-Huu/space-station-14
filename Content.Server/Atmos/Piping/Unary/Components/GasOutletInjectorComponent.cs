@@ -9,14 +9,12 @@ namespace Content.Server.Atmos.Piping.Unary.Components
     public sealed partial class GasOutletInjectorComponent : Component
     {
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool Enabled { get; set; } = true;
+            public bool Enabled { get; set; } = true;
 
         /// <summary>
         ///     Target volume to transfer. If <see cref="WideNet"/> is enabled, actual transfer rate will be much higher.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float TransferRate
+            public float TransferRate
         {
             get => _transferRate;
             set => _transferRate = Math.Clamp(value, 0f, MaxTransferRate);
@@ -24,8 +22,7 @@ namespace Content.Server.Atmos.Piping.Unary.Components
 
         private float _transferRate = 50;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("maxTransferRate")]
+            [DataField("maxTransferRate")]
         public float MaxTransferRate = Atmospherics.MaxTransferRate;
 
         [DataField("maxPressure")]

@@ -25,7 +25,6 @@ public sealed partial class MovedByPressureComponent : Component
     [DataField]
     public float MoveResist { get; set; } = 100f;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public int LastHighPressureMovementAirCycle { get; set; } = 0;
 }
 

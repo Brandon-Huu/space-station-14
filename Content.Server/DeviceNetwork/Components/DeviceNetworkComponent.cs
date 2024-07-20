@@ -41,8 +41,7 @@ namespace Content.Server.DeviceNetwork.Components
         /// <summary>
         ///     The frequency that this device going to try transmit on.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("transmitFrequency")]
+            [DataField("transmitFrequency")]
         public uint? TransmitFrequency;
 
         /// <summary>
@@ -70,8 +69,7 @@ namespace Content.Server.DeviceNetwork.Components
         ///     Prefix to prepend to any automatically generated addresses. Helps players to identify devices. This gets
         ///     localized.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("prefix")]
+            [DataField("prefix")]
         public string? Prefix;
 
         /// <summary>
@@ -90,16 +88,14 @@ namespace Content.Server.DeviceNetwork.Components
         /// <summary>
         ///     Whether the device should attempt to join the network on map init.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("autoConnect")]
+            [DataField("autoConnect")]
         public bool AutoConnect = true;
 
         /// <summary>
         ///     Whether to send the broadcast recipients list to the sender so it can be filtered.
         /// <see cref="DeviceListSystem"/>
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("sendBroadcastAttemptEvent")]
+            [DataField("sendBroadcastAttemptEvent")]
         public bool SendBroadcastAttemptEvent = false;
 
         /// <summary>

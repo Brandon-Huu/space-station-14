@@ -19,7 +19,6 @@ public readonly partial record struct CargoBountyData
     /// <summary>
     /// The prototype containing information about the bounty.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField(required: true)]
     public ProtoId<CargoBountyPrototype> Bounty { get; init; } = string.Empty;
 

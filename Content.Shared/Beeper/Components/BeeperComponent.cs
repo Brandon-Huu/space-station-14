@@ -37,13 +37,11 @@ public sealed partial class BeeperComponent : Component
     /// <summary>
     /// Interval for the next beep
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan Interval;
 
     /// <summary>
     /// Time when we beeped last
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan LastBeepTime;
 
     [ViewVariables(VVAccess.ReadOnly)]

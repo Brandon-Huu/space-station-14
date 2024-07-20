@@ -53,8 +53,7 @@ namespace Content.Server.NodeContainer.Nodes
         /// <summary>
         ///     Whether this node can connect to others or not.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool ConnectionsEnabled
+            public bool ConnectionsEnabled
         {
             get => _connectionsEnabled;
             set

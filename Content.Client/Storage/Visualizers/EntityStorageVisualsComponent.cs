@@ -8,28 +8,24 @@ public sealed partial class EntityStorageVisualsComponent : Component
     /// The RSI state used for the base layer of the storage entity sprite while the storage is closed.
     /// </summary>
     [DataField("stateBaseClosed")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? StateBaseClosed;
 
     /// <summary>
     /// The RSI state used for the base layer of the storage entity sprite while the storage is open.
     /// </summary>
     [DataField("stateBaseOpen")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? StateBaseOpen;
 
     /// <summary>
     /// The RSI state used for the door/lid while the storage is open.
     /// </summary>
     [DataField("stateDoorOpen")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? StateDoorOpen;
 
     /// <summary>
     /// The RSI state used for the door/lid while the storage is closed.
     /// </summary>
     [DataField("stateDoorClosed")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? StateDoorClosed;
 
     /// <summary>

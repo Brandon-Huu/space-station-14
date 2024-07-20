@@ -15,8 +15,7 @@ namespace Content.Server.Construction.Completions
         [DataField("AudioParams")]
         public AudioParams AudioParams = AudioParams.Default;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("variation")]
+            [DataField("variation")]
         public float Variation = 0.125f;
 
         public void PerformAction(EntityUid uid, EntityUid? userUid, IEntityManager entityManager)

@@ -31,56 +31,48 @@ namespace Content.Server.Explosion.Components
         /// <summary>
         /// How long the the proximity trigger animation plays for.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("animationDuration")]
+            [DataField("animationDuration")]
         public TimeSpan AnimationDuration = TimeSpan.FromSeconds(0.6f);
 
         /// <summary>
         /// Whether the entity needs to be anchored for the proximity to work.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("requiresAnchored")]
+            [DataField("requiresAnchored")]
         public bool RequiresAnchored = true;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("enabled")]
+            [DataField("enabled")]
         public bool Enabled = true;
 
         /// <summary>
         /// The minimum delay between repeating triggers.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("cooldown")]
+            [DataField("cooldown")]
         public TimeSpan Cooldown = TimeSpan.FromSeconds(5);
 
         /// <summary>
         /// When can the trigger run again?
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("nextTrigger", customTypeSerializer: typeof(TimeOffsetSerializer))]
+            [DataField("nextTrigger", customTypeSerializer: typeof(TimeOffsetSerializer))]
         [AutoPausedField]
         public TimeSpan NextTrigger = TimeSpan.Zero;
 
         /// <summary>
         /// When will the visual state be updated again after activation?
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("nextVisualUpdate", customTypeSerializer: typeof(TimeOffsetSerializer))]
+            [DataField("nextVisualUpdate", customTypeSerializer: typeof(TimeOffsetSerializer))]
         [AutoPausedField]
         public TimeSpan NextVisualUpdate = TimeSpan.Zero;
 
         /// <summary>
         /// What speed should the other object be moving at to trigger the proximity fixture?
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("triggerSpeed")]
+            [DataField("triggerSpeed")]
         public float TriggerSpeed = 3.5f;
 
         /// <summary>
         /// If this proximity is triggered should we continually repeat it?
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("repeating")]
+            [DataField("repeating")]
         public bool Repeating = true;
 
         /// <summary>

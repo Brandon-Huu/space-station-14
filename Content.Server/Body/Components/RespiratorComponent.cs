@@ -44,12 +44,10 @@ namespace Content.Server.Body.Components
         // TODO HYPEROXIA?
 
         [DataField(required: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public DamageSpecifier Damage = default!;
+            public DamageSpecifier Damage = default!;
 
         [DataField(required: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public DamageSpecifier DamageRecovery = default!;
+            public DamageSpecifier DamageRecovery = default!;
 
         [DataField]
         public TimeSpan GaspEmoteCooldown = TimeSpan.FromSeconds(8);

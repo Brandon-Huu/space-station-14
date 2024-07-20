@@ -112,8 +112,7 @@ namespace Content.Shared.Containers.ItemSlots
         ///     cabinet may simply be closed at the moment and needs to be opened first.
         /// </remarks>
         [DataField(readOnly: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool Locked = false;
+            public bool Locked = false;
 
         /// <summary>
         /// Prevents adding the eject alt-verb, but still lets you swap items.

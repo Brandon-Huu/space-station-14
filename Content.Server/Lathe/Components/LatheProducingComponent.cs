@@ -9,13 +9,11 @@ public sealed partial class LatheProducingComponent : Component
     /// <summary>
     /// The time at which production began
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan StartTime;
 
     /// <summary>
     /// How long it takes to produce the recipe.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan ProductionLength;
 }
 

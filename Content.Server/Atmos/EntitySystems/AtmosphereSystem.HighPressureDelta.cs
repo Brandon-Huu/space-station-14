@@ -18,8 +18,7 @@ namespace Content.Server.Atmos.EntitySystems
 
         private int _spaceWindSoundCooldown = 0;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public string? SpaceWindSound { get; private set; } = "/Audio/Effects/space_wind.ogg";
+            public string? SpaceWindSound { get; private set; } = "/Audio/Effects/space_wind.ogg";
 
         private readonly HashSet<Entity<MovedByPressureComponent>> _activePressures = new(8);
 

@@ -74,8 +74,7 @@ namespace Content.Client.Viewport
 
         public Vector2i? FixedStretchSize { get; set; }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public ScalingViewportStretchMode StretchMode
+            public ScalingViewportStretchMode StretchMode
         {
             get => _stretchMode;
             set
@@ -85,8 +84,7 @@ namespace Content.Client.Viewport
             }
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public ScalingViewportRenderScaleMode RenderScaleMode
+            public ScalingViewportRenderScaleMode RenderScaleMode
         {
             get => _renderScaleMode;
             set
@@ -96,8 +94,7 @@ namespace Content.Client.Viewport
             }
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int FixedRenderScale
+            public int FixedRenderScale
         {
             get => _fixedRenderScale;
             set
@@ -107,8 +104,7 @@ namespace Content.Client.Viewport
             }
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public ScalingViewportIgnoreDimension IgnoreDimension
+            public ScalingViewportIgnoreDimension IgnoreDimension
         {
             get => _ignoreDimension;
             set

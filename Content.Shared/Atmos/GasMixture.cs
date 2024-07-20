@@ -25,8 +25,7 @@ namespace Content.Shared.Atmos
         public float this[int gas] => Moles[gas];
 
         [DataField("temperature")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        private float _temperature = Atmospherics.TCMB;
+            private float _temperature = Atmospherics.TCMB;
 
         [DataField("immutable")]
         public bool Immutable { get; private set; }
@@ -68,8 +67,7 @@ namespace Content.Shared.Atmos
         }
 
         [DataField("volume")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float Volume { get; set; }
+            public float Volume { get; set; }
 
         public GasMixture()
         {

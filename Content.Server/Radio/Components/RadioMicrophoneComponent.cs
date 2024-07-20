@@ -13,11 +13,9 @@ namespace Content.Server.Radio.Components;
 [Access(typeof(RadioDeviceSystem))]
 public sealed partial class RadioMicrophoneComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("broadcastChannel", customTypeSerializer: typeof(PrototypeIdSerializer<RadioChannelPrototype>))]
     public string BroadcastChannel = SharedChatSystem.CommonChannel;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("listenRange")]
     public int ListenRange  = 4;
 

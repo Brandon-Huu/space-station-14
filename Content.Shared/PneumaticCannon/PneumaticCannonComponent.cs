@@ -12,7 +12,6 @@ public sealed partial class PneumaticCannonComponent : Component
 {
     public const string TankSlotId = "gas_tank";
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public PneumaticCannonPower Power = PneumaticCannonPower.Medium;
 
     [DataField("toolModifyPower", customTypeSerializer:typeof(PrototypeIdSerializer<ToolQualityPrototype>))]
@@ -22,14 +21,12 @@ public sealed partial class PneumaticCannonComponent : Component
     ///     How long to stun for if they shoot the pneumatic cannon at high power.
     /// </summary>
     [DataField("highPowerStunTime")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float HighPowerStunTime = 3.0f;
 
     /// <summary>
     ///     Amount of moles to consume for each shot at any power.
     /// </summary>
     [DataField("gasUsage")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float GasUsage = 0.142f;
 
     /// <summary>

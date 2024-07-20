@@ -116,7 +116,6 @@ public sealed partial class HungerComponent : Component
     /// <summary>
     /// The time between each update.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [AutoNetworkedField]
     public TimeSpan UpdateRate = TimeSpan.FromSeconds(1);
 }

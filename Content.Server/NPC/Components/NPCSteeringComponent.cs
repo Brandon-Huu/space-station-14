@@ -25,7 +25,6 @@ public sealed partial class NPCSteeringComponent : Component
     /// <summary>
     /// Radius for collision avoidance.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float Radius = 0.35f;
 
     [ViewVariables, DataField]

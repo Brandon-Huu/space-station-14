@@ -48,7 +48,6 @@ public sealed class ConfirmButton : Button
     /// <summary>
     /// The text displayed on the button when waiting for a second click
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public string ConfirmationText
     {
         get => _confirmationText ?? Loc.GetString("generic-confirm");
@@ -58,13 +57,11 @@ public sealed class ConfirmButton : Button
     /// <summary>
     /// The time until the button reverts to normal
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan ResetTime { get; set; } = TimeSpan.FromSeconds(2);
 
     /// <summary>
     /// The time until the button accepts a second click. This is to prevent accidentally confirming the button
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan CooldownTime { get; set; } = TimeSpan.FromSeconds(.5);
 
     [ViewVariables]

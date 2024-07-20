@@ -10,6 +10,5 @@ public sealed partial class PillComponent : Component
     /// </summary>
     [AutoNetworkedField]
     [DataField("pillType")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public uint PillType;
 }

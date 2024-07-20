@@ -37,19 +37,16 @@ public sealed partial class DefusableComponent : Component
     /// <summary>
     /// Is the bomb actually usable? This is different from Activated because this tracks whether the bomb can even start in the first place.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool Usable = true;
 
     /// <summary>
     /// Does the bomb show how much time remains?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool DisplayTime = true;
 
     /// <summary>
     /// Is this bomb supposed to be stuck to the ground?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool Bolted;
 
     /// <summary>

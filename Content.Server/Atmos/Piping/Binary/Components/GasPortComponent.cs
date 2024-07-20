@@ -5,8 +5,7 @@ namespace Content.Server.Atmos.Piping.Binary.Components
     [RegisterComponent]
     public sealed partial class GasPortComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("pipe")]
+            [DataField("pipe")]
         public string PipeName { get; set; } = "connected";
 
         [ViewVariables(VVAccess.ReadOnly)]

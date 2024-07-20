@@ -18,8 +18,7 @@ namespace Content.Server.Atmos.EntitySystems
 
         private int _hotspotSoundCooldown = 0;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public string? HotspotSound { get; private set; } = "/Audio/Effects/fire.ogg";
+            public string? HotspotSound { get; private set; } = "/Audio/Effects/fire.ogg";
 
         private void ProcessHotspot(
             Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> ent,

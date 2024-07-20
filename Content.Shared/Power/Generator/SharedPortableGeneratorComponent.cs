@@ -18,21 +18,18 @@ public sealed partial class PortableGeneratorComponent : Component
     /// Chance that this generator will start. If it fails, the user has to try again.
     /// </summary>
     [DataField("startChance")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float StartChance { get; set; } = 1f;
 
     /// <summary>
     /// Amount of time it takes to attempt to start the generator.
     /// </summary>
     [DataField("startTime")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan StartTime { get; set; } = TimeSpan.FromSeconds(2);
 
     /// <summary>
     /// Sound that plays when attempting to start this generator.
     /// </summary>
     [DataField("startSound")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier? StartSound { get; set; }
 
     /// <summary>
@@ -40,7 +37,6 @@ public sealed partial class PortableGeneratorComponent : Component
     /// Plays instead of <see cref="StartSound"/> if the generator has no fuel (dumbass).
     /// </summary>
     [DataField("startSoundEmpty")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier? StartSoundEmpty { get; set; }
 }
 

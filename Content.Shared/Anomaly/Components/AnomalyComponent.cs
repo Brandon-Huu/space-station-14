@@ -88,7 +88,6 @@ public sealed partial class AnomalyComponent : Component
     /// The time at which the next artifact pulse will occur.
     /// </summary>
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField, AutoPausedField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan NextPulseTime = TimeSpan.Zero;
 
     /// <summary>
@@ -178,7 +177,6 @@ public sealed partial class AnomalyComponent : Component
     /// The vessel that the anomaly is connceted to. Stored so that multiple
     /// vessels cannot connect to the same anomaly.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public EntityUid? ConnectedVessel;
 
     /// <summary>
@@ -257,14 +255,12 @@ public sealed partial class AnomalyComponent : Component
     /// <summary>
     /// How long it takes to go from the bottom of the animation to the top.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("animationTime")]
     public float AnimationTime = 2f;
 
     /// <summary>
     /// How far it goes in any direction.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("offset")]
     public Vector2 FloatingOffset = new(0, 0.15f);
 

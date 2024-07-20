@@ -33,27 +33,23 @@ public sealed partial class PoweredLightVisualsComponent : Component
     /// The minimum length of the base blinking animation (one on-off-on cycle) in seconds.
     /// </summary>
     [DataField("minBlinkingTime")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float MinBlinkingAnimationCycleTime = 0.5f;
 
     /// <summary>
     /// The maximum length of the base blinking animation (one on-off-on cycle) in seconds.
     /// </summary>
     [DataField("maxBlinkingTime")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float MaxBlinkingAnimationCycleTime = 2;
 
     /// <summary>
     /// The sound that plays when the blinking animation cycles.
     /// </summary>
     [DataField("blinkingSound")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier? BlinkingSound = default;
 
     /// <summary>
     /// Whether or not this light is currently blinking.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool IsBlinking;
 
     #endregion Blinking

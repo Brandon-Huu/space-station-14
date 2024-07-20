@@ -26,7 +26,6 @@ public sealed partial class ArtifactAnalyzerComponent : Component
     [ViewVariables]
     public EntityUid? Console;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool ReadyToPrint = false;
 
     [DataField("scanFinishedSound")]
@@ -39,7 +38,6 @@ public sealed partial class ArtifactAnalyzerComponent : Component
     [ViewVariables]
     public ArtifactNode? LastAnalyzedNode;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public int? LastAnalyzerPointValue;
     #endregion
 }

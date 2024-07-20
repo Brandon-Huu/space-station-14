@@ -36,7 +36,6 @@ public sealed partial class EggLayerComponent : Component
     /// <summary>
     ///     Set during component init.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float CurrentEggLayCooldown;
 
     [DataField(required: true), ViewVariables(VVAccess.ReadWrite)]

@@ -21,8 +21,7 @@ namespace Content.Server.Chemistry.Components
         /// we have to generate the storage slots at MapInit first, then fill them.
         /// </summary>
         [DataField("pack", customTypeSerializer:typeof(PrototypeIdSerializer<ReagentDispenserInventoryPrototype>))]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public string? PackPrototypeId = default!;
+            public string? PackPrototypeId = default!;
 
         /// <summary>
         /// Maximum number of internal storage slots. Dispenser can't store (or dispense) more than
@@ -59,7 +58,6 @@ namespace Content.Server.Chemistry.Components
         [DataField("clickSound"), ViewVariables(VVAccess.ReadWrite)]
         public SoundSpecifier ClickSound = new SoundPathSpecifier("/Audio/Machines/machine_switch.ogg");
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        public ReagentDispenserDispenseAmount DispenseAmount = ReagentDispenserDispenseAmount.U10;
+            public ReagentDispenserDispenseAmount DispenseAmount = ReagentDispenserDispenseAmount.U10;
     }
 }

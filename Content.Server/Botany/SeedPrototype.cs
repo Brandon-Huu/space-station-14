@@ -173,7 +173,6 @@ public partial class SeedData
     [DataField("production")] public float Production;
     [DataField("growthStages")] public int GrowthStages = 6;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("harvestRepeat")] public HarvestType HarvestRepeat = HarvestType.NoRepeat;
 
     [DataField("potency")] public float Potency = 1f;

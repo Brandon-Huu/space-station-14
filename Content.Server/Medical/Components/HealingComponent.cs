@@ -12,23 +12,20 @@ namespace Content.Server.Medical.Components
     public sealed partial class HealingComponent : Component
     {
         [DataField("damage", required: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public DamageSpecifier Damage = default!;
+            public DamageSpecifier Damage = default!;
 
         /// <remarks>
         ///     This should generally be negative,
         ///     since you're, like, trying to heal damage.
         /// </remarks>
         [DataField("bloodlossModifier")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float BloodlossModifier = 0.0f;
+            public float BloodlossModifier = 0.0f;
 
         /// <summary>
         ///     Restore missing blood.
         /// </summary>
         [DataField("ModifyBloodLevel")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public float ModifyBloodLevel = 0.0f;
+            public float ModifyBloodLevel = 0.0f;
 
         /// <remarks>
         ///     The supported damage types are specified using a <see cref="DamageContainerPrototype"/>s. For a
@@ -41,8 +38,7 @@ namespace Content.Server.Medical.Components
         /// <summary>
         /// How long it takes to apply the damage.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("delay")]
+            [DataField("delay")]
         public float Delay = 3f;
 
         /// <summary>

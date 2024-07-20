@@ -6,8 +6,7 @@ namespace Content.Server.Singularity.Components
     [RegisterComponent]
     public sealed partial class SinguloFoodComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("energy")]
+            [DataField("energy")]
         public float Energy { get; set; } = 1f;
     }
 }

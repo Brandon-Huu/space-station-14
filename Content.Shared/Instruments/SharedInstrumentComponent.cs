@@ -27,7 +27,6 @@ public abstract partial class SharedInstrumentComponent : Component
     [DataField("respectMidiLimits"), ViewVariables(VVAccess.ReadWrite)]
     public bool RespectMidiLimits { get; set; } = true;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public EntityUid? Master { get; set; } = null;
 
     [ViewVariables]

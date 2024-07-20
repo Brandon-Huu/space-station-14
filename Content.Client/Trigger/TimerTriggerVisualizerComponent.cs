@@ -17,7 +17,6 @@ public sealed partial class TimerTriggerVisualsComponent : Component
     /// The RSI state used while the device has not been primed.
     /// </summary>
     [DataField("unprimedSprite")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string UnprimedSprite = "icon";
 
     /// <summary>
@@ -38,6 +37,5 @@ public sealed partial class TimerTriggerVisualsComponent : Component
     /// The actual priming animation.
     /// Constructed at component init from the sprite and sound.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public Animation PrimingAnimation = default!;
 }

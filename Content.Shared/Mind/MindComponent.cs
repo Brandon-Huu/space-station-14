@@ -87,15 +87,13 @@ namespace Content.Shared.Mind
         /// <summary>
         ///     Prevents user from ghosting out
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("preventGhosting")]
+            [DataField("preventGhosting")]
         public bool PreventGhosting { get; set; }
 
         /// <summary>
         ///     Prevents user from suiciding
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("preventSuicide")]
+            [DataField("preventSuicide")]
         public bool PreventSuicide { get; set; }
 
         /// <summary>

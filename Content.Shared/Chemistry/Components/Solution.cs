@@ -36,16 +36,14 @@ namespace Content.Shared.Chemistry.Components
         ///     systems use this.
         /// </remarks>
         [DataField("maxVol")]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public FixedPoint2 MaxVolume { get; set; } = FixedPoint2.Zero;
+            public FixedPoint2 MaxVolume { get; set; } = FixedPoint2.Zero;
 
         public float FillFraction => MaxVolume == 0 ? 1 : Volume.Float() / MaxVolume.Float();
 
         /// <summary>
         ///     If reactions will be checked for when adding reagents to the container.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("canReact")]
+            [DataField("canReact")]
         public bool CanReact { get; set; } = true;
 
         /// <summary>
@@ -57,8 +55,7 @@ namespace Content.Shared.Chemistry.Components
         /// <summary>
         ///     The temperature of the reagents in the solution.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("temperature")]
+            [DataField("temperature")]
         public float Temperature { get; set; } = 293.15f;
 
         /// <summary>
@@ -85,8 +82,7 @@ namespace Content.Shared.Chemistry.Components
         /// </summary>
         [ViewVariables] private bool _heatCapacityDirty = true;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        private int _heatCapacityUpdateCounter;
+            private int _heatCapacityUpdateCounter;
 
         // This value is arbitrary btw.
         private const int HeatCapacityUpdateInterval = 15;

@@ -62,7 +62,6 @@ public sealed partial class CloningPodComponent : Component
         Params = AudioParams.Default.WithVolume(4),
     };
 
-    [ViewVariables(VVAccess.ReadWrite)]
     public CloningPodStatus Status;
 
     [ViewVariables]

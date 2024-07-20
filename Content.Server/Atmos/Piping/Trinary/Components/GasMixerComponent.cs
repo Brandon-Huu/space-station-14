@@ -7,36 +7,28 @@ namespace Content.Server.Atmos.Piping.Trinary.Components
     [Access(typeof(GasMixerSystem))]
     public sealed partial class GasMixerComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("enabled")]
+            [DataField("enabled")]
         public bool Enabled = true;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("inletOne")]
+            [DataField("inletOne")]
         public string InletOneName = "inletOne";
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("inletTwo")]
+            [DataField("inletTwo")]
         public string InletTwoName = "inletTwo";
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("outlet")]
+            [DataField("outlet")]
         public string OutletName = "outlet";
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("targetPressure")]
+            [DataField("targetPressure")]
         public float TargetPressure = Atmospherics.OneAtmosphere;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("maxTargetPressure")]
+            [DataField("maxTargetPressure")]
         public float MaxTargetPressure = Atmospherics.MaxOutputPressure;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("inletOneConcentration")]
+            [DataField("inletOneConcentration")]
         public float InletOneConcentration = 0.5f;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("inletTwoConcentration")]
+            [DataField("inletTwoConcentration")]
         public float InletTwoConcentration = 0.5f;
     }
 }

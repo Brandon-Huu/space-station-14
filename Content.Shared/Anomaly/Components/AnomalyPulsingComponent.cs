@@ -18,6 +18,5 @@ public sealed partial class AnomalyPulsingComponent : Component
     /// <summary>
     /// How long the pulse visual lasts
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan PulseDuration = TimeSpan.FromSeconds(5);
 }

@@ -19,14 +19,12 @@ public sealed class TegNodeGroup : BaseNodeGroup
     /// <summary>
     /// If true, this TEG is fully built and has all its parts properly connected.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool IsFullyBuilt { get; private set; }
 
     /// <summary>
     /// The central generator component.
     /// </summary>
     /// <seealso cref="TegGeneratorComponent"/>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TegNodeGenerator? Generator { get; private set; }
 
     // Illustration for how the TEG A/B circulators are laid out.
@@ -42,7 +40,6 @@ public sealed class TegNodeGroup : BaseNodeGroup
     /// Not filled in if there is no center piece to deduce relative rotation from.
     /// </remarks>
     /// <seealso cref="TegCirculatorComponent"/>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TegNodeCirculator? CirculatorA { get; private set; }
 
     /// <summary>
@@ -52,7 +49,6 @@ public sealed class TegNodeGroup : BaseNodeGroup
     /// Not filled in if there is no center piece to deduce relative rotation from.
     /// </remarks>
     /// <seealso cref="TegCirculatorComponent"/>
-    [ViewVariables(VVAccess.ReadWrite)]
     public TegNodeCirculator? CirculatorB { get; private set; }
 
     private IEntityManager? _entityManager;

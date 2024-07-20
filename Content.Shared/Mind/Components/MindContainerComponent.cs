@@ -26,15 +26,13 @@ namespace Content.Shared.Mind.Components
         /// <summary>
         ///     Whether examining should show information about the mind or not.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("showExamineInfo"), AutoNetworkedField]
+            [DataField("showExamineInfo"), AutoNetworkedField]
         public bool ShowExamineInfo { get; set; }
 
         /// <summary>
         ///     Whether the mind will be put on a ghost after this component is shutdown.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("ghostOnShutdown")]
+            [DataField("ghostOnShutdown")]
         [Access(typeof(SharedMindSystem), Other = AccessPermissions.ReadWriteExecute)] // FIXME Friends
         public bool GhostOnShutdown { get; set; } = true;
     }

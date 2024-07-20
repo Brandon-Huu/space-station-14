@@ -5,12 +5,10 @@ namespace Content.Server.Atmos.Piping.Binary.Components
     [RegisterComponent]
     public sealed partial class GasPassiveGateComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("inlet")]
+            [DataField("inlet")]
         public string InletName { get; set; } = "inlet";
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("outlet")]
+            [DataField("outlet")]
         public string OutletName { get; set; } = "outlet";
 
         [ViewVariables(VVAccess.ReadOnly)]

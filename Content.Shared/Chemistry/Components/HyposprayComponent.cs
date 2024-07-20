@@ -13,11 +13,9 @@ public sealed partial class HyposprayComponent : Component
 
     // TODO: This should be on clumsycomponent.
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float ClumsyFailChance = 0.5f;
 
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public FixedPoint2 TransferAmount = FixedPoint2.New(5);
 
     [DataField]

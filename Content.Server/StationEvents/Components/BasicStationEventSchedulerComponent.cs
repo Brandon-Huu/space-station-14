@@ -9,6 +9,5 @@ public sealed partial class BasicStationEventSchedulerComponent : Component
     /// How long until the next check for an event runs
     /// </summary>
     /// Default value is how long until first event is allowed
-    [ViewVariables(VVAccess.ReadWrite)]
     public float TimeUntilNextEvent = MinimumTimeUntilFirstEvent;
 }

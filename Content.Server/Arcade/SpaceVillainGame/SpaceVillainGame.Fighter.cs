@@ -10,8 +10,7 @@ public sealed partial class SpaceVillainGame
         /// <summary>
         /// The current hit point total of the fighter.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int Hp
+            public int Hp
         {
             get => _hp;
             set => _hp = MathHelper.Clamp(value, 0, HpMax);
@@ -21,8 +20,7 @@ public sealed partial class SpaceVillainGame
         /// <summary>
         /// The maximum hit point total of the fighter.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int HpMax
+            public int HpMax
         {
             get => _hpMax;
             set
@@ -36,8 +34,7 @@ public sealed partial class SpaceVillainGame
         /// <summary>
         /// The current mana total of the fighter.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int Mp
+            public int Mp
         {
             get => _mp;
             set => _mp = MathHelper.Clamp(value, 0, MpMax);
@@ -47,8 +44,7 @@ public sealed partial class SpaceVillainGame
         /// <summary>
         /// The maximum mana total of the fighter.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public int MpMax
+            public int MpMax
         {
             get => _mpMax;
             set
@@ -62,7 +58,6 @@ public sealed partial class SpaceVillainGame
         /// <summary>
         /// Whether the given fighter can take damage/lose mana.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool Invincible = false;
+            public bool Invincible = false;
     }
 }

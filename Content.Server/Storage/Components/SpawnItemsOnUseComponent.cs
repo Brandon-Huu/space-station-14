@@ -24,8 +24,7 @@ namespace Content.Server.Storage.Components
         /// <summary>
         ///     How many uses before the item should delete itself.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("uses")]
+            [DataField("uses")]
         public int Uses = 1;
     }
 }

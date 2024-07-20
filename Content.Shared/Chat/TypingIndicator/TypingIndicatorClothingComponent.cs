@@ -16,7 +16,6 @@ public sealed partial class TypingIndicatorClothingComponent : Component
     ///     The typing indicator that will override the default typing indicator when the item is equipped to a users
     ///     inventory.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("proto", required: true)]
     public ProtoId<TypingIndicatorPrototype> TypingIndicatorPrototype = default!;
 

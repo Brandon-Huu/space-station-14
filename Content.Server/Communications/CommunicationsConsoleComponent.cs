@@ -24,8 +24,7 @@ namespace Content.Server.Communications
         /// Fluent ID for the announcement title
         /// If a Fluent ID isn't found, just uses the raw string
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField(required: true)]
+            [DataField(required: true)]
         public LocId Title = "comms-console-announcement-title-station";
 
         /// <summary>

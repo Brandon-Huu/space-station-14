@@ -20,28 +20,24 @@ public sealed partial class CardboardBoxComponent : Component
     /// <summary>
     /// The entity used for the box opening effect
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("effect")]
     public string Effect = "Exclamation";
 
     /// <summary>
     /// Sound played upon effect creation
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("effectSound")]
     public SoundSpecifier? EffectSound;
 
 	/// <summary>
 	/// Whether to prevent the box from making the sound and effect
 	/// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
 	[DataField("quiet")]
 	public bool Quiet = false;
 
     /// <summary>
     /// How far should the box opening effect go?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("distance")]
     public float Distance = 6f;
 

@@ -13,14 +13,12 @@ public sealed partial class StickyComponent : Component
     ///     What target entities are valid to be surface for sticky entity.
     /// </summary>
     [DataField("whitelist")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public EntityWhitelist? Whitelist;
 
     /// <summary>
     ///     What target entities can't be used as surface for sticky entity.
     /// </summary>
     [DataField("blacklist")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public EntityWhitelist? Blacklist;
 
     /// <summary>
@@ -28,14 +26,12 @@ public sealed partial class StickyComponent : Component
     ///     If zero will stick entity immediately.
     /// </summary>
     [DataField("stickDelay")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan StickDelay = TimeSpan.Zero;
 
     /// <summary>
     ///     Whether users can unstick item when it was stuck to surface.
     /// </summary>
     [DataField("canUnstick")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool CanUnstick = true;
 
     /// <summary>
@@ -43,35 +39,30 @@ public sealed partial class StickyComponent : Component
     ///     If zero will unstick entity immediately.
     /// </summary>
     [DataField("unstickDelay")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan UnstickDelay = TimeSpan.Zero;
 
     /// <summary>
     ///     Popup message shown when player started sticking entity to another entity.
     /// </summary>
     [DataField("stickPopupStart")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? StickPopupStart;
 
     /// <summary>
     ///     Popup message shown when player successfully stuck entity.
     /// </summary>
     [DataField("stickPopupSuccess")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? StickPopupSuccess;
 
     /// <summary>
     ///     Popup message shown when player started unsticking entity from another entity.
     /// </summary>
     [DataField("unstickPopupStart")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? UnstickPopupStart;
 
     /// <summary>
     ///     Popup message shown when player successfully unstuck entity.
     /// </summary>
     [DataField("unstickPopupSuccess")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string? UnstickPopupSuccess;
 
     /// <summary>

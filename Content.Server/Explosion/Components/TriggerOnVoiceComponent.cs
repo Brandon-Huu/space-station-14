@@ -8,12 +8,10 @@ namespace Content.Server.Explosion.Components
     {
         public bool IsListening => IsRecording || !string.IsNullOrWhiteSpace(KeyPhrase);
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("keyPhrase")]
+            [DataField("keyPhrase")]
         public string? KeyPhrase;
 
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("listenRange")]
+            [DataField("listenRange")]
         public int ListenRange { get; private set; } = 4;
 
         [DataField("isRecording")]

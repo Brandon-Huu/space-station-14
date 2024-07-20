@@ -17,7 +17,6 @@ public class RadialContainer : LayoutContainer
     /// <remarks>
     /// The top of the screen is at 0 radians, and the bottom of the screen is at PI radians
     /// </remarks>
-    [ViewVariables(VVAccess.ReadWrite)]
     public Vector2 AngularRange
     {
         get
@@ -45,19 +44,16 @@ public class RadialContainer : LayoutContainer
     /// <summary>
     /// Determines the direction in which child elements will be arranged
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public RAlignment RadialAlignment { get; set; } = RAlignment.Clockwise;
 
     /// <summary>
     /// Determines how far from the radial container's center that its child elements will be placed
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public float Radius { get; set; } = 100f;
 
     /// <summary>
     /// Sets whether the container should reserve a space on the layout for child which are not currently visible
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool ReserveSpaceForHiddenChildren { get; set; } = true;
 
     /// <summary>

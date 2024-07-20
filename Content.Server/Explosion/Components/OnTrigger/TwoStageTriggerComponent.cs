@@ -12,7 +12,6 @@ public sealed partial class TwoStageTriggerComponent : Component
     /// <summary>
     /// How long it takes for the second stage to be triggered.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("triggerDelay")]
     public TimeSpan TriggerDelay = TimeSpan.FromSeconds(10);
 

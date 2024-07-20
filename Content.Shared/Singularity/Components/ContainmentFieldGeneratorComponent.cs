@@ -25,21 +25,18 @@ public sealed partial class ContainmentFieldGeneratorComponent : Component
     /// <summary>
     /// The minimum the field generator needs to start generating a connection
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("powerMinimum")]
     public int PowerMinimum = 6;
 
     /// <summary>
     /// How much power should this field generator receive from a collision
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("power")]
     public int PowerReceived = 3;
 
     /// <summary>
     /// How much power should this field generator lose if not powered?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("powerLoss")]
     public int PowerLoss = 2;
 
@@ -65,7 +62,6 @@ public sealed partial class ContainmentFieldGeneratorComponent : Component
     /// What collision should power this generator?
     /// It really shouldn't be anything but an emitter bolt but it's here for fun.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("idTag", customTypeSerializer: typeof(PrototypeIdSerializer<TagPrototype>))]
     public string IDTag = "EmitterBolt";
 
@@ -85,7 +81,6 @@ public sealed partial class ContainmentFieldGeneratorComponent : Component
     /// <summary>
     /// Is this generator connected to fields?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool IsConnected;
 
     /// <summary>
@@ -104,7 +99,6 @@ public sealed partial class ContainmentFieldGeneratorComponent : Component
     /// <summary>
     /// What fields should this spawn?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("createdField", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string CreatedField = "ContainmentField";
 }

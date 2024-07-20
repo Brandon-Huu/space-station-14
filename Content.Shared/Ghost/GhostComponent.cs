@@ -51,7 +51,6 @@ public sealed partial class GhostComponent : Component
     public int BooMaxTargets = 3;
 
     // TODO: instead of this funny stuff just give it access and update in system dirtying when needed
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool CanGhostInteract
     {
         get => _canGhostInteract;
@@ -70,7 +69,6 @@ public sealed partial class GhostComponent : Component
     ///     Changed by <see cref="SharedGhostSystem.SetCanReturnToBody"/>
     /// </summary>
     // TODO MIRROR change this to use friend classes when thats merged
-    [ViewVariables(VVAccess.ReadWrite)]
     public bool CanReturnToBody
     {
         get => _canReturnToBody;

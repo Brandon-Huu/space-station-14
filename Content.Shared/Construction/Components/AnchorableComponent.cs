@@ -16,14 +16,12 @@ namespace Content.Shared.Construction.Components
         public AnchorableFlags Flags = AnchorableFlags.Anchorable | AnchorableFlags.Unanchorable;
 
         [DataField]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public bool Snap { get; private set; } = true;
+            public bool Snap { get; private set; } = true;
 
         /// <summary>
         /// Base delay to use for anchoring.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField]
+            [DataField]
         public float Delay = 1f;
     }
 
