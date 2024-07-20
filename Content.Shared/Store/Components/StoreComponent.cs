@@ -78,7 +78,7 @@ public sealed partial class StoreComponent : Component
     ///     Checks if store can be opened by the account owner only.
     ///     Not meant to be used with uplinks.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public bool OwnerOnly;
 
     /// <summary>

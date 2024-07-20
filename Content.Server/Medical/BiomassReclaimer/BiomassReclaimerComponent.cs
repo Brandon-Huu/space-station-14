@@ -15,7 +15,7 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// <summary>
         /// The interval for <see cref="RandomMessTimer"/>.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField]
+        [DataField]
         public TimeSpan RandomMessInterval = TimeSpan.FromSeconds(5);
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// <summary>
         /// Will this refuse to gib a living mob?
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField]
+        [DataField]
         public bool SafetyEnabled = true;
     }
 }

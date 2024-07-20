@@ -11,7 +11,7 @@ public abstract partial class SharedBeamComponent : Component
     /// A unique list of targets that this beam collided with.
     /// Useful for code like Arcing in the Lightning Component.
     /// </summary>
-    [DataField)]
+    [DataField]
     public HashSet<EntityUid> HitTargets = new();
 
     /// <summary>

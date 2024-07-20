@@ -26,7 +26,7 @@ public sealed partial class CryoPodComponent : Component
     [DataField]
     public float BeakerTransferTime = 1f;
 
-    [DataField(, customTypeSerializer:typeof(TimeOffsetSerializer))]
+    [DataField, customTypeSerializer:typeof(TimeOffsetSerializer))]
     public TimeSpan? NextInjectionTime;
 
     /// <summary>

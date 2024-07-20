@@ -6,7 +6,7 @@ namespace Content.Server.Warps
     [RegisterComponent]
     public sealed partial class WarpPointComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite), DataField]
+        [DataField]
         public string? Location;
 
         /// <summary>

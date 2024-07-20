@@ -109,7 +109,7 @@ public abstract partial class SharedDisposalUnitComponent : Component
     /// <summary>
     /// Was the disposals unit engaged for a manual flush.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public bool Engaged;
 
     /// <summary>

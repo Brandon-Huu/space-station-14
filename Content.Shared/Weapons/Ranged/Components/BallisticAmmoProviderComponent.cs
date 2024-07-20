@@ -9,16 +9,16 @@ namespace Content.Shared.Weapons.Ranged.Components;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class BallisticAmmoProviderComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public SoundSpecifier? SoundRack = new SoundPathSpecifier("/Audio/Weapons/Guns/Cock/smg_cock.ogg");
 
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public SoundSpecifier? SoundInsert = new SoundPathSpecifier("/Audio/Weapons/Guns/MagIn/bullet_insert.ogg");
 
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public EntProtoId? Proto;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public int Capacity = 30;
 
     public int Count => UnspawnedCount + Container.ContainedEntities.Count;
@@ -26,7 +26,7 @@ public sealed partial class BallisticAmmoProviderComponent : Component
     [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
     public int UnspawnedCount;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public EntityWhitelist? Whitelist;
 
     public Container Container = default!;
@@ -47,7 +47,7 @@ public sealed partial class BallisticAmmoProviderComponent : Component
     /// <summary>
     /// Is it okay for this entity to directly transfer its valid ammunition into another provider?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public bool MayTransfer;
 
     /// <summary>

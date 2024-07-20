@@ -46,7 +46,7 @@ public sealed partial class SalvageExpeditionComponent : SharedSalvageExpedition
     /// <summary>
     /// Sound that plays when the mission end is imminent.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public SoundSpecifier Sound = new SoundCollectionSpecifier("ExpeditionEnd")
     {
         Params = AudioParams.Default.WithVolume(-5),

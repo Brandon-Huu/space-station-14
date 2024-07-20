@@ -21,7 +21,7 @@ public sealed partial class ItemToggleSizeComponent : Component
     /// <summary>
     ///     Item's shape when activated
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public List<Box2i>? ActivatedShape = null;
 
     /// <summary>
@@ -33,6 +33,6 @@ public sealed partial class ItemToggleSizeComponent : Component
     /// <summary>
     ///     Item's shape when deactivated. If none is mentioned, it uses the item's default shape instead.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public List<Box2i>? DeactivatedShape = null;
 }
