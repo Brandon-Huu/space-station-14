@@ -16,15 +16,11 @@ namespace Content.Shared.PDA
         /// <summary>
         /// The base PDA sprite state, eg. "pda", "pda-clown"
         /// </summary>
-        [DataField("state")]
         public string? State;
 
-        [DataField("idSlot")]
         public ItemSlot IdSlot = new();
 
-        [DataField("penSlot")]
         public ItemSlot PenSlot = new();
-        [DataField("paiSlot")]
         public ItemSlot PaiSlot = new();
 
         // Really this should just be using ItemSlot.StartingItem. However, seeing as we have so many different starting

@@ -6,8 +6,8 @@ namespace Content.Server.Power.Components
     [RegisterComponent]
     public sealed partial class BatterySelfRechargerComponent : Component
     {
-        [DataField("autoRecharge")] public bool AutoRecharge { get; set; }
+        public bool AutoRecharge { get; set; }
 
-        [DataField("autoRechargeRate")] public float AutoRechargeRate { get; set; }
+        public float AutoRechargeRate { get; set; }
     }
 }

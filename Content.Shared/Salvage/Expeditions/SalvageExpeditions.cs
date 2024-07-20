@@ -59,13 +59,12 @@ public sealed partial class SalvageExpeditionDataComponent : Component
     /// <summary>
     /// Are we actively cooling down from the last salvage mission.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("cooldown")]
     public bool Cooldown = false;
 
     /// <summary>
     /// Nexy time salvage missions are offered.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("nextOffer", customTypeSerializer:typeof(TimeOffsetSerializer))]
+    [DataField("nextOffer", customTypeSerializer:typeof(TimeOffsetSerializer))]
     [AutoPausedField]
     public TimeSpan NextOffer;
 

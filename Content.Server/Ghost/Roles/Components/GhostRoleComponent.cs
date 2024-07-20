@@ -18,13 +18,11 @@ namespace Content.Server.Ghost.Roles.Components
         // Actually make use of / enforce this requirement?
         // Why is this even here.
         // Move to ghost role prototype & respect CCvars.GameRoleTimerOverride
-        [DataField("requirements")]
         public HashSet<JobRequirement>? Requirements;
 
         /// <summary>
         /// Whether the <see cref="MakeSentientCommand"/> should run on the mob.
         /// </summary>
-        [DataField("makeSentient")]
         public bool MakeSentient = true;
 
         /// <summary>
@@ -36,7 +34,6 @@ namespace Content.Server.Ghost.Roles.Components
 
         // We do this so updating RoleName and RoleDescription in VV updates the open EUIs.
 
-        [ViewVariables(VVAccess.ReadWrite)]
         [Access(typeof(GhostRoleSystem), Other = AccessPermissions.ReadWriteExecute)] // FIXME Friends
         public string RoleName
         {
@@ -48,7 +45,6 @@ namespace Content.Server.Ghost.Roles.Components
             }
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
         [Access(typeof(GhostRoleSystem), Other = AccessPermissions.ReadWriteExecute)] // FIXME Friends
         public string RoleDescription
         {
@@ -60,7 +56,6 @@ namespace Content.Server.Ghost.Roles.Components
             }
         }
 
-        [ViewVariables(VVAccess.ReadWrite)]
         [Access(typeof(GhostRoleSystem), Other = AccessPermissions.ReadWriteExecute)] // FIXME Friends
         public string RoleRules
         {
@@ -72,12 +67,8 @@ namespace Content.Server.Ghost.Roles.Components
             }
         }
 
-        [DataField("allowSpeech")]
-        [ViewVariables(VVAccess.ReadWrite)]
         public bool AllowSpeech { get; set; } = true;
 
-        [DataField("allowMovement")]
-        [ViewVariables(VVAccess.ReadWrite)]
         public bool AllowMovement { get; set; }
 
         [ViewVariables(VVAccess.ReadOnly)]
@@ -89,7 +80,6 @@ namespace Content.Server.Ghost.Roles.Components
         /// <summary>
         /// Reregisters the ghost role when the current player ghosts.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)]
         [DataField("reregister")]
         public bool ReregisterOnGhost { get; set; } = true;
 

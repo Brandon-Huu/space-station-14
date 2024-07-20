@@ -9,7 +9,7 @@ public sealed partial class BuckledPrecondition : HTNPrecondition
 {
     private SharedBuckleSystem _buckle = default!;
 
-    [DataField("isBuckled")] public bool IsBuckled = true;
+    public bool IsBuckled = true;
 
     public override void Initialize(IEntitySystemManager sysManager)
     {
