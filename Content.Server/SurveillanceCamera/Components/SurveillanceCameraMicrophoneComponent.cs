@@ -20,6 +20,6 @@ public sealed partial class SurveillanceCameraMicrophoneComponent : Component
     [DataField]
     public EntityWhitelist Blacklist { get; private set; } = new();
 
-    [DataFiel]
+    [DataField]
     public int Range { get; private set; } = 10;
 }
