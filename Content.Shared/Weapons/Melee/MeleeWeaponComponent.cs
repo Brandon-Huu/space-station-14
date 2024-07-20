@@ -32,7 +32,6 @@ public sealed partial class MeleeWeaponComponent : Component
     /// Next time this component is allowed to light attack. Heavy attacks are wound up and never have a cooldown.
     /// </summary>
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoNetworkedField]
-    [ViewVariables(VVAccess.ReadWrite)]
     [AutoPausedField]
     public TimeSpan NextAttack;
 
@@ -75,7 +74,6 @@ public sealed partial class MeleeWeaponComponent : Component
     public DamageSpecifier Damage = default!;
 
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public FixedPoint2 BluntStaminaDamageFactor = FixedPoint2.New(0.5f);
 
     /// <summary>

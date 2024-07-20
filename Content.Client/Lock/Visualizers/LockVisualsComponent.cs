@@ -7,14 +7,12 @@ public sealed partial class LockVisualsComponent : Component
     /// <summary>
     /// The RSI state used for the lock indicator while the entity is locked.
     /// </summary>
-    [DataField("stateLocked")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string? StateLocked = "locked";
 
     /// <summary>
     /// The RSI state used for the lock indicator entity is unlocked.
     /// </summary>
-    [DataField("stateUnlocked")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string? StateUnlocked = "unlocked";
 }

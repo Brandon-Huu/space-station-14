@@ -146,7 +146,6 @@ public sealed partial class DoorComponent : Component
     /// The sprite state used for the door when it's open.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string OpenSpriteState = "open";
 
     /// <summary>
@@ -159,7 +158,6 @@ public sealed partial class DoorComponent : Component
     /// The sprite state used for the door when it's closed.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string ClosedSpriteState = "closed";
 
     /// <summary>
@@ -255,7 +253,7 @@ public sealed partial class DoorComponent : Component
     }
     #endregion
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool CanPry = true;
 
     [DataField]
@@ -264,7 +262,7 @@ public sealed partial class DoorComponent : Component
     /// <summary>
     /// Default time that the door should take to pry open.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float PryTime = 1.5f;
 
     [DataField]
@@ -273,21 +271,18 @@ public sealed partial class DoorComponent : Component
     /// <summary>
     /// Whether the door blocks light.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool Occludes = true;
 
     /// <summary>
     /// Whether the door will open when it is bumped into.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool BumpOpen = true;
 
     /// <summary>
     /// Whether the door will open when it is activated or clicked.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool ClickOpen = true;
 
