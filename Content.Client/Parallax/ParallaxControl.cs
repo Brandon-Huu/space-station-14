@@ -17,7 +17,7 @@ public sealed class ParallaxControl : Control
     [Dependency] private readonly IParallaxManager _parallaxManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
 
-    [ViewVariables(VVAccess.ReadWrite)] public Vector2 Offset { get; set; }
+    public Vector2 Offset { get; set; }
 
     public ParallaxControl()
     {

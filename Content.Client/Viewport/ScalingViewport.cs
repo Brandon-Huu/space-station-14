@@ -72,7 +72,7 @@ namespace Content.Client.Viewport
 
         // Do not need to InvalidateViewport() since it doesn't affect viewport creation.
 
-        [ViewVariables(VVAccess.ReadWrite)] public Vector2i? FixedStretchSize { get; set; }
+        public Vector2i? FixedStretchSize { get; set; }
 
         [ViewVariables(VVAccess.ReadWrite)]
         public ScalingViewportStretchMode StretchMode

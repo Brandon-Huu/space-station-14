@@ -24,7 +24,7 @@ namespace Content.Server.Ghost.Roles.Components
         /// <summary>
         /// Whether the <see cref="MakeSentientCommand"/> should run on the mob.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite)] [DataField("makeSentient")]
+        [DataField("makeSentient")]
         public bool MakeSentient = true;
 
         /// <summary>

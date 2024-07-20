@@ -13,7 +13,7 @@ namespace Content.Shared.Audio;
 public sealed partial class AmbientSoundComponent : Component, IComponentTreeEntry<AmbientSoundComponent>
 {
     [DataField("enabled", readOnly: true)]
-    [ViewVariables(VVAccess.ReadWrite)] // only for map editing
+    // only for map editing
     public bool Enabled { get; set; } = true;
 
     [DataField("sound", required: true), ViewVariables(VVAccess.ReadWrite)] // only for map editing
@@ -22,7 +22,7 @@ public sealed partial class AmbientSoundComponent : Component, IComponentTreeEnt
     /// <summary>
     /// How far away this ambient sound can potentially be heard.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)] // only for map editing
+    // only for map editing
     [DataField("range")]
     public float Range = 2f;
 
@@ -31,7 +31,7 @@ public sealed partial class AmbientSoundComponent : Component, IComponentTreeEnt
     /// <summary>
     /// Applies this volume to the sound being played.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)] // only for map editing
+    // only for map editing
     [DataField("volume")]
     public float Volume = -10f;
 

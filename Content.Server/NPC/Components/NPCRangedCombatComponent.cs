@@ -20,7 +20,7 @@ public sealed partial class NPCRangedCombatComponent : Component
     /// <summary>
     /// If null it will instantly turn.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)] public Angle? RotationSpeed;
+    public Angle? RotationSpeed;
 
     /// <summary>
     /// Maximum distance, between our rotation and the target's, to consider shooting it.

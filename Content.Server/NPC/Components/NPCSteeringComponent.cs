@@ -91,17 +91,17 @@ public sealed partial class NPCSteeringComponent : Component
     /// <summary>
     /// End target that we're trying to move to.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)] public EntityCoordinates Coordinates;
+    public EntityCoordinates Coordinates;
 
     /// <summary>
     /// How close are we trying to get to the coordinates before being considered in range.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)] public float Range = 0.2f;
+    public float Range = 0.2f;
 
     /// <summary>
     /// How far does the last node in the path need to be before considering re-pathfinding.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)] public float RepathRange = 1.5f;
+    public float RepathRange = 1.5f;
 
     public const int FailedPathLimit = 3;
 
@@ -112,7 +112,7 @@ public sealed partial class NPCSteeringComponent : Component
 
     [ViewVariables] public SteeringStatus Status = SteeringStatus.Moving;
 
-    [ViewVariables(VVAccess.ReadWrite)] public PathFlags Flags = PathFlags.None;
+    public PathFlags Flags = PathFlags.None;
 
     /// <summary>
     /// If the NPC is using a do_after to clear an obstacle.

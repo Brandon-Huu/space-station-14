@@ -9,7 +9,7 @@ namespace Content.Server.Gravity
     public sealed partial class GravityGeneratorComponent : SharedGravityGeneratorComponent
     {
         // 1% charge per second.
-        [ViewVariables(VVAccess.ReadWrite)] [DataField("chargeRate")] public float ChargeRate { get; set; } = 0.01f;
+        [DataField("chargeRate")] public float ChargeRate { get; set; } = 0.01f;
         // The gravity generator has two power values.
         // Idle power is assumed to be the power needed to run the control systems and interface.
         [DataField("idlePower")] public float IdlePowerUse { get; set; }
@@ -35,7 +35,7 @@ namespace Content.Server.Gravity
         public float MaxCharge { get; set; } = 1;
 
         // 0 -> 1
-        [ViewVariables(VVAccess.ReadWrite)] [DataField("charge")] public float Charge { get; set; } = 1;
+        [DataField("charge")] public float Charge { get; set; } = 1;
 
         /// <summary>
         /// Is the gravity generator currently "producing" gravity?
