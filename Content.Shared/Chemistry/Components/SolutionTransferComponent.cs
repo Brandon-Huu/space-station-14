@@ -19,13 +19,13 @@ public sealed partial class SolutionTransferComponent : Component
     /// <summary>
     ///     The minimum amount of solution that can be transferred at once from this solution.
     /// </summary>
-    [DataField]
+    [DataField("minTransferAmount")]
     public FixedPoint2 MinimumTransferAmount { get; set; } = FixedPoint2.New(5);
 
     /// <summary>
     ///     The maximum amount of solution that can be transferred at once from this solution.
     /// </summary>
-    [DataField]
+    [DataField("maxTransferAmount")]
     public FixedPoint2 MaximumTransferAmount { get; set; } = FixedPoint2.New(50);
 
     /// <summary>
