@@ -11,7 +11,7 @@ namespace Content.Shared.Strip.Components
         /// <summary>
         ///     The strip delay for hands.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField("handDelay")]
+        [DataField("handDelay")]
         public TimeSpan HandStripDelay = TimeSpan.FromSeconds(4f);
     }
 

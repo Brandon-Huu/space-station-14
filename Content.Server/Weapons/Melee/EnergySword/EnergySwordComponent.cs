@@ -3,13 +3,13 @@ namespace Content.Server.Weapons.Melee.EnergySword;
 [RegisterComponent]
 internal sealed partial class EnergySwordComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField("activatedColor"), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public Color ActivatedColor = Color.DodgerBlue;
 
     /// <summary>
     ///     A color option list for the random color picker.
     /// </summary>
-    [DataField("colorOptions")]
+    [DataField]
     public List<Color> ColorOptions = new()
     {
         Color.Tomato,
@@ -23,6 +23,6 @@ internal sealed partial class EnergySwordComponent : Component
     /// <summary>
     ///     RGB cycle rate for hacked e-swords.
     /// </summary>
-    [DataField("cycleRate")]
+    [DataField]
     public float CycleRate = 1f;
 }

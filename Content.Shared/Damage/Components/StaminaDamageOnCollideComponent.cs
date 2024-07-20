@@ -8,9 +8,9 @@ namespace Content.Shared.Damage.Components;
 [RegisterComponent]
 public sealed partial class StaminaDamageOnCollideComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField("damage")]
+    [DataField]
     public float Damage = 55f;
 
-    [DataField("sound")]
+    [DataField]
     public SoundSpecifier? Sound;
 }

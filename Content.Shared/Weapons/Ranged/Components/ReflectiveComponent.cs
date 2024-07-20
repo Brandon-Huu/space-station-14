@@ -10,6 +10,6 @@ namespace Content.Shared.Weapons.Ranged.Components;
 [RegisterComponent, NetworkedComponent]
 public sealed partial class ReflectiveComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField("reflective")]
+    [DataField]
     public ReflectType Reflective = ReflectType.NonEnergy;
 }

@@ -9,14 +9,13 @@ public sealed partial class HTNComponent : NPCComponent
     /// <summary>
     /// The base task to use for planning
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite),
-     DataField("rootTask", required: true)]
+    [DataField(required: true)]
     public HTNCompoundTask RootTask = default!;
 
     /// <summary>
     /// Check any active services for our current plan. This is used to find new targets for example without changing our plan.
     /// </summary>
-    [DataField("checkServices")]
+    [DataField]
     public bool CheckServices = true;
 
     /// <summary>
@@ -28,7 +27,7 @@ public sealed partial class HTNComponent : NPCComponent
     /// <summary>
     /// How long to wait after having planned to try planning again.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("planCooldown")]
+    [DataField]
     public float PlanCooldown = 0.45f;
 
     /// <summary>

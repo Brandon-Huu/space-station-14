@@ -18,18 +18,18 @@ public sealed partial class DumpableDoAfterEvent : SimpleDoAfterEvent
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class DumpableComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField("soundDump"), AutoNetworkedField]
+    [DataField("soundDump"), AutoNetworkedField]
     public SoundSpecifier? DumpSound = new SoundCollectionSpecifier("storageRustle");
 
     /// <summary>
     /// How long each item adds to the doafter.
     /// </summary>
-    [DataField("delayPerItem"), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public TimeSpan DelayPerItem = TimeSpan.FromSeconds(SharedStorageSystem.AreaInsertDelayPerItem);
 
     /// <summary>
     /// The multiplier modifier
     /// </summary>
-    [DataField("multiplier"), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public float Multiplier = 1.0f;
 }

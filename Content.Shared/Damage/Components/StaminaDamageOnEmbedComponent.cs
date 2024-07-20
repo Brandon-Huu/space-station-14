@@ -12,6 +12,6 @@ namespace Content.Shared.Damage.Components;
 [Access(typeof(StaminaSystem))]
 public sealed partial class StaminaDamageOnEmbedComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public float Damage = 10f;
 }

@@ -8,13 +8,13 @@ public sealed partial class IgniteOnCollideComponent : Component
     /// <summary>
     /// How many more times the ignition can be applied.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("count")]
+    [DataField]
     public int Count = 1;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField("fireStacks")]
+    [ DataField]
     public float FireStacks;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField("fixtureId")]
+    [DataField]
     public string FixtureId = "ignition";
 
 }

@@ -6,14 +6,13 @@ namespace Content.Server.Holosign
     [RegisterComponent]
     public sealed partial class HolosignProjectorComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("signProto", customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
+        [DataField(customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
         public string SignProto = "HolosignWetFloor";
 
         /// <summary>
         /// How much charge a single use expends.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField("chargeUse")]
+        [DataField]
         public float ChargeUse = 50f;
     }
 }
