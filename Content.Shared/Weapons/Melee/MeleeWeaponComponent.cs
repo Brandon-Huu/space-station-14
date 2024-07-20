@@ -24,7 +24,6 @@ public sealed partial class MeleeWeaponComponent : Component
     /// <summary>
     /// Should the melee weapon's damage stats be examinable.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool Hidden;
 

@@ -15,21 +15,18 @@ public sealed partial class WarDeclaratorComponent : Component
     /// <summary>
     /// Custom war declaration message. If empty, use default.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public string Message;
 
     /// <summary>
     /// Permission to customize message text
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool AllowEditingMessage = true;
 
     /// <summary>
     /// War declaration text color
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public Color Color = Color.Red;
 
@@ -42,7 +39,6 @@ public sealed partial class WarDeclaratorComponent : Component
     /// <summary>
     /// Fluent ID for the declaration sender title
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public LocId SenderTitle = "comms-console-announcement-title-nukie";
 

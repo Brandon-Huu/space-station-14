@@ -60,16 +60,14 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     /// <summary>
     /// The prefixes that can be used to create the game name.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("possibleFightVerbs")]
+    [DataField]
     public List<string> PossibleFightVerbs = new()
         {"Defeat", "Annihilate", "Save", "Strike", "Stop", "Destroy", "Robust", "Romance", "Pwn", "Own"};
 
     /// <summary>
     /// The first names/titles that can be used to construct the name of the villain.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("possibleFirstEnemyNames")]
+    [DataField]
     public List<string> PossibleFirstEnemyNames = new(){
         "the Automatic", "Farmer", "Lord", "Professor", "the Cuban", "the Evil", "the Dread King",
         "the Space", "Lord", "the Great", "Duke", "General"
@@ -78,8 +76,7 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     /// <summary>
     /// The last names that can be used to construct the name of the villain.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("possibleLastEnemyNames")]
+    [DataField]
     public List<string> PossibleLastEnemyNames = new()
     {
         "Melonoid", "Murdertron", "Sorcerer", "Ruin", "Jeff", "Ectoplasm", "Crushulon", "Uhangoid",
@@ -89,20 +86,19 @@ public sealed partial class SpaceVillainArcadeComponent : SharedSpaceVillainArca
     /// <summary>
     /// The prototypes that can be dispensed as a reward for winning the game.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("possibleRewards", customTypeSerializer: typeof(PrototypeIdListSerializer<EntityPrototype>))]
+    [DataField( customTypeSerializer: typeof(PrototypeIdListSerializer<EntityPrototype>))]
     public List<string> PossibleRewards = new();
 
     /// <summary>
     /// The minimum number of prizes the arcade machine can have.
     /// </summary>
-    [DataField("rewardMinAmount")]
+    [DataField]
     public int RewardMinAmount;
 
     /// <summary>
     /// The maximum number of prizes the arcade machine can have.
     /// </summary>
-    [DataField("rewardMaxAmount")]
+    [DataField]
     public int RewardMaxAmount;
 
     /// <summary>

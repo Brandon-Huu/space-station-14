@@ -13,7 +13,6 @@ public sealed partial class HandLabelerComponent : Component
     [DataField]
     public string AssignedLabel = string.Empty;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public int MaxLabelChars = 50;
 

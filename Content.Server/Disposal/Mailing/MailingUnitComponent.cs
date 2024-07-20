@@ -10,20 +10,19 @@ public sealed partial class MailingUnitComponent : Component
     /// List of targets the mailing unit can send to.
     /// Each target is just a disposal routing tag
     /// </summary>
-    [DataField("targetList")]
+    [DataField]
     public List<string> TargetList = new();
 
     /// <summary>
     /// The target that gets attached to the disposal holders tag list on flush
     /// </summary>
-    [DataField("target")]
+    [DataField]
     public string? Target;
 
     /// <summary>
     /// The tag for this mailing unit
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("tag")]
+    [DataField]
     public string? Tag;
 
     public SharedDisposalUnitComponent.DisposalUnitBoundUserInterfaceState? DisposalUnitInterfaceState;

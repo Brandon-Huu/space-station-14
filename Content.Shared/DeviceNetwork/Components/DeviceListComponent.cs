@@ -16,7 +16,6 @@ public sealed partial class DeviceListComponent : Component
     /// <summary>
     /// The limit of devices that can be linked to this device list.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public int DeviceLimit = 32;
 

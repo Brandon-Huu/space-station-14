@@ -167,43 +167,42 @@ public partial class SeedData
 
     [DataField("endurance")] public float Endurance = 100f;
 
-    [DataField("yield")] public int Yield;
-    [DataField("lifespan")] public float Lifespan;
-    [DataField("maturation")] public float Maturation;
-    [DataField("production")] public float Production;
-    [DataField("growthStages")] public int GrowthStages = 6;
+    [DataField] public int Yield;
+    [DataField] public float Lifespan;
+    [DataField] public float Maturation;
+    [DataField] public float Production;
+    [DataField] public int GrowthStages = 6;
 
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("harvestRepeat")] public HarvestType HarvestRepeat = HarvestType.NoRepeat;
+    [DataField] public HarvestType HarvestRepeat = HarvestType.NoRepeat;
 
-    [DataField("potency")] public float Potency = 1f;
+    [DataField] public float Potency = 1f;
 
     /// <summary>
     ///     If true, cannot be harvested for seeds. Balances hybrids and
     ///     mutations.
     /// </summary>
-    [DataField("seedless")] public bool Seedless = false;
+    [DataField] public bool Seedless = false;
 
     /// <summary>
     ///     If false, rapidly decrease health while growing. Used to kill off
     ///     plants with "bad" mutations.
     /// </summary>
-    [DataField("viable")] public bool Viable = true;
+    [DataField] public bool Viable = true;
 
     /// <summary>
     ///     If true, fruit slips players.
     /// </summary>
-    [DataField("slip")] public bool Slip = false;
+    [DataField] public bool Slip = false;
 
     /// <summary>
     ///     If true, fruits are sentient.
     /// </summary>
-    [DataField("sentient")] public bool Sentient = false;
+    [DataField] public bool Sentient = false;
 
     /// <summary>
     ///     If true, a sharp tool is required to harvest this plant.
     /// </summary>
-    [DataField("ligneous")] public bool Ligneous;
+    [DataField] public bool Ligneous;
 
     // No, I'm not removing these.
     // if you re-add these, make sure that they get cloned.
@@ -222,33 +221,33 @@ public partial class SeedData
 
     #region Cosmetics
 
-    [DataField("plantRsi", required: true)]
+    [DataField(required: true)]
     public ResPath PlantRsi { get; set; } = default!;
 
-    [DataField("plantIconState")] public string PlantIconState { get; set; } = "produce";
+    [DataField] public string PlantIconState { get; set; } = "produce";
 
-    [DataField("screamSound")]
+    [DataField]
     public SoundSpecifier ScreamSound = new SoundPathSpecifier("/Audio/Voice/Human/malescream_1.ogg");
 
 
     [DataField("screaming")] public bool CanScream;
 
-    [DataField("bioluminescent")] public bool Bioluminescent;
-    [DataField("bioluminescentColor")] public Color BioluminescentColor { get; set; } = Color.White;
+    [DataField] public bool Bioluminescent;
+    [DataField] public Color BioluminescentColor { get; set; } = Color.White;
 
     public float BioluminescentRadius = 2f;
 
-    [DataField("kudzuPrototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))] public string KudzuPrototype = "WeakKudzu";
+    [DataField(customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))] public string KudzuPrototype = "WeakKudzu";
 
-    [DataField("turnIntoKudzu")] public bool TurnIntoKudzu;
-    [DataField("splatPrototype")] public string? SplatPrototype { get; set; }
+    [DataField] public bool TurnIntoKudzu;
+    [DataField] public string? SplatPrototype { get; set; }
 
     #endregion
 
     /// <summary>
     ///     The seed prototypes this seed may mutate into when prompted to.
     /// </summary>
-    [DataField("mutationPrototypes", customTypeSerializer: typeof(PrototypeIdListSerializer<SeedPrototype>))]
+    [DataField( customTypeSerializer: typeof(PrototypeIdListSerializer<SeedPrototype>))]
     public List<string> MutationPrototypes = new();
 
     public SeedData Clone()
