@@ -30,7 +30,7 @@ public sealed partial class SwapTeleporterComponent : Component
     /// <summary>
     /// Delay after starting the teleport and it occuring.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan TeleportDelay = TimeSpan.FromSeconds(2.5f);
 
     /// <summary>
@@ -43,7 +43,7 @@ public sealed partial class SwapTeleporterComponent : Component
     /// <summary>
     /// A minimum waiting period inbetween teleports.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan Cooldown = TimeSpan.FromMinutes(5);
 
     /// <summary>

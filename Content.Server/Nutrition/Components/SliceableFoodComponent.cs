@@ -11,10 +11,10 @@ public sealed partial class SliceableFoodComponent : Component
     /// Prototype to spawn after slicing.
     /// If null then it can't be sliced.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntProtoId? Slice;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier Sound = new SoundPathSpecifier("/Audio/Items/Culinary/chop.ogg");
 
     /// <summary>

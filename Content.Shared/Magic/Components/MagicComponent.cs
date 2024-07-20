@@ -25,13 +25,13 @@ public sealed partial class MagicComponent : Component
     /// <summary>
     ///     Does this spell require Wizard Robes & Hat?
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool RequiresClothes;
 
     /// <summary>
     ///     Does this spell require the user to speak?
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool RequiresSpeech;
 
     // TODO: FreeHand - should check if toggleable action

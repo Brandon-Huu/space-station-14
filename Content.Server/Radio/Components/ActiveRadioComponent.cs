@@ -19,7 +19,7 @@ public sealed partial class ActiveRadioComponent : Component
     /// A toggle for globally receiving all radio channels.
     /// Overrides <see cref="Channels"/>
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool ReceiveAllChannels;
 
     /// <summary>

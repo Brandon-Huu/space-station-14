@@ -61,7 +61,7 @@ public sealed partial class AccessReaderComponent : Component
     /// <summary>
     /// A limit on the max size of <see cref="AccessLog"/>
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int AccessLogLimit = 20;
 
     /// <summary>

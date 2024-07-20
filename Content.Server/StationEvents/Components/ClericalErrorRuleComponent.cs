@@ -12,12 +12,12 @@ public sealed partial class ClericalErrorRuleComponent : Component
     /// <summary>
     /// The minimum percentage number of records to remove from the station.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MinToRemove = 0.0025f;
 
     /// <summary>
     /// The maximum percentage number of records to remove from the station.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxToRemove = 0.1f;
 }

@@ -41,13 +41,13 @@ public sealed partial class WoolyComponent : Component
     /// <summary>
     ///     The amount of nutrient consumed on update.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float HungerUsage = 10f;
 
     /// <summary>
     ///     How long to wait before growing wool.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan GrowthDelay = TimeSpan.FromMinutes(1);
 
     /// <summary>

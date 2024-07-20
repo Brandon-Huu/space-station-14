@@ -3,9 +3,9 @@
 [RegisterComponent]
 public sealed partial class ContainerTemperatureDamageThresholdsComponent: Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float? HeatDamageThreshold;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float? ColdDamageThreshold;
 }

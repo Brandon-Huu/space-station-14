@@ -15,7 +15,7 @@ public sealed partial class RevolutionaryComponent : Component
     /// <summary>
     /// The status icon prototype displayed for revolutionaries
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<StatusIconPrototype> StatusIcon { get; set; } = "RevolutionaryFaction";
 
     /// <summary>

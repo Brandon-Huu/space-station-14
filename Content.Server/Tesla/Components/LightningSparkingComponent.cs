@@ -13,7 +13,7 @@ public sealed partial class LightningSparkingComponent : Component
     /// <summary>
     /// Spark duration.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float LightningTime = 4;
 
     /// <summary>
@@ -23,6 +23,6 @@ public sealed partial class LightningSparkingComponent : Component
     [AutoPausedField]
     public TimeSpan LightningEndTime;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool IsSparking;
 }

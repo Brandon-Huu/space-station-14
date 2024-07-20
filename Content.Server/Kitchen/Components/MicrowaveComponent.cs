@@ -45,7 +45,7 @@ namespace Content.Server.Kitchen.Components
         [ViewVariables]
         public bool Broken;
 
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public ProtoId<SinkPortPrototype> OnPort = "On";
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace Content.Server.Kitchen.Components
         /// <summary>
         /// Tracks the elapsed time of the current cook timer.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public TimeSpan CurrentCookTimeEnd = TimeSpan.Zero;
 
         /// <summary>
@@ -79,10 +79,10 @@ namespace Content.Server.Kitchen.Components
 
         public Container Storage = default!;
 
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public int Capacity = 10;
 
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public ProtoId<ItemSizePrototype> MaxItemSize = "Normal";
 
         /// <summary>
@@ -94,18 +94,18 @@ namespace Content.Server.Kitchen.Components
         /// <summary>
         /// Chance of an explosion occurring when we microwave a metallic object
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float ExplosionChance = .1f;
 
         /// <summary>
         /// Chance of lightning occurring when we microwave a metallic object
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float LightningChance = .75f;
 
         /// <summary>
         /// If this microwave can give ids accesses without exploding
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public bool CanMicrowaveIdsSafely = true;
     }
 

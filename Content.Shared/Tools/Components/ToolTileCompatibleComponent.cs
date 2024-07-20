@@ -17,13 +17,13 @@ public sealed partial class ToolTileCompatibleComponent : Component
     /// <summary>
     /// The time it takes to modify the tile.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan Delay = TimeSpan.FromSeconds(1);
 
     /// <summary>
     /// Whether or not the tile being modified must be unobstructed
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool RequiresUnobstructed = true;
 }
 

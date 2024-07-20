@@ -38,7 +38,7 @@ public sealed partial class IdCardComponent : Component
     /// <summary>
     /// Determines if accesses from this card should be logged by <see cref="AccessReaderComponent"/>
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool BypassLogging;
 
     [DataField]

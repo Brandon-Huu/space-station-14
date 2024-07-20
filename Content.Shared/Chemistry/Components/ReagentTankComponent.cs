@@ -7,10 +7,10 @@ namespace Content.Shared.Chemistry.Components;
 [RegisterComponent, NetworkedComponent]
 public sealed partial class ReagentTankComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public FixedPoint2 TransferAmount { get; set; } = FixedPoint2.New(10);
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ReagentTankType TankType { get; set; } = ReagentTankType.Unspecified;
 }
 

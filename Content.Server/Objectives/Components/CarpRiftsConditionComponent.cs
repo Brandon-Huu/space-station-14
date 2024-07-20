@@ -12,6 +12,6 @@ public sealed partial class CarpRiftsConditionComponent : Component
     /// <summary>
     /// The number of rifts currently charged.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int RiftsCharged;
 }

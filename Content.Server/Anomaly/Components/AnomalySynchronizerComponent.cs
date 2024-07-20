@@ -13,7 +13,7 @@ public sealed partial class AnomalySynchronizerComponent : Component
     /// <summary>
     /// The uid of the anomaly to which the synchronizer is connected.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntityUid? ConnectedAnomaly;
 
     /// <summary>
@@ -49,9 +49,9 @@ public sealed partial class AnomalySynchronizerComponent : Component
     [DataField]
     public ProtoId<SourcePortPrototype> SupercritPort = "Supercritical";
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier ConnectedSound = new SoundPathSpecifier("/Audio/Machines/anomaly_sync_connect.ogg");
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier DisconnectedSound = new SoundPathSpecifier("/Audio/Machines/anomaly_sync_connect.ogg");
 }

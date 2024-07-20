@@ -70,7 +70,7 @@ public abstract partial class SharedDisposalUnitComponent : Component
     /// <summary>
     /// Removes the pressure requirement for flushing.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool DisablePressure;
 
     /// <summary>

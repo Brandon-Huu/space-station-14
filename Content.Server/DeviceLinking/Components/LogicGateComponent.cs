@@ -22,7 +22,7 @@ public sealed partial class LogicGateComponent : Component
     /// Tool quality to use for cycling logic gate operations.
     /// Cannot be pulsing since linking uses that.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<ToolQualityPrototype> CycleQuality = "Screwing";
 
     /// <summary>
@@ -34,19 +34,19 @@ public sealed partial class LogicGateComponent : Component
     /// <summary>
     /// Name of the first input port.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<SinkPortPrototype> InputPortA = "InputA";
 
     /// <summary>
     /// Name of the second input port.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<SinkPortPrototype> InputPortB = "InputB";
 
     /// <summary>
     /// Name of the output port.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<SourcePortPrototype> OutputPort = "Output";
 
     // Initial state

@@ -16,7 +16,7 @@ public sealed partial class AccessComponent : Component
     /// <summary>
     /// True if the access provider is enabled and can grant access.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public bool Enabled = true;
 

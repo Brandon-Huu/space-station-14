@@ -15,7 +15,7 @@ public sealed partial class SmokeOnTriggerComponent : Component
     /// <summary>
     /// How long the smoke stays for, after it has spread.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Duration = 10;
 
     /// <summary>
@@ -28,7 +28,7 @@ public sealed partial class SmokeOnTriggerComponent : Component
     /// Smoke entity to spawn.
     /// Defaults to smoke but you can use foam if you want.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntProtoId SmokePrototype = "Smoke";
 
     /// <summary>
@@ -37,6 +37,6 @@ public sealed partial class SmokeOnTriggerComponent : Component
     /// <remarks>
     /// When using repeating trigger this essentially gets multiplied so dont do anything crazy like omnizine or lexorin.
     /// </remarks>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public Solution Solution = new();
 }

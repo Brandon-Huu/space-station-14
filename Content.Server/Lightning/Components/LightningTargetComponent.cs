@@ -15,13 +15,13 @@ public sealed partial class LightningTargetComponent : Component
     /// <summary>
     /// The probability that this target will not be ignored by a lightning strike. This is necessary for Tesla's balance.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float HitProbability = 1f;
 
     /// <summary>
-    /// Priority level for selecting a lightning target. 
+    /// Priority level for selecting a lightning target.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int Priority;
 
     /// <summary>
@@ -29,7 +29,7 @@ public sealed partial class LightningTargetComponent : Component
     /// This number controls how many bounces the lightning bolt has left after hitting that target.
     /// At high values, the lightning will not travel farther than that entity.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int LightningResistance = 1; //by default, reduces the number of bounces from this target by 1
 
     // BOOM PART
@@ -37,31 +37,31 @@ public sealed partial class LightningTargetComponent : Component
     /// <summary>
     /// Will the entity explode after being struck by lightning?
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool LightningExplode = true;
 
     /// <summary>
     /// The explosion prototype to spawn
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<ExplosionPrototype> ExplosionPrototype = "Default";
 
     /// <summary>
     /// The total amount of intensity an explosion can achieve
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float TotalIntensity = 25f;
 
     /// <summary>
     /// How quickly does the explosion's power slope? Higher = smaller area and more concentrated damage, lower = larger area and more spread out damage
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Dropoff = 2f;
 
     /// <summary>
     /// How much intensity can be applied per tile?
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxTileIntensity = 5f;
 
     /// <summary>

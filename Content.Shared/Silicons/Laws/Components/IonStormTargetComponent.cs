@@ -13,37 +13,37 @@ public sealed partial class IonStormTargetComponent : Component
     /// <summary>
     /// <see cref="WeightedRandomPrototype"/> for a random lawset to possibly replace the old one with.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<WeightedRandomPrototype> RandomLawsets = "IonStormLawsets";
 
     /// <summary>
     /// Chance for this borg to be affected at all.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Chance = 0.8f;
 
     /// <summary>
     /// Chance to replace the lawset with a random one
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float RandomLawsetChance = 0.25f;
 
     /// <summary>
     /// Chance to remove a random law.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float RemoveChance = 0.2f;
 
     /// <summary>
     /// Chance to replace a random law with the new one, rather than have it be a glitched-order law.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float ReplaceChance = 0.2f;
 
     /// <summary>
     /// Chance to shuffle laws after everything is done.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float ShuffleChance = 0.2f;
 }
 

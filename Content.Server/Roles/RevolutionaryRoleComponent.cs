@@ -11,6 +11,6 @@ public sealed partial class RevolutionaryRoleComponent : AntagonistRoleComponent
     /// <summary>
     /// For headrevs, how many people you have converted.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public uint ConvertedCount = 0;
 }

@@ -42,14 +42,14 @@ namespace Content.Shared.UserInterface
         /// <summary>
         ///     Entities that are required to open this UI.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public EntityWhitelist? RequiredItems;
 
         /// <summary>
         ///     If true, then this UI can only be opened via verbs. I.e., normal interactions/activations will not open
         ///     the UI.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public bool VerbOnly;
 
         /// <summary>

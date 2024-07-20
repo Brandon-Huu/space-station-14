@@ -20,7 +20,7 @@ public sealed partial class ItemPlacerComponent : Component
     /// <summary>
     /// Whitelist for entities that can be placed.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntityWhitelist? Whitelist;
 
     /// <summary>

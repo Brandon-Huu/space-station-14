@@ -28,7 +28,7 @@ public partial class SiliconLaw : IComparable<SiliconLaw>
     /// <summary>
     /// An identifier that overrides <see cref="Order"/> in the law menu UI.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string? LawIdentifierOverride;
 
     public int CompareTo(SiliconLaw? other)

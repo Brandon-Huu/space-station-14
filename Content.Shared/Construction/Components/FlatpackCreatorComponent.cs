@@ -17,7 +17,7 @@ public sealed partial class FlatpackCreatorComponent : Component
     /// <summary>
     /// Whether or not packing is occuring
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public bool Packing;
 
@@ -32,13 +32,13 @@ public sealed partial class FlatpackCreatorComponent : Component
     /// <summary>
     /// How long packing lasts.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan PackDuration = TimeSpan.FromSeconds(3);
 
     /// <summary>
     /// The prototype used when spawning a flatpack.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntProtoId BaseFlatpackPrototype = "BaseFlatpack";
 
     /// <summary>
@@ -55,7 +55,7 @@ public sealed partial class FlatpackCreatorComponent : Component
     [DataField]
     public Dictionary<ProtoId<MaterialPrototype>, int> BaseComputerCost = new();
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string SlotId = "board_slot";
 }
 

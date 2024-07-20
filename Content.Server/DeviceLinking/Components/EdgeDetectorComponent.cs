@@ -13,19 +13,19 @@ public sealed partial class EdgeDetectorComponent : Component
     /// <summary>
     /// Name of the input port.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<SinkPortPrototype> InputPort = "Input";
 
     /// <summary>
     /// Name of the rising edge output port.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<SourcePortPrototype> OutputHighPort = "OutputHigh";
 
     /// <summary>
     /// Name of the falling edge output port.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<SourcePortPrototype> OutputLowPort = "OutputLow";
 
     // Initial state

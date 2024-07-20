@@ -27,7 +27,7 @@ public sealed partial class DisposalTubeComponent : Component
     /// <summary>
     /// Damage dealt to containing entities on every turn
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public DamageSpecifier DamageOnTurn = new()
     {
         DamageDict = new()

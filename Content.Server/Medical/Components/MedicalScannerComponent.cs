@@ -13,7 +13,7 @@ namespace Content.Server.Medical.Components
         public ContainerSlot BodyContainer = default!;
         public EntityUid? ConnectedConsole;
 
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float CloningFailChanceMultiplier = 1f;
     }
 }

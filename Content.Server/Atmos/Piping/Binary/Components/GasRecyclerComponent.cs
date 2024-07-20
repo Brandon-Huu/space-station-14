@@ -17,10 +17,10 @@ namespace Content.Server.Atmos.Piping.Binary.Components
         [DataField("outlet")]
         public string OutletName { get; set; } = "outlet";
 
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float MinTemp = 300 + Atmospherics.T0C;
 
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float MinPressure = 30 * Atmospherics.OneAtmosphere;
     }
 }

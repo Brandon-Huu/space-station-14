@@ -21,7 +21,7 @@ public sealed partial class PAIComponent : Component
     /// The last person who activated this PAI.
     /// Used for assigning the name.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntityUid? LastUser;
 
     [DataField(serverOnly: true)]

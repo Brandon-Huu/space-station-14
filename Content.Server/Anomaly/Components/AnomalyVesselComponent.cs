@@ -23,7 +23,7 @@ public sealed partial class AnomalyVesselComponent : Component
     /// <summary>
     /// A multiplier applied to the amount of points generated.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float PointMultiplier = 1;
 
     /// <summary>

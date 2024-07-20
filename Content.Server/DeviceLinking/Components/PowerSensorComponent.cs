@@ -20,14 +20,14 @@ public sealed partial class PowerSensorComponent : Component
     /// Useful when working with SMESes where input and output can both be important.
     /// Or with APCs where there is no output and only input.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool Output;
 
     /// <summary>
     /// Tool quality to use for switching between input and output.
     /// Cannot be pulsing since linking uses that.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<ToolQualityPrototype> SwitchQuality = "Screwing";
 
     /// <summary>
@@ -39,19 +39,19 @@ public sealed partial class PowerSensorComponent : Component
     /// <summary>
     /// Name of the port set when the network is charging power.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<SourcePortPrototype> ChargingPort = "PowerCharging";
 
     /// <summary>
     /// Name of the port set when the network is discharging power.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<SourcePortPrototype> DischargingPort = "PowerDischarging";
 
     /// <summary>
     /// How long to wait before checking the power network.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan CheckDelay = TimeSpan.FromSeconds(1);
 
     /// <summary>

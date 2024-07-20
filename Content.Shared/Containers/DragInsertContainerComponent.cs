@@ -9,12 +9,12 @@ namespace Content.Shared.Containers;
 [Access(typeof(DragInsertContainerSystem))]
 public sealed partial class DragInsertContainerComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string ContainerId;
 
     /// <summary>
     /// If true, there will also be verbs for inserting / removing objects from this container.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool UseVerbs = true;
 }

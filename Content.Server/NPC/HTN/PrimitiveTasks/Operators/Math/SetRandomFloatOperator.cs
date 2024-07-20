@@ -16,10 +16,10 @@ public sealed partial class SetRandomFloatOperator : HTNOperator
     [DataField(required: true), ViewVariables]
     public string TargetKey = string.Empty;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxAmount = 1f;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MinAmount;
 
     public override async Task<(bool Valid, Dictionary<string, object>? Effects)> Plan(NPCBlackboard blackboard,

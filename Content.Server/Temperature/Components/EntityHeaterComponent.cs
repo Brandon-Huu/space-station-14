@@ -13,7 +13,7 @@ public sealed partial class EntityHeaterComponent : Component
     /// Power used when heating at the high setting.
     /// Low and medium are 33% and 66% respectively.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Power = 2400f;
 
     /// <summary>

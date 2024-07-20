@@ -3,7 +3,7 @@
 [RegisterComponent]
 public sealed partial class ExaminableSolutionComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Solution = "default";
 
     /// <summary>

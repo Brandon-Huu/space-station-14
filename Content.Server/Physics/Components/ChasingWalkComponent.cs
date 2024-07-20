@@ -14,44 +14,44 @@ public sealed partial class ChasingWalkComponent : Component
     /// <summary>
     /// The next moment in time when the entity is pushed toward its goal
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoPausedField]
     public TimeSpan NextImpulseTime;
 
     /// <summary>
     /// Push-to-target frequency.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float ImpulseInterval = 2f;
 
     /// <summary>
     /// The minimum speed at which this entity will move.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MinSpeed = 1.5f;
 
     /// <summary>
     /// The maximum speed at which this entity will move.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxSpeed = 3f;
 
     /// <summary>
     /// The current speed.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Speed;
 
     /// <summary>
     /// The minimum time interval in which an object can change its motion target.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float ChangeVectorMinInterval = 5f;
 
     /// <summary>
     /// The maximum time interval in which an object can change its motion target.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float ChangeVectorMaxInterval = 25f;
 
     /// <summary>
@@ -70,12 +70,12 @@ public sealed partial class ChasingWalkComponent : Component
     /// <summary>
     /// The maximum radius in which the entity chooses the target component to follow
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxChaseRadius = 25;
 
     /// <summary>
     /// The entity uid, chasing by the component owner
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntityUid? ChasingEntity;
 }

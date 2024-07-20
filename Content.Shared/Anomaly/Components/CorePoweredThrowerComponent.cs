@@ -14,12 +14,12 @@ public sealed partial class CorePoweredThrowerComponent : Component
     /// <summary>
     /// The ID of the item slot containing the core.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string CoreSlotId = "core_slot";
 
     /// <summary>
     /// A range for how much the stability variable on the anomaly will increase with each throw.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public Vector2 StabilityPerThrow = new(0.1f, 0.2f);
 }

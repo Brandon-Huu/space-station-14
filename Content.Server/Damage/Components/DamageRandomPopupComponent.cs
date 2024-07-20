@@ -8,6 +8,6 @@ namespace Content.Server.Damage.Components;
 /// </summary>
 public sealed partial class DamageRandomPopupComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public List<LocId> Popups = new();
 }

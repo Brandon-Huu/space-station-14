@@ -6,9 +6,9 @@
 [RegisterComponent, Access(typeof(IgnitionSourceSystem))]
 public sealed partial class IgnitionSourceComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool Ignited;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int Temperature = 700;
 }

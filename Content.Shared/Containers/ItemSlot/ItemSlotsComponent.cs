@@ -121,7 +121,7 @@ namespace Content.Shared.Containers.ItemSlots
         /// <remarks>
         ///     This does not affect EjectOnInteract, since if you do that you probably want ejecting to work.
         /// </remarks>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public bool DisableEject = false;
 
         /// <summary>

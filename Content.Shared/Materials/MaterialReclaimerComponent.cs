@@ -31,7 +31,7 @@ public sealed partial class MaterialReclaimerComponent : Component
     /// How efficiently the materials are reclaimed.
     /// In practice, a multiplier per material when calculating the output of the reclaimer.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Efficiency = 1f;
 
     /// <summary>
@@ -53,13 +53,13 @@ public sealed partial class MaterialReclaimerComponent : Component
     /// The minimum amount fo time it can take to process an entity.
     /// this value supercedes the calculated one using <see cref="MaterialProcessRate"/>
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan MinimumProcessDuration = TimeSpan.FromSeconds(0.5f);
 
     /// <summary>
     /// The id of our output solution
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string SolutionContainerId = "output";
 
     /// <summary>
