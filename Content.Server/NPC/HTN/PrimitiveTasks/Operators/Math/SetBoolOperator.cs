@@ -12,7 +12,7 @@ public sealed partial class SetBoolOperator : HTNOperator
     [DataField(required: true), ViewVariables]
     public string TargetKey = string.Empty;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool Value;
 
     public override async Task<(bool Valid, Dictionary<string, object>? Effects)> Plan(NPCBlackboard blackboard,

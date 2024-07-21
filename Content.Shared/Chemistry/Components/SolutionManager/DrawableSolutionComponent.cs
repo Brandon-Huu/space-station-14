@@ -9,6 +9,6 @@ public sealed partial class DrawableSolutionComponent : Component
     /// <summary>
     /// Solution name that can be removed with syringes.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Solution = "default";
 }

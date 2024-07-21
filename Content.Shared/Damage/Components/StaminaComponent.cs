@@ -44,7 +44,7 @@ public sealed partial class StaminaComponent : Component
     /// <summary>
     /// How long will this mob be stunned for?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public TimeSpan StunTime = TimeSpan.FromSeconds(6);
 
     /// <summary>

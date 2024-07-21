@@ -12,18 +12,18 @@ public sealed partial class PuddleCreateAnomalyComponent : Component
     /// The maximum amount of solution that an anomaly can splash out of the storage on the floor during pulsation.
     /// Scales with Severity.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxPuddleSize = 100;
 
     /// <summary>
     /// The maximum amount of solution that an anomaly can splash out of the storage on the floor during supercritical event
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float SuperCriticalPuddleSize = 1000;
 
     /// <summary>
     /// Solution name that can be drained.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Solution { get; set; } = "default";
 }

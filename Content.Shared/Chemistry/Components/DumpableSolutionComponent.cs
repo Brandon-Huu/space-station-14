@@ -12,12 +12,12 @@ public sealed partial class DumpableSolutionComponent : Component
     /// <summary>
     /// Solution name that can be dumped into.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Solution = "default";
 
     /// <summary>
     /// Whether the solution can be dumped into infinitely.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool Unlimited = false;
 }

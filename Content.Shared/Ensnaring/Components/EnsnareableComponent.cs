@@ -14,22 +14,19 @@ public sealed partial class EnsnareableComponent : Component
     /// <summary>
     /// How much should this slow down the entities walk?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("walkSpeed")]
+    [DataField]
     public float WalkSpeed = 1.0f;
 
     /// <summary>
     /// How much should this slow down the entities sprint?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("sprintSpeed")]
+    [DataField]
     public float SprintSpeed = 1.0f;
 
     /// <summary>
     /// Is this entity currently ensnared?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("isEnsnared")]
+    [DataField]
     public bool IsEnsnared;
 
     /// <summary>
@@ -37,10 +34,10 @@ public sealed partial class EnsnareableComponent : Component
     /// </summary>
     public Container Container = default!;
 
-    [DataField("sprite")]
+    [DataField]
     public string? Sprite;
 
-    [DataField("state")]
+    [DataField]
     public string? State;
 
     [DataField]

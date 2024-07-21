@@ -16,8 +16,7 @@ public sealed partial class SubdermalImplantComponent : Component
     /// <summary>
     /// Used where you want the implant to grant the owner an instant action.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("implantAction")]
+    [DataField]
     public EntProtoId? ImplantAction;
 
     [DataField, AutoNetworkedField]
@@ -32,8 +31,7 @@ public sealed partial class SubdermalImplantComponent : Component
     /// <summary>
     /// Should this implant be removeable?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("permanent"), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public bool Permanent = false;
 
     /// <summary>

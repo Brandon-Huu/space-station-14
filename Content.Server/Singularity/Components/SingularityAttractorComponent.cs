@@ -13,7 +13,7 @@ public sealed partial class SingularityAttractorComponent : Component
     /// <summary>
     /// The range at which singularities will be unable to go away from the attractor.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float BaseRange = 25f;
 
     /// <summary>

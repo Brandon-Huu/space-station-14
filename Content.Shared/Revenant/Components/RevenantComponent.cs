@@ -17,7 +17,7 @@ public sealed partial class RevenantComponent : Component
     /// The total amount of Essence the revenant has. Functions
     /// as health and is regenerated.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public FixedPoint2 Essence = 75;
 

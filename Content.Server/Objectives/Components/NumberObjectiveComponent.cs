@@ -12,7 +12,7 @@ public sealed partial class NumberObjectiveComponent : Component
     /// <summary>
     /// Number to use in the objective condition.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int Target;
 
     /// <summary>
@@ -30,12 +30,12 @@ public sealed partial class NumberObjectiveComponent : Component
     /// <summary>
     /// Optional title locale id, passed "count" with <see cref="Target"/>.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string? Title;
 
     /// <summary>
     /// Optional description locale id, passed "count" with <see cref="Target"/>.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string? Description;
 }

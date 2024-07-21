@@ -11,7 +11,6 @@ public sealed partial class ArtifactTimerTriggerComponent : Component
     ///     Time between artifact activation attempts.
     /// </summary>
     [DataField("rate")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan ActivationRate = TimeSpan.FromSeconds(5.0f);
 
     /// <summary>

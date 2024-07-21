@@ -77,7 +77,7 @@ namespace Content.Server.Atmos.Components
         /// <summary>
         /// Determines how quickly the object will fade out. With positive values, the object will flare up instead of going out.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float FirestackFade = -0.1f;
 
         [DataField]

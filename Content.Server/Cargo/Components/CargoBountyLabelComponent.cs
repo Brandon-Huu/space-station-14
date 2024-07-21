@@ -12,7 +12,7 @@ public sealed partial class CargoBountyLabelComponent : Component
     /// <summary>
     /// The ID for the bounty this label corresponds to.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Id = string.Empty;
 
     /// <summary>

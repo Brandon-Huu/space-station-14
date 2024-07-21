@@ -10,13 +10,11 @@ public abstract partial class SharedPointingArrowComponent : Component
     /// The position of the sender when the point began.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public Vector2 StartPosition;
 
     /// <summary>
     /// When the pointing arrow ends
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public TimeSpan EndTime;
 }

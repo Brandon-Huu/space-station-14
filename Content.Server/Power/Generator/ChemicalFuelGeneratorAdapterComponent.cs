@@ -23,7 +23,6 @@ public sealed partial class ChemicalFuelGeneratorAdapterComponent : Component
     /// The name of <see cref="Solution"/>.
     /// </summary>
     [DataField("solution")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public string SolutionName = "tank";
 
     /// <summary>

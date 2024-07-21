@@ -16,25 +16,25 @@ public sealed partial class DamageMarkerComponent : Component
     /// <summary>
     /// Sprite to apply to the entity while damagemarker is applied.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("effect")]
+    [DataField]
     public SpriteSpecifier.Rsi? Effect = new(new ResPath("/Textures/Objects/Weapons/Effects"), "shield2");
 
     /// <summary>
     /// Sound to play when the damage marker is procced.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("sound")]
+    [DataField]
     public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg");
 
-    [ViewVariables(VVAccess.ReadWrite), DataField("damage")]
+    [DataField]
     public DamageSpecifier Damage = new();
 
     /// <summary>
     /// Entity that marked this entity for a damage surplus.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("marker"), AutoNetworkedField]
+    [AutoNetworkedField]
     public EntityUid Marker;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField("endTime", customTypeSerializer:typeof(TimeOffsetSerializer)), AutoNetworkedField]
+    [ DataField(customTypeSerializer:typeof(TimeOffsetSerializer)), AutoNetworkedField]
     [AutoPausedField]
     public TimeSpan EndTime;
 }

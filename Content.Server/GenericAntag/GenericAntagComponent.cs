@@ -25,6 +25,6 @@ public sealed partial class GenericAntagComponent : Component
     /// The rule that's been spawned.
     /// Used to prevent spawning multiple rules.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntityUid? RuleEntity;
 }

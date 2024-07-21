@@ -17,34 +17,34 @@ public sealed partial class MeleeThrowOnHitComponent : Component
     /// <summary>
     /// The speed at which hit entities should be thrown.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public float Speed = 10f;
 
     /// <summary>
     /// How long hit entities remain thrown, max.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public float Lifetime = 3f;
 
     /// <summary>
     /// How long we wait to start accepting collision.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MinLifetime = 0.05f;
 
     /// <summary>
     /// Whether or not anchorable entities should be unanchored when hit.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public bool UnanchorOnHit;
 
     /// <summary>
     /// Whether or not the throwing behavior occurs by default.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public bool Enabled = true;
 }
@@ -60,21 +60,21 @@ public sealed partial class MeleeThrownComponent : Component
     /// <summary>
     /// The velocity of the throw
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public Vector2 Velocity;
 
     /// <summary>
     /// How long the throw will last.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public float Lifetime;
 
     /// <summary>
     /// How long we wait to start accepting collision.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MinLifetime;
 
     /// <summary>

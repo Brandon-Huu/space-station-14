@@ -9,8 +9,7 @@ public sealed partial class StickyVisualizerComponent : Component
     /// <summary>
     ///     What sprite draw depth set when entity stuck.
     /// </summary>
-    [DataField("stuckDrawDepth")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int StuckDrawDepth = (int) DrawDepth.Overdoors;
 
     /// <summary>

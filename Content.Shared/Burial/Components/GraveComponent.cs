@@ -10,14 +10,14 @@ public sealed partial class GraveComponent : Component
     /// <summary>
     /// How long it takes to dig this grave, without modifiers
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan DigDelay = TimeSpan.FromSeconds(15);
 
     /// <summary>
     /// Modifier if digging yourself out by hand if buried alive
     /// TODO: Handle digging with bare hands in the tools system
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float DigOutByHandModifier = 0.1f;
 
     /// <summary>

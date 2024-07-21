@@ -8,8 +8,7 @@ namespace Content.Shared.Construction.NodeEntities;
 [DataDefinition]
 public sealed partial class StaticNodeEntity : IGraphNodeEntity
 {
-    [DataField("id", customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField(customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string? Id { get; private set; }
 
     public StaticNodeEntity()

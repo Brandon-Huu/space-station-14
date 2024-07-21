@@ -24,7 +24,6 @@ public sealed partial class ItemComponent : Component
     public Dictionary<HandLocation, List<PrototypeLayerData>> InhandVisuals = new();
 
     [Access(typeof(SharedItemSystem))]
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public string? HeldPrefix;
 
@@ -32,7 +31,6 @@ public sealed partial class ItemComponent : Component
     ///     Rsi of the sprite shown on the player when this item is in their hands. Used to generate a default entry for <see cref="InhandVisuals"/>
     /// </summary>
     [Access(typeof(SharedItemSystem))]
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("sprite")]
     public string? RsiPath;
 

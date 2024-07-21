@@ -34,7 +34,6 @@ public sealed partial class ToggleableClothingComponent : Component
     /// <summary>
     ///     The inventory slot that the clothing is equipped to.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public string Slot = "head";
 

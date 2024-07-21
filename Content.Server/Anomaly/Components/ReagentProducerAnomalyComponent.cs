@@ -20,45 +20,45 @@ public sealed partial class ReagentProducerAnomalyComponent : Component
     /// <summary>
     ///     How frequently should this reagent generation update, in seconds?
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float UpdateInterval = 3.0f;
 
     /// <summary>
     /// The spread of the random weight of the choice of this category, depending on the severity.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public Vector2 WeightSpreadDangerous = new(5.0f, 9.0f);
     /// <summary>
     /// The spread of the random weight of the choice of this category, depending on the severity.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public Vector2 WeightSpreadFun = new(3.0f, 0.0f);
     /// <summary>
     /// The spread of the random weight of the choice of this category, depending on the severity.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public Vector2 WeightSpreadUseful = new(1.0f, 1.0f);
 
     /// <summary>
     /// Category of dangerous reagents for injection. Various toxins and poisons
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public List<ProtoId<ReagentPrototype>> DangerousChemicals = new();
     /// <summary>
     /// Category of useful reagents for injection. Medicine and other things that players WANT to get
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public List<ProtoId<ReagentPrototype>> UsefulChemicals = new();
     /// <summary>
     /// Category of fun reagents for injection. Glue, drugs, beer. Something that will bring fun.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public List<ProtoId<ReagentPrototype>> FunChemicals = new();
 
     /// <summary>
     /// Noise made when anomaly pulse.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier ChangeSound = new SoundPathSpecifier("/Audio/Effects/waterswirl.ogg");
     /// <summary>
     /// The component will repaint the sprites of the object to match the current color of the solution,
@@ -72,25 +72,24 @@ public sealed partial class ReagentProducerAnomalyComponent : Component
     /// <summary>
     /// the maximum amount of reagent produced per second
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxReagentProducing = 1.5f;
 
     /// <summary>
     /// how much does the reagent production increase before entering the supercritical state
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float SupercriticalReagentProducingModifier = 100f;
 
     /// <summary>
     /// The name of the reagent that the anomaly produces.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<ReagentPrototype> ProducingReagent = "Water";
 
     /// <summary>
     /// Solution name where the substance is generated
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("solution")]
     public string SolutionName = "default";
 

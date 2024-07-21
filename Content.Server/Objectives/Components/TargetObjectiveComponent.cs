@@ -16,6 +16,6 @@ public sealed partial class TargetObjectiveComponent : Component
     /// Mind entity id of the target.
     /// This must be set by another system using <see cref="TargetObjectiveSystem.SetTarget"/>.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntityUid? Target;
 }

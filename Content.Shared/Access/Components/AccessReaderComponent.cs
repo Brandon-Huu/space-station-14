@@ -23,7 +23,6 @@ public sealed partial class AccessReaderComponent : Component
     /// <summary>
     /// The set of tags that will automatically deny an allowed check, if any of them are present.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public HashSet<ProtoId<AccessLevelPrototype>> DenyTags = new();
 
@@ -62,7 +61,7 @@ public sealed partial class AccessReaderComponent : Component
     /// <summary>
     /// A limit on the max size of <see cref="AccessLog"/>
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int AccessLogLimit = 20;
 
     /// <summary>

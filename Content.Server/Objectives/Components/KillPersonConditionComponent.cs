@@ -12,6 +12,6 @@ public sealed partial class KillPersonConditionComponent : Component
     /// <summary>
     /// Whether the target must be truly dead, ignores missing evac.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool RequireDead = false;
 }

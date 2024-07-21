@@ -10,6 +10,6 @@ public sealed partial class InjectableSolutionComponent : Component
     /// <summary>
     /// Solution name which can be added with syringes.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Solution = "default";
 }

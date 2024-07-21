@@ -11,7 +11,7 @@ public sealed partial class ProjectileComponent : Component
     /// <summary>
     ///     The effect that appears when a projectile collides with an entity.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntProtoId? ImpactEffect;
 
     /// <summary>

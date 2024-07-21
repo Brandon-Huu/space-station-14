@@ -12,6 +12,6 @@ public sealed partial class DrainableSolutionComponent : Component
     /// <summary>
     /// Solution name that can be drained.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Solution = "default";
 }

@@ -63,7 +63,7 @@ public sealed partial class ArtifactCrusherComponent : Component
     /// <summary>
     /// The material for the fragments.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<StackPrototype> FragmentStackProtoId = "ArtifactFragment";
 
     /// <summary>

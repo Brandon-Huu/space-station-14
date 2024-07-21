@@ -11,23 +11,20 @@ namespace Content.Shared.Weapons.Ranged.Components;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class BasicEntityAmmoProviderComponent : AmmoProviderComponent
 {
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("proto", required: true, customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
+    [DataField( required: true, customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string Proto = default!;
 
     /// <summary>
     ///     Max capacity.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("capacity")]
+    [DataField]
     [AutoNetworkedField]
     public int? Capacity = null;
 
     /// <summary>
     ///     Actual ammo left. Initialized to capacity unless they are non-null and differ.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("count")]
+    [DataField]
     [AutoNetworkedField]
     public int? Count = null;
 }

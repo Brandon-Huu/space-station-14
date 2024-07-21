@@ -8,7 +8,7 @@ namespace Content.Shared.Atmos.Rotting;
 [RegisterComponent, NetworkedComponent]
 public sealed partial class ProRottingContainerComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float DecayModifier = 3f;
 }
 

@@ -26,13 +26,11 @@ public sealed partial class ArtifactGasTriggerComponent : Component
     ///     Gas id that will activate artifact.
     /// </summary>
     [DataField("gas")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public Gas? ActivationGas;
 
     /// <summary>
     ///     How many moles of gas should be present in room to activate artifact.
     /// </summary>
     [DataField("moles")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float ActivationMoles = Atmospherics.MolesCellStandard * 0.1f;
 }

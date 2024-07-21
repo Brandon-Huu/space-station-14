@@ -35,6 +35,6 @@ public sealed partial class GasCondenserComponent : Component
     /// Derived from a standard of 500u per canister:
     /// 400u / 1871.71051 moles per canister
     /// </remarks>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MolesToReagentMultiplier = 0.2137f;
 }

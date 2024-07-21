@@ -14,13 +14,13 @@ public sealed partial class HeadRevolutionaryComponent : Component
     /// <summary>
     /// The status icon corresponding to the head revolutionary.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<StatusIconPrototype> StatusIcon { get; set; } = "HeadRevolutionaryFaction";
 
     /// <summary>
     /// How long the stun will last after the user is converted.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan StunTime = TimeSpan.FromSeconds(3);
 
     public override bool SessionSpecific => true;

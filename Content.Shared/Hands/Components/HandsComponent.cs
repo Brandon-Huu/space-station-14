@@ -41,21 +41,19 @@ public sealed partial class HandsComponent : Component
     ///     Modifies the speed at which items are thrown.
     /// </summary>
     [DataField]
-    [ViewVariables(VVAccess.ReadWrite)]
     public float BaseThrowspeed { get; set; } = 11f;
 
     /// <summary>
     ///     Distance after which longer throw targets stop increasing throw impulse.
     /// </summary>
-    [DataField("throwRange")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float ThrowRange { get; set; } = 8f;
 
     /// <summary>
     ///     Whether or not to add in-hand sprites for held items. Some entities (e.g., drones) don't want these.
     ///     Used by the client.
     /// </summary>
-    [DataField("showInHands")]
+    [DataField]
     public bool ShowInHands = true;
 
     /// <summary>
@@ -67,14 +65,14 @@ public sealed partial class HandsComponent : Component
     /// <summary>
     ///     The time at which throws will be allowed again.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoPausedField]
     public TimeSpan NextThrowTime;
 
     /// <summary>
     ///     The minimum time inbetween throws.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan ThrowCooldown = TimeSpan.FromSeconds(0.5f);
 }
 

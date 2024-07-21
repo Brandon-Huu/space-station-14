@@ -16,6 +16,6 @@ public sealed partial class LogProbeCartridgeComponent : Component
     /// <summary>
     /// The sound to make when we scan something with access
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier SoundScan = new SoundPathSpecifier("/Audio/Machines/scan_finish.ogg");
 }

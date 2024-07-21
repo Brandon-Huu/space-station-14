@@ -7,13 +7,13 @@ namespace Content.Shared.Atmos.Components;
 [RegisterComponent]
 public sealed partial class ExtinguishOnInteractComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier? ExtinguishAttemptSound = new SoundPathSpecifier("/Audio/Items/candle_blowing.ogg");
 
     /// <summary>
     /// Extinguishing chance
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Probability = 0.9f;
 
     /// <summary>
@@ -21,7 +21,7 @@ public sealed partial class ExtinguishOnInteractComponent : Component
     /// </summary>
     // With positive values, the interaction will conversely fan the fire,
     // which is useful for any blacksmithing mechs
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float StackDelta = -5.0f;
 
     [DataField]

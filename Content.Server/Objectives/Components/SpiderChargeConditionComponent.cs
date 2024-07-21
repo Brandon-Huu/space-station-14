@@ -12,6 +12,6 @@ public sealed partial class SpiderChargeConditionComponent : Component
     /// <summary>
     /// Warp point that the spider charge has to target
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public EntityUid? Target;
 }

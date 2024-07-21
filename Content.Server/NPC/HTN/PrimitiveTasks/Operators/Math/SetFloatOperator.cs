@@ -12,7 +12,7 @@ public sealed partial class SetFloatOperator : HTNOperator
     [DataField(required: true), ViewVariables]
     public string TargetKey = string.Empty;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Amount;
 
     public override async Task<(bool Valid, Dictionary<string, object>? Effects)> Plan(NPCBlackboard blackboard,

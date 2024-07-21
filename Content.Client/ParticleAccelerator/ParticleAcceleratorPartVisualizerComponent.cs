@@ -6,12 +6,10 @@ namespace Content.Client.ParticleAccelerator;
 [Access(typeof(ParticleAcceleratorPartVisualizerSystem))]
 public sealed partial class ParticleAcceleratorPartVisualsComponent : Component
 {
-    [DataField("stateBase", required: true)]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField(required: true)]
     public string StateBase = default!;
 
     [DataField("stateSuffixes")]
-    [ViewVariables(VVAccess.ReadWrite)]
     public Dictionary<ParticleAcceleratorVisualState, string> StatesSuffixes = new()
     {
         {ParticleAcceleratorVisualState.Powered, "p"},

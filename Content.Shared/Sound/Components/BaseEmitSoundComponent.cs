@@ -11,7 +11,6 @@ public abstract partial class BaseEmitSoundComponent : Component
     public static readonly AudioParams DefaultParams = AudioParams.Default.WithVolume(-2f);
 
     [AutoNetworkedField]
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField(required: true)]
     public SoundSpecifier? Sound;
 }

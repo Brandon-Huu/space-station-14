@@ -10,6 +10,6 @@ public sealed partial class AntiAnomalyZoneComponent : Component
     /// <summary>
     /// the radius in which anomalies cannot appear
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float ZoneRadius = 10;
 }

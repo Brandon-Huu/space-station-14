@@ -18,14 +18,14 @@ public sealed partial class InternalTemperatureComponent : Component
     /// Internal temperature which is modified by surface temperature.
     /// This gets set to <see cref="TemperatureComponent.CurrentTemperature"/> on mapinit.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Temperature;
 
     /// <summary>
     /// Thermal conductivity of the material in W/m/K.
     /// Higher conductivity means its insides will heat up faster.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float Conductivity = 0.5f;
 
     /// <summary>

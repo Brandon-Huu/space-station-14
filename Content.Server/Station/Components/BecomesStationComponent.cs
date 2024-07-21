@@ -13,7 +13,6 @@ public sealed partial class BecomesStationComponent : Component
     ///     Mapping only. Should use StationIds in all other
     ///     scenarios.
     /// </summary>
-    [DataField("id", required: true)]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField(required: true)]
     public string Id = default!;
 }

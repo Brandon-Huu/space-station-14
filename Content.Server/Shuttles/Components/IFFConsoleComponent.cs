@@ -9,6 +9,6 @@ public sealed partial class IFFConsoleComponent : Component
     /// <summary>
     /// Flags that this console is allowed to set.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("allowedFlags")]
+    [DataField]
     public IFFFlags AllowedFlags = IFFFlags.HideLabel;
 }

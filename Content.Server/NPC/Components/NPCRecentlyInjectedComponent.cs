@@ -5,10 +5,10 @@ namespace Content.Server.NPC.Components
     [RegisterComponent]
     public sealed partial class NPCRecentlyInjectedComponent : Component
     {
-        [ViewVariables(VVAccess.ReadWrite), DataField("accumulator")]
+        [DataField]
         public float Accumulator = 0f;
 
-        [ViewVariables(VVAccess.ReadWrite), DataField("removeTime")]
+        [DataField]
         public TimeSpan RemoveTime = TimeSpan.FromMinutes(1);
     }
 }

@@ -8,13 +8,13 @@ namespace Content.Server.MassMedia.Components;
 [Access(typeof(NewsSystem))]
 public sealed partial class NewsWriterComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public bool PublishEnabled;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer)), AutoPausedField]
     public TimeSpan NextPublish;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public float PublishCooldown = 20f;
 
     [DataField]

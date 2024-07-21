@@ -19,12 +19,12 @@ public sealed partial class ContainerSpawnPointComponent : Component, ISpawnPoin
     /// <summary>
     /// An optional job specifier
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string? Job;
 
     /// <summary>
     /// The type of spawn point
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SpawnPointType SpawnType { get; set; } = SpawnPointType.Unset;
 }

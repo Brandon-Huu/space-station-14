@@ -12,20 +12,20 @@ namespace Content.Shared.Bed.Cryostorage;
 [AutoGenerateComponentState]
 public sealed partial class CryostorageComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string ContainerId = "storage";
 
     /// <summary>
     /// How long a player can remain inside Cryostorage before automatically being taken care of, given that they have no mind.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public TimeSpan NoMindGracePeriod = TimeSpan.FromSeconds(30f);
 
     /// <summary>
     /// How long a player can remain inside Cryostorage before automatically being taken care of.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public TimeSpan GracePeriod = TimeSpan.FromMinutes(5f);
 

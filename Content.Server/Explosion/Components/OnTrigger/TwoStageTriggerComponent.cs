@@ -12,8 +12,7 @@ public sealed partial class TwoStageTriggerComponent : Component
     /// <summary>
     /// How long it takes for the second stage to be triggered.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("triggerDelay")]
+    [DataField]
     public TimeSpan TriggerDelay = TimeSpan.FromSeconds(10);
 
     /// <summary>
@@ -22,13 +21,13 @@ public sealed partial class TwoStageTriggerComponent : Component
     [DataField("components", required: true)]
     public ComponentRegistry SecondStageComponents = new();
 
-    [DataField("nextTriggerTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoPausedField]
     public TimeSpan? NextTriggerTime;
 
-    [DataField("triggered")]
+    [DataField]
     public bool Triggered = false;
 
-    [DataField("ComponentsIsLoaded")]
+    [DataField("ComponentsIsLoaded")] //TODO: make camel case
     public bool ComponentsIsLoaded = false;
 }

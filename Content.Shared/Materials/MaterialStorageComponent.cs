@@ -22,7 +22,7 @@ public sealed partial class MaterialStorageComponent : Component
     /// <summary>
     ///     How much material the storage can store in total.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public int? StorageLimit;
 
     /// <summary>

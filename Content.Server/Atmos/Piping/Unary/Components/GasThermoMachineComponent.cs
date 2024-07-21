@@ -12,10 +12,10 @@ namespace Content.Server.Atmos.Piping.Unary.Components
         ///     Current electrical power consumption, in watts. Increasing power increases the ability of the
         ///     thermomachine to heat or cool air.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float HeatCapacity = 5000;
 
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float TargetTemperature = Atmospherics.T20C;
 
         /// <summary>
@@ -43,32 +43,32 @@ namespace Content.Server.Atmos.Piping.Unary.Components
         ///     Current minimum temperature
         ///     Ignored if heater.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float MinTemperature = 73.15f;
 
         /// <summary>
         ///     Current maximum temperature
         ///     Ignored if freezer.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float MaxTemperature = 593.15f;
 
         /// <summary>
         /// Last amount of energy added/removed from the attached pipe network
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float LastEnergyDelta;
 
         /// <summary>
         /// An percentage of the energy change that is leaked into the surrounding environment rather than the inlet pipe.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float EnergyLeakPercentage;
 
         /// <summary>
         /// If true, heat is exclusively exchanged with the local atmosphere instead of the inlet pipe air
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public bool Atmospheric = false;
     }
 }

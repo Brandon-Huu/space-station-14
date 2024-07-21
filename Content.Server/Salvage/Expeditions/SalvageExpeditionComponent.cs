@@ -19,20 +19,20 @@ public sealed partial class SalvageExpeditionComponent : SharedSalvageExpedition
     /// <summary>
     /// Where the dungeon is located for initial announcement.
     /// </summary>
-    [DataField("dungeonLocation")]
+    [DataField]
     public Vector2 DungeonLocation = Vector2.Zero;
 
     /// <summary>
     /// When the expeditions ends.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("endTime", customTypeSerializer: typeof(TimeOffsetSerializer))]
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoPausedField]
     public TimeSpan EndTime;
 
     /// <summary>
     /// Station whose mission this is.
     /// </summary>
-    [DataField("station")]
+    [DataField]
     public EntityUid Station;
 
     [ViewVariables] public bool Completed = false;
@@ -46,7 +46,7 @@ public sealed partial class SalvageExpeditionComponent : SharedSalvageExpedition
     /// <summary>
     /// Sound that plays when the mission end is imminent.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public SoundSpecifier Sound = new SoundCollectionSpecifier("ExpeditionEnd")
     {
         Params = AudioParams.Default.WithVolume(-5),

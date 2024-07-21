@@ -12,7 +12,6 @@ public sealed partial class AtmosDeviceComponent : Component
     /// <summary>
     ///     If true, this device must be anchored before it will receive any AtmosDeviceUpdateEvents.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool RequireAnchored = true;
 

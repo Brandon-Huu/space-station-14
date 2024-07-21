@@ -17,56 +17,50 @@ public sealed partial class AmeControllerComponent : SharedAmeControllerComponen
     /// <summary>
     /// Antimatter fuel slot.
     /// </summary>
-    [DataField("fuelSlot")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ItemSlot FuelSlot = new();
 
     /// <summary>
     /// Whether or not the AME controller is currently injecting animatter into the reactor.
     /// </summary>
-    [DataField("injecting")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool Injecting = false;
 
     /// <summary>
     /// How much antimatter the AME controller is set to inject into the reactor per update.
     /// </summary>
-    [DataField("injectionAmount")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int InjectionAmount = 2;
 
     /// <summary>
     /// How stable the reactor currently is.
     /// When this falls to <= 0 the reactor explodes.
     /// </summary>
-    [DataField("stability")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int Stability = 100;
 
     /// <summary>
     /// The sound used when pressing buttons in the UI.
     /// </summary>
-    [DataField("clickSound")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier ClickSound = new SoundPathSpecifier("/Audio/Machines/machine_switch.ogg");
 
     /// <summary>
     /// The sound used when injecting antimatter into the AME.
     /// </summary>
-    [DataField("injectSound")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public SoundSpecifier InjectSound = new SoundCollectionSpecifier("MetalThud");
 
     /// <summary>
     /// The last time this could have injected fuel into the AME.
     /// </summary>
-    [DataField("lastUpdate")]
+    [DataField]
     public TimeSpan LastUpdate = default!;
 
     /// <summary>
     /// The next time this will try to inject fuel into the AME.
     /// </summary>
-    [DataField("nextUpdate")]
+    [DataField]
     public TimeSpan NextUpdate = default!;
 
     /// <summary>
@@ -77,8 +71,7 @@ public sealed partial class AmeControllerComponent : SharedAmeControllerComponen
     /// <summary>
     /// The the amount of time that passes between injection attempts.
     /// </summary>
-    [DataField("updatePeriod")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan UpdatePeriod = TimeSpan.FromSeconds(10.0);
 
     /// <summary>

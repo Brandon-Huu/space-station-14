@@ -22,33 +22,33 @@ public sealed partial class ReproductiveComponent : Component
     /// <summary>
     /// Minimum length between each attempt to breed.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan MinBreedAttemptInterval = TimeSpan.FromSeconds(45);
 
     /// <summary>
     /// Maximum length between each attempt to breed.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan MaxBreedAttemptInterval = TimeSpan.FromSeconds(60);
 
     /// <summary>
     /// How close to a partner an entity must be in order to breed.
     /// Unrealistically long.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float BreedRange = 3f;
 
     /// <summary>
     /// How many other entities with this component are allowed in range before we stop.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int Capacity = 6;
 
     /// <summary>
     /// The chance that, on a given attempt,
     /// for each valid partner, the entity will breed.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float BreedChance = 0.15f;
 
     /// <summary>
@@ -69,34 +69,34 @@ public sealed partial class ReproductiveComponent : Component
     /// When gestation will end.
     /// Null if <see cref="Gestating"/> is false
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan? GestationEndTime;
 
     /// <summary>
     /// How long it takes the entity after breeding
     /// to produce offspring
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan GestationDuration = TimeSpan.FromMinutes(1.5);
 
     /// <summary>
     /// How much hunger is consumed when an entity
     /// gives birth. A balancing tool to require feeding.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float HungerPerBirth = 75f;
 
     /// <summary>
     /// Popup shown when an entity gives birth.
     /// Configurable for things like laying eggs.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public LocId BirthPopup = "reproductive-birth-popup";
 
     /// <summary>
     /// Whether or not the offspring should be made into "infants".
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool MakeOffspringInfant = true;
 
     /// <summary>

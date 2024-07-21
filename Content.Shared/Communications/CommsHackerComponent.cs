@@ -14,7 +14,7 @@ public sealed partial class CommsHackerComponent : Component
     /// <summary>
     /// Time taken to hack the console
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan Delay = TimeSpan.FromSeconds(20);
 
     /// <summary>

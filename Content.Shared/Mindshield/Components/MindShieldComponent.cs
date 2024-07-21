@@ -11,6 +11,6 @@ namespace Content.Shared.Mindshield.Components;
 [RegisterComponent, NetworkedComponent, Access(typeof(SharedRevolutionarySystem))]
 public sealed partial class MindShieldComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public ProtoId<StatusIconPrototype> MindShieldStatusIcon = "MindShieldIcon";
 }

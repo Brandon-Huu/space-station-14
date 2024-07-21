@@ -47,7 +47,7 @@ public sealed partial class FTLComponent : Component
     /// <summary>
     /// If we're docking after FTL what is the prioritised dock tag (if applicable).
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public ProtoId<TagPrototype>? PriorityTag;
 
     [ViewVariables(VVAccess.ReadWrite), DataField("soundTravel")]

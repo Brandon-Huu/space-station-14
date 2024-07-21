@@ -16,22 +16,21 @@ public sealed partial class TimerTriggerVisualsComponent : Component
     /// <summary>
     /// The RSI state used while the device has not been primed.
     /// </summary>
-    [DataField("unprimedSprite")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string UnprimedSprite = "icon";
 
     /// <summary>
     /// The RSI state used when the device is primed.
     /// Not VVWrite-able because it's only used at component init to construct the priming animation.
     /// </summary>
-    [DataField("primingSprite")]
+    [DataField]
     public string PrimingSprite = "primed";
 
     /// <summary>
     /// The sound played when the device is primed.
     /// Not VVWrite-able because it's only used at component init to construct the priming animation.
     /// </summary>
-    [DataField("primingSound")]
+    [DataField]
     public SoundSpecifier? PrimingSound;
 
     /// <summary>

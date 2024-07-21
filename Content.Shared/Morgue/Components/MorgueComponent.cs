@@ -9,8 +9,7 @@ public sealed partial class MorgueComponent : Component
     /// <summary>
     ///     Whether or not the morgue beeps if a living player is inside.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("doSoulBeep")]
+    [DataField]
     public bool DoSoulBeep = true;
 
     [ViewVariables]

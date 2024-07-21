@@ -15,7 +15,6 @@ public sealed partial class ActiveMicrowaveComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     public float TotalTime;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoPausedField]
     public TimeSpan MalfunctionTime = TimeSpan.Zero;

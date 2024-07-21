@@ -70,7 +70,7 @@ public abstract partial class SharedDisposalUnitComponent : Component
     /// <summary>
     /// Removes the pressure requirement for flushing.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool DisablePressure;
 
     /// <summary>
@@ -82,14 +82,12 @@ public abstract partial class SharedDisposalUnitComponent : Component
     [DataField]
     public bool AutomaticEngage = true;
 
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public TimeSpan AutomaticEngageTime = TimeSpan.FromSeconds(30);
 
     /// <summary>
     /// Delay from trying to enter disposals ourselves.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public float EntryDelay = 0.5f;
 
@@ -111,7 +109,7 @@ public abstract partial class SharedDisposalUnitComponent : Component
     /// <summary>
     /// Was the disposals unit engaged for a manual flush.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField]
+    [DataField]
     public bool Engaged;
 
     /// <summary>

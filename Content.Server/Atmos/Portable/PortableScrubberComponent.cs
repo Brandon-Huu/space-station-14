@@ -37,13 +37,13 @@ namespace Content.Server.Atmos.Portable
         /// <summary>
         /// Maximum internal pressure before it refuses to take more.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float MaxPressure = 2500;
 
         /// <summary>
         /// The speed at which gas is scrubbed from the environment.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public float TransferRate = 800;
     }
 }

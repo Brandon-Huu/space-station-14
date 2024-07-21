@@ -6,7 +6,7 @@ namespace Content.Shared.Mousetrap;
 public sealed partial class MousetrapComponent : Component
 {
     [ViewVariables]
-    [DataField("isActive")]
+    [DataField]
     public bool IsActive = false;
 
     /// <summary>
@@ -15,7 +15,6 @@ public sealed partial class MousetrapComponent : Component
     ///     equation will occur.
     ///     The default is 10.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("massBalance")]
+    [DataField]
     public int MassBalance = 10;
 }

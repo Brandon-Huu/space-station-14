@@ -13,16 +13,14 @@ public sealed partial class GravityWellComponent : Component
     /// <summary>
     /// The maximum range at which the gravity well can push/pull entities.
     /// </summary>
-    [DataField("maxRange")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxRange;
 
     /// <summary>
     /// The minimum range at which the gravity well can push/pull entities.
     /// This is effectively hardfloored at <see cref="GravityWellSystem.MinGravPulseRange"/>.
     /// </summary>
-    [DataField("minRange")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MinRange = 0f;
 
     /// <summary>
@@ -30,8 +28,7 @@ public sealed partial class GravityWellComponent : Component
     /// Negative values accelerate entities away from the gravity well.
     /// Actual acceleration scales with the inverse of the distance to the singularity.
     /// </summary>
-    [DataField("baseRadialAcceleration")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float BaseRadialAcceleration = 0.0f;
 
     /// <summary>
@@ -39,8 +36,7 @@ public sealed partial class GravityWellComponent : Component
     /// Positive tangential acceleration is counter-clockwise.
     /// Actual acceleration scales with the inverse of the distance to the singularity.
     /// </summary>
-    [DataField("baseTangentialAcceleration")]
-    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float BaseTangentialAcceleration = 0.0f;
 
     #region Update Timing
@@ -49,7 +45,6 @@ public sealed partial class GravityWellComponent : Component
     /// The amount of time that should elapse between automated updates to this gravity well.
     /// </summary>
     [DataField("gravPulsePeriod")]
-    [ViewVariables(VVAccess.ReadOnly)]
     [Access(typeof(GravityWellSystem))]
     public TimeSpan TargetPulsePeriod { get; internal set; } = TimeSpan.FromSeconds(0.5);
 

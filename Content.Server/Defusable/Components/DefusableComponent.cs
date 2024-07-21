@@ -13,25 +13,25 @@ public sealed partial class DefusableComponent : Component
     /// <summary>
     ///     The bomb will play this sound on defusal.
     /// </summary>
-    [ViewVariables(VVAccess.ReadOnly), DataField("defusalSound")]
+    [ViewVariables(VVAccess.ReadOnly), DataField]
     public SoundSpecifier DefusalSound = new SoundPathSpecifier("/Audio/Misc/notice2.ogg");
 
     /// <summary>
     ///     The bomb will play this sound on bolt.
     /// </summary>
-    [ViewVariables(VVAccess.ReadOnly), DataField("boltSound")]
+    [ViewVariables(VVAccess.ReadOnly), DataField]
     public SoundSpecifier BoltSound = new SoundPathSpecifier("/Audio/Machines/boltsdown.ogg");
 
     /// <summary>
     ///     Is this bomb one use?
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("disposable")]
+    [ DataField]
     public bool Disposable = true;
 
     /// <summary>
     /// Is the bomb live? This is different from BombUsable because this tracks whether the bomb is ticking down or not.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("activated")]
+    [ DataField]
     public bool Activated;
 
     /// <summary>

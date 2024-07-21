@@ -56,32 +56,32 @@ namespace Content.Shared.Movement.Components
         /// <summary>
         /// Minimum speed a mob has to be moving before applying movement friction.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField]
+        [DataField]
         public float MinimumFrictionSpeed = DefaultMinimumFrictionSpeed;
 
         /// <summary>
         /// The negative velocity applied for friction when weightless and providing inputs.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField]
+        [DataField]
         public float WeightlessFriction = DefaultWeightlessFriction;
 
         /// <summary>
         /// The negative velocity applied for friction when weightless and not providing inputs.
         /// This is essentially how much their speed decreases per second.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField]
+        [DataField]
         public float WeightlessFrictionNoInput = DefaultWeightlessFrictionNoInput;
 
         /// <summary>
         /// The movement speed modifier applied to a mob's total input velocity when weightless.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField]
+        [DataField]
         public float WeightlessModifier = DefaultWeightlessModifier;
 
         /// <summary>
         /// The acceleration applied to mobs when moving and weightless.
         /// </summary>
-        [ViewVariables(VVAccess.ReadWrite), DataField]
+        [DataField]
         public float WeightlessAcceleration = DefaultWeightlessAcceleration;
 
         /// <summary>

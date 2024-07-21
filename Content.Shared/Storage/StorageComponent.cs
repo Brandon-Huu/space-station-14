@@ -24,7 +24,7 @@ namespace Content.Shared.Storage
         /// <summary>
         /// A dictionary storing each entity to its position within the storage grid.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public Dictionary<EntityUid, ItemStorageLocation> StoredItems = new();
 
         /// <summary>
@@ -38,13 +38,13 @@ namespace Content.Shared.Storage
         /// <summary>
         /// A list of boxes that comprise a combined grid that determines the location that items can be stored.
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public List<Box2i> Grid = new();
 
         /// <summary>
         /// The maximum size item that can be inserted into this storage,
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         [Access(typeof(SharedStorageSystem))]
         public ProtoId<ItemSizePrototype>? MaxItemSize;
 
@@ -120,7 +120,7 @@ namespace Content.Shared.Storage
         /// Horizontal - items are stored laying down
         /// Vertical - items are stored standing up
         /// </summary>
-        [DataField, ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public StorageDefaultOrientation? DefaultStorageOrientation;
 
         [Serializable, NetSerializable]

@@ -37,7 +37,7 @@ public sealed partial class CloningPodComponent : Component
     /// <summary>
     /// The current amount of time it takes to clone a body
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float CloningTime = 30f;
 
     /// <summary>

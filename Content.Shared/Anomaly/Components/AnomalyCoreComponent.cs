@@ -13,7 +13,7 @@ public sealed partial class AnomalyCoreComponent : Component
     /// <summary>
     /// Amount of time required for the core to decompose into an inert core
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public double TimeToDecay = 600;
 
     /// <summary>
@@ -26,19 +26,19 @@ public sealed partial class AnomalyCoreComponent : Component
     /// <summary>
     /// The starting value of the entity.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public double StartPrice = 10000;
 
     /// <summary>
     /// The value of the object sought during decaying
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public double EndPrice = 200;
 
     /// <summary>
     /// Has the core decayed?
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public bool IsDecayed;
 
@@ -46,7 +46,7 @@ public sealed partial class AnomalyCoreComponent : Component
     /// The amount of GORILLA charges the core has.
     /// Not used when <see cref="IsDecayed"/> is false.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     [AutoNetworkedField]
     public int Charge = 5;
 }

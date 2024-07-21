@@ -22,14 +22,14 @@ public sealed partial class SmokeComponent : Component
     /// <summary>
     /// The max amount of tiles this smoke cloud can spread to.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public int SpreadAmount;
 
     /// <summary>
     /// The max rate at which chemicals are transferred from the smoke to the person inhaling it.
     /// Calculated as (total volume of chemicals in smoke) / (<see cref="Duration"/>)
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public FixedPoint2 TransferRate;
 
     /// <summary>

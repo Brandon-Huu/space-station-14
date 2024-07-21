@@ -15,23 +15,23 @@ public sealed partial class InjectionAnomalyComponent : Component
     /// the maximum amount of injection of a substance into an entity per pulsation
     /// scales with Severity
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float MaxSolutionInjection = 15;
     /// <summary>
     /// the maximum amount of injection of a substance into an entity in the supercritical phase
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float SuperCriticalSolutionInjection = 50;
 
     /// <summary>
     /// The maximum radius in which the anomaly injects reagents into the surrounding containers.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float InjectRadius = 3;
     /// <summary>
     /// The maximum radius in which the anomaly injects reagents into the surrounding containers.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public float SuperCriticalInjectRadius = 15;
 
     /// <summary>
@@ -42,6 +42,6 @@ public sealed partial class InjectionAnomalyComponent : Component
     /// <summary>
     /// Solution name that can be drained.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Solution { get; set; } = "default";
 }

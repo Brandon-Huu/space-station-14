@@ -19,7 +19,7 @@ public sealed partial class IgniteOnTriggerComponent : Component
     /// <summary>
     /// How long the ignition source is active for after triggering.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public TimeSpan IgnitedTime = TimeSpan.FromSeconds(0.5);
 
     /// <summary>

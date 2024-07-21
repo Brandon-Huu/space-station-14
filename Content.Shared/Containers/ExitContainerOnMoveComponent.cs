@@ -9,6 +9,6 @@ namespace Content.Shared.Containers;
 [Access(typeof(ExitContainerOnMoveSystem))]
 public sealed partial class ExitContainerOnMoveComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string ContainerId;
 }

@@ -17,6 +17,6 @@ public sealed partial class SolutionItemStatusComponent : Component
     /// <summary>
     /// The ID of the solution that will be shown on the item status control.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public string Solution = "default";
 }

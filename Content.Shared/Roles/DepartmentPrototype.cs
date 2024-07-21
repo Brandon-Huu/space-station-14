@@ -20,14 +20,14 @@ public sealed partial class DepartmentPrototype : IPrototype
     [DataField(required: true)]
     public Color Color;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public List<ProtoId<JobPrototype>> Roles = new();
 
     /// <summary>
     /// Whether this is a primary department or not.
     /// For example, CE's primary department is engineering since Command has primary: false.
     /// </summary>
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    [DataField]
     public bool Primary = true;
 
     /// <summary>

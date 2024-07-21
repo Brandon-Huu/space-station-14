@@ -11,6 +11,6 @@ public sealed partial class TetheredComponent : Component
     [DataField("tetherer"), AutoNetworkedField]
     public EntityUid Tetherer;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField("originalAngularDamping"), AutoNetworkedField]
+    [ DataField, AutoNetworkedField]
     public float OriginalAngularDamping;
 }

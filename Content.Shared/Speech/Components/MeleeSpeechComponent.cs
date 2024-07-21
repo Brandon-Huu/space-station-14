@@ -14,16 +14,14 @@ public sealed partial class MeleeSpeechComponent : Component
     /// <summary>
     /// The battlecry to be said when an entity attacks with this component
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("Battlecry")]
+    [DataField("Battlecry")] //Todo: Make camelcase
     [AutoNetworkedField]
     public string? Battlecry;
 
     /// <summary>
     /// The maximum amount of characters allowed in a battlecry
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField("MaxBattlecryLength")]
+    [DataField]
     [AutoNetworkedField]
     public int MaxBattlecryLength = 12;
 
@@ -32,7 +30,7 @@ public sealed partial class MeleeSpeechComponent : Component
     /// <summary>
     /// The action to open the battlecry UI
     /// </summary>
-    [DataField("configureActionEntity")] public EntityUid? ConfigureActionEntity;
+    [DataField] public EntityUid? ConfigureActionEntity;
 }
 
 /// <summary>
