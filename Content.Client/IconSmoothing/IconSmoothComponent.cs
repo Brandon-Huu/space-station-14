@@ -15,7 +15,7 @@ namespace Content.Client.IconSmoothing
     [RegisterComponent]
     public sealed partial class IconSmoothComponent : Component
     {
-        [DataField]
+        [ViewVariables(VVAccess.ReadWrite), DataField("enabled")]
         public bool Enabled = true;
 
         public (EntityUid?, Vector2i)? LastPosition;
@@ -23,14 +23,14 @@ namespace Content.Client.IconSmoothing
         /// <summary>
         ///     We will smooth with other objects with the same key.
         /// </summary>
-        [DataField("key")]
+        [ViewVariables(VVAccess.ReadWrite), DataField("key")]
         public string? SmoothKey { get; private set; }
 
         /// <summary>
         ///     Prepended to the RSI state.
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite), DataField("base")]
-        public string StateBase { get; private set; } = string.Empty;
+        public string StateBase { get; set; } = string.Empty;
 
         [DataField("shader", customTypeSerializer:typeof(PrototypeIdSerializer<ShaderPrototype>))]
         public string? Shader;
@@ -38,7 +38,7 @@ namespace Content.Client.IconSmoothing
         /// <summary>
         ///     Mode that controls how the icon should be selected.
         /// </summary>
-        [DataField]
+        [ViewVariables(VVAccess.ReadWrite), DataField("mode")]
         public IconSmoothingMode Mode = IconSmoothingMode.Corners;
 
         /// <summary>
