@@ -1,0 +1,26 @@
+From 0d421ac2474c641ab9b7401e72c375140a736ff3 Mon Sep 17 00:00:00 2001
+From: Brandon H <Brandon@brandon-huu.com>
+Date: Thu, 25 Jul 2024 11:50:58 -0500
+Subject: [PATCH] LET ME IN THE BAR LET ME IN THE BAR LET ME IN THE BAR. IM 18
+ I SWEAR PLEASE PPLEASE NOOOO I SWEAR PLEASE PLEASE I WANNA GET CRUNK
+
+---
+ Content.Server/Administration/Commands/JobWhitelistCommands.cs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Content.Server/Administration/Commands/JobWhitelistCommands.cs b/Content.Server/Administration/Commands/JobWhitelistCommands.cs
+index a84a11ef84..e604417f92 100644
+--- a/Content.Server/Administration/Commands/JobWhitelistCommands.cs
++++ b/Content.Server/Administration/Commands/JobWhitelistCommands.cs
+@@ -47,7 +47,7 @@ public override async void Execute(IConsoleShell shell, string argStr, string[]
+             var isWhitelisted = await _db.IsJobWhitelisted(guid, job);
+             if (isWhitelisted)
+             {
+-                shell.WriteLine(Loc.GetString("cmd-jobwhitelist-already-whitelisted",
++                shell.WriteLine(Loc.GetString("cmd-jobwhitelistadd-already-whitelisted",
+                     ("player", player),
+                     ("jobId", job.Id),
+                     ("jobName", jobPrototype.LocalizedName)));
+-- 
+2.34.1
+
