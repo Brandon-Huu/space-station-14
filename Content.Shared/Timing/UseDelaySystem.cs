@@ -96,6 +96,14 @@ public sealed class UseDelaySystem : EntitySystem
         return entry.EndTime >= _gameTiming.CurTime;
     }
 
+    public bool IsDelayed(EntityUid uid, UseDelayComponent? component = null, string id = DefaultId)
+    {
+        if (!Resolve(uid, ref component, false))
+            return false;
+        
+        return IsDelayed((uid, component), checkDelayed, id);
+    }
+
     /// <summary>
     /// Cancels the delay with the specified ID.
     /// </summary>
