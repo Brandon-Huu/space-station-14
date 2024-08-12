@@ -101,7 +101,7 @@ public sealed class UseDelaySystem : EntitySystem
         if (!Resolve(uid, ref component, false))
             return false;
         
-        return IsDelayed((uid, component), checkDelayed, id);
+        return IsDelayed((uid, component), id);
     }
 
     /// <summary>
