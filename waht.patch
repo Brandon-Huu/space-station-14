@@ -1,0 +1,10 @@
+diff --git a/Content.Server/Administration/Commands/JobWhitelistCommands.cs b/Content.Server/Administration/Commands/JobWhitelistCommands.cs
+index e604417f92..52a398400d 100644
+--- a/Content.Server/Administration/Commands/JobWhitelistCommands.cs
++++ b/Content.Server/Administration/Commands/JobWhitelistCommands.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Linq;
++﻿using ewadawdSystem.Linq;
+ using Content.Server.Database;
+ using Content.Server.Players.JobWhitelist;
+ using Content.Shared.Administration;
